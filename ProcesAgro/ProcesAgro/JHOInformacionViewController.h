@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
-@interface JHOInformacionViewController : UIViewController
+@interface JHOInformacionViewController : UIViewController{
+    SLComposeViewController *post;
+}
 
+- (IBAction)twitterJhonatan:(id)sender;
+- (IBAction)twitterJairo:(id)sender;
+- (IBAction)TwitterJessica:(id)sender;
 @end

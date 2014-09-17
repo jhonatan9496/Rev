@@ -78,7 +78,7 @@
     
     post = [[SLComposeViewController alloc] init];
     post = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [post setInitialText:@"prueba"];
+    [post setInitialText:@"Estoy recibiendo información de convocatorias y tramites  del gobierno por la app ProcesAgro "];
     [self presentViewController:post animated:YES completion:NULL];
     
 }
@@ -86,7 +86,7 @@
 - (IBAction)postTwitter:(id)sender {
     post = [[SLComposeViewController alloc] init];
     post = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-    [post setInitialText:@"prueba"];
+    [post setInitialText:@"Estoy recibiendo información de convocatorias y tramites  del gobierno por la app ProcesAgro"];
     [self presentViewController:post animated:YES completion:NULL];
 }
 @end

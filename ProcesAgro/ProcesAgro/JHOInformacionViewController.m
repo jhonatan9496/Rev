@@ -47,4 +47,25 @@
 }
 */
 
+- (IBAction)twitterJhonatan:(id)sender {
+    post = [[SLComposeViewController alloc] init];
+    post = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [post setInitialText:@"@jhonatanacelas @jessicacruza @tucompualdia "];
+    [self presentViewController:post animated:YES completion:NULL];
+
+}
+
+- (IBAction)twitterJairo:(id)sender {
+    post = [[SLComposeViewController alloc] init];
+    post = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [post setInitialText:@"@jhonatanacelas @jessicacruza @tucompualdia "];
+    [self presentViewController:post animated:YES completion:NULL];
+}
+
+- (IBAction)TwitterJessica:(id)sender {
+    post = [[SLComposeViewController alloc] init];
+    post = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [post setInitialText:@"@jhonatanacelas @jessicacruza @tucompualdia "];
+    [self presentViewController:post animated:YES completion:NULL];
+}
 @end

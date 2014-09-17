@@ -70,22 +70,16 @@
 - (IBAction)celularEdita:(id)sender {
     
     CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-   [self.view setFrame:CGRectMake(appFrame.origin.x,-216,appFrame.size.width,appFrame.size.height)];
+   [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
     
 }
 
-- (IBAction)terminaEditaCel:(id)sender {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
-    [self resignFirstResponder];
-     [ica3101 setReturnKeyType: UIReturnKeyDone];
-}
 
 - (IBAction)sitermina:(id)sender {
     CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
     
     [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
-    [self resignFirstResponder];
+    [self.scroller resignFirstResponder];
 }
 
 - (IBAction)avanzarDatosFinca:(id)sender {

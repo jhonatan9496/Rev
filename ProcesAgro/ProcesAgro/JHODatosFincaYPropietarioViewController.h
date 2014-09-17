@@ -19,11 +19,23 @@
     
     IBOutlet UIScrollView *scroller;
     
+    UITextField *currentTextField;
+    BOOL keyboardIsShown;
+    
 }
+@property(nonatomic,retain)UIScrollView *scroller;
+
 
 - (IBAction)celularEdita:(id)sender;
 - (IBAction)terminaEditaCel:(id)sender;
 - (IBAction)sitermina:(id)sender;
+
+
+
+- (IBAction)didbeginediting:(id)sender;
+- (IBAction)didendeditind:(id)sender;
+
+
 
 - (IBAction)avanzarDatosFinca:(id)sender;
 @end
