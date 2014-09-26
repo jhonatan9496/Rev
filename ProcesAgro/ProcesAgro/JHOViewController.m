@@ -64,7 +64,6 @@
     
     
     
-    
     self.navigationItem.title = @"ProcesAgro";
     
     // Actualizar al inicio
