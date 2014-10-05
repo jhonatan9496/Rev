@@ -91,4 +91,32 @@
 }
 */
 
+//----------------------------------------------------
+//          Metodos Tecclado mayor 3 años
+//----------------------------------------------------
+
+
+- (IBAction)begin:(id)sender {
+    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+    [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
+}
+
+- (IBAction)salirdin:(id)sender {
+    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+    
+    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
+    [self resignFirstResponder];
+}
+
+- (IBAction)salirCompra:(id)sender {
+    [self resignFirstResponder];
+}
+
+- (IBAction)salirNacimiento:(id)sender {
+    [self resignFirstResponder];
+}
+
+- (IBAction)salirprimer:(id)sender {
+    [self resignFirstResponder];
+}
 @end

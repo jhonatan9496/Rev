@@ -67,6 +67,10 @@
 }
 */
 
+//----------------------------------------------------
+//          Metodos Tecclado celular edita
+//----------------------------------------------------
+
 - (IBAction)celularEdita:(id)sender {
     
     CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
@@ -79,8 +83,57 @@
     CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
     
     [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
-    [self.scroller resignFirstResponder];
+    [self resignFirstResponder];
 }
+
+//----------------------------------------------------
+//          Metodos Tecclado telefono fijo
+//----------------------------------------------------
+
+- (IBAction)beginTelefonoFijo:(id)sender {
+    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+    [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
+    
+}
+
+- (IBAction)salirTelefonoFijo:(id)sender {
+    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+    
+    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
+    [self resignFirstResponder];
+}
+//----------------------------------------------------
+//          Metodos Tecclado cedula
+//----------------------------------------------------
+
+- (IBAction)salirCedula:(id)sender {
+    [self resignFirstResponder];
+}
+//----------------------------------------------------
+//          Metodos Tecclado nombre
+//----------------------------------------------------
+
+- (IBAction)salirNombrePropietario:(id)sender {
+    [self resignFirstResponder];
+}
+//----------------------------------------------------
+//          Metodos Tecclado finca
+//----------------------------------------------------
+
+- (IBAction)salirNombreFinca:(id)sender {
+     [self resignFirstResponder];
+}
+//----------------------------------------------------
+//          Metodos Tecclado ica
+//----------------------------------------------------
+
+- (IBAction)salirIca:(id)sender {
+     [self resignFirstResponder];
+}
+
+//----------------------------------------------------
+//         Metodo guardar informacion avanzar
+//----------------------------------------------------
 
 - (IBAction)avanzarDatosFinca:(id)sender {
     

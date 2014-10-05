@@ -27,15 +27,22 @@
 
 
 - (IBAction)celularEdita:(id)sender;
-- (IBAction)terminaEditaCel:(id)sender;
 - (IBAction)sitermina:(id)sender;
 
 
+- (IBAction)beginTelefonoFijo:(id)sender;
+- (IBAction)salirTelefonoFijo:(id)sender;
 
-- (IBAction)didbeginediting:(id)sender;
-- (IBAction)didendeditind:(id)sender;
+
+- (IBAction)salirCedula:(id)sender;
 
 
+- (IBAction)salirNombrePropietario:(id)sender;
+
+
+- (IBAction)salirNombreFinca:(id)sender;
+
+- (IBAction)salirIca:(id)sender;
 
 - (IBAction)avanzarDatosFinca:(id)sender;
 @end

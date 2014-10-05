@@ -66,32 +66,7 @@
     
     self.navigationItem.title = @"ProcesAgro";
     
-    // Actualizar al inicio
-    
-    //------- Verificamos Conexion a Internet --------------
-    
-#define SITIO_WEB "www.google.com"
-    SCNetworkReachabilityRef referencia = SCNetworkReachabilityCreateWithName (kCFAllocatorDefault, SITIO_WEB);
-    SCNetworkReachabilityFlags resultado;
-    SCNetworkReachabilityGetFlags ( referencia, &resultado );
-    CFRelease(referencia);
-    // codigo a ejecutar si hay conexion
-    if (resultado & kSCNetworkReachabilityFlagsReachable) {
-        NSLog(@"SI HAY CONEXION");
-        [self sincronizarServicios];
-        [self sincronizarConvocatorias];
-        //[self sincronizarOficinas];
-        [self sincronizarOfertasInstitucionales];
-        [self sincronizarPasosOfertas];
-        
-        
-        // codigo a ejecutar si NO hay conexion
-        
-    }else {
-        NSLog(@"No hay conexión Internet");
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Conexion a Internet " message:@"No está conectado a internet. \n Verifique que tiene conexion a internet para actualizar la informacionq" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
-    }
-
+   
     
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -147,7 +122,13 @@
     NSInvocationOperation *operacion =  [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(mostrarConvocatorias) object:nil];
     [queue addOperation:operacion];
     
-  
+    //------------------------------------------------------------------
+    // ----------Creamos nuevo hilo y lo lanzamos cargar info ---------
+    //------------------------------------------------------------------
+    NSOperationQueue *queue2 = [NSOperationQueue new];
+    NSInvocationOperation *operacion2 =  [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(cargarInformacion) object:nil];
+    [queue2 addOperation:operacion2];
+
 }
 
 
@@ -175,6 +156,42 @@
 
 //------------------------------------------------------------------
 // ---------- FIN Metodo del hilo que cambia cada 5s txt convocatorias---------
+//-----------------------------------------------------------------
+
+//------------------------------------------------------------------
+// -------Metodo del hilo cargar informacion inico------
+//-----------------------------------------------------------------
+-(void)cargarInformacion{
+    // Actualizar al inicio
+    
+    //------- Verificamos Conexion a Internet --------------
+    
+#define SITIO_WEB "www.google.com"
+    SCNetworkReachabilityRef referencia = SCNetworkReachabilityCreateWithName (kCFAllocatorDefault, SITIO_WEB);
+    SCNetworkReachabilityFlags resultado;
+    SCNetworkReachabilityGetFlags ( referencia, &resultado );
+    CFRelease(referencia);
+    // codigo a ejecutar si hay conexion
+    if (resultado & kSCNetworkReachabilityFlagsReachable) {
+        NSLog(@"SI HAY CONEXION");
+        [self sincronizarServicios];
+        [self sincronizarConvocatorias];
+        //[self sincronizarOficinas];
+        [self sincronizarOfertasInstitucionales];
+        [self sincronizarPasosOfertas];
+        
+        
+        // codigo a ejecutar si NO hay conexion
+        
+    }else {
+        NSLog(@"No hay conexión Internet");
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Conexion a Internet " message:@"No está conectado a internet. \n Verifique que tiene conexion a internet para actualizar la informacionq" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+
+}
+
+//------------------------------------------------------------------
+// -------Metodo del hilo cargar informacion inico------
 //-----------------------------------------------------------------
 
 - (void)didReceiveMemoryWarning

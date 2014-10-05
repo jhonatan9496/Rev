@@ -57,7 +57,15 @@
     
     //NSString *urlArmada = [NSString  stringWithFormat:@"http://localhost/WebService/Tramite.php?ica3101=%@ &nombre_finca=%@&nombre_propietario=%@&cedula_propietario=%@&telefonofijo%@&celular_propietario=%@",ica,nombre_finca,nombre_propietario,cedula_propietario,telefono_fijo_propuetario,celular_propietario];
     
-    NSString *urlArmada = [NSString  stringWithFormat:@"http://procesagro.tucompualdia.com/crearFormulario/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/",[appDelegate.tramiteDiccionario objectForKey:@"ica"],[appDelegate.tramiteDiccionario objectForKey:@"nombreFinca"],[appDelegate.tramiteDiccionario objectForKey:@"nombrePropietario"],[appDelegate.tramiteDiccionario objectForKey:@"cedulaPropietario"],[appDelegate.tramiteDiccionario objectForKey:@"fijoPropietario"],[appDelegate.tramiteDiccionario objectForKey:@"celularPropietario"],[appDelegate.tramiteDiccionario objectForKey:@"municipio"],[appDelegate.tramiteDiccionario objectForKey:@"departamento"],[appDelegate.tramiteDiccionario objectForKey:@"nombreSolicitante"],[appDelegate.tramiteDiccionario objectForKey:@"cedulaSolicitante"],[appDelegate.tramiteDiccionario objectForKey:@"fijoSolicitante"],[appDelegate.tramiteDiccionario objectForKey:@"celularSolicitante"],[appDelegate.tramiteDiccionario objectForKey:@"menor1Bovinos"],[appDelegate.tramiteDiccionario objectForKey:@"entre12Bovinos"],[appDelegate.tramiteDiccionario objectForKey:@"entre23Bovinos"],[appDelegate.tramiteDiccionario objectForKey:@"mayores3Bovinos"],[appDelegate.tramiteDiccionario objectForKey:@"menor1Bufalino"] ,[appDelegate.tramiteDiccionario objectForKey:@"entre12Bufalino"],[appDelegate.tramiteDiccionario objectForKey:@"entre23Bufalino"],[appDelegate.tramiteDiccionario objectForKey:@"mayor3Bufalino"],[appDelegate.tramiteDiccionario objectForKey:@"primeraVez"],[appDelegate.tramiteDiccionario objectForKey:@"nacimiento"],[appDelegate.tramiteDiccionario objectForKey:@"compra"],[appDelegate.tramiteDiccionario objectForKey:@"perdidaDIN"],justificacion.text];
+    NSString *justi;
+    
+    if ([justificacion.text isEqualToString:@""]) {
+        justi = [NSString  stringWithFormat:@"sin justi"];
+    }else{
+        justi= [NSString  stringWithFormat:justificacion.text];
+    }
+    
+    NSString *urlArmada = [NSString  stringWithFormat:@"http://procesagro.tucompualdia.com/crearFormulario/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/%@/",[appDelegate.tramiteDiccionario objectForKey:@"ica"],[appDelegate.tramiteDiccionario objectForKey:@"nombreFinca"],[appDelegate.tramiteDiccionario objectForKey:@"nombrePropietario"],[appDelegate.tramiteDiccionario objectForKey:@"cedulaPropietario"],[appDelegate.tramiteDiccionario objectForKey:@"fijoPropietario"],[appDelegate.tramiteDiccionario objectForKey:@"celularPropietario"],[appDelegate.tramiteDiccionario objectForKey:@"municipio"],[appDelegate.tramiteDiccionario objectForKey:@"departamento"],[appDelegate.tramiteDiccionario objectForKey:@"nombreSolicitante"],[appDelegate.tramiteDiccionario objectForKey:@"cedulaSolicitante"],[appDelegate.tramiteDiccionario objectForKey:@"fijoSolicitante"],[appDelegate.tramiteDiccionario objectForKey:@"celularSolicitante"],[appDelegate.tramiteDiccionario objectForKey:@"menor1Bovinos"],[appDelegate.tramiteDiccionario objectForKey:@"entre12Bovinos"],[appDelegate.tramiteDiccionario objectForKey:@"entre23Bovinos"],[appDelegate.tramiteDiccionario objectForKey:@"mayores3Bovinos"],[appDelegate.tramiteDiccionario objectForKey:@"menor1Bufalino"] ,[appDelegate.tramiteDiccionario objectForKey:@"entre12Bufalino"],[appDelegate.tramiteDiccionario objectForKey:@"entre23Bufalino"],[appDelegate.tramiteDiccionario objectForKey:@"mayor3Bufalino"],[appDelegate.tramiteDiccionario objectForKey:@"primeraVez"],[appDelegate.tramiteDiccionario objectForKey:@"nacimiento"],[appDelegate.tramiteDiccionario objectForKey:@"compra"],[appDelegate.tramiteDiccionario objectForKey:@"perdidaDIN"],justi];
     
     
     NSLog(@"%@" ,urlArmada);
@@ -76,7 +84,7 @@
             nuevaURL = [NSString  stringWithFormat:@"%@",[convertir objectAtIndex:i]];
         }else {
        
-        nuevaURL = [NSString  stringWithFormat:@"%@%%%@",nuevaURL,[convertir objectAtIndex:i]];
+        nuevaURL = [NSString  stringWithFormat:@"%@_%@",nuevaURL,[convertir objectAtIndex:i]];
         }
         
         }
@@ -95,5 +103,9 @@
     }
         
 
+}
+
+- (IBAction)salirJusti:(id)sender {
+    [self resignFirstResponder];
 }
 @end

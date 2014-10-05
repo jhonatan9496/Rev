@@ -35,6 +35,8 @@
     self.navigationItem.title = @"Ubicacion";
     
     
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -91,4 +93,11 @@
     
 }
 
+- (IBAction)salirMunicipio:(id)sender {
+    [self resignFirstResponder];
+}
+
+- (IBAction)salirDepto:(id)sender {
+    [self resignFirstResponder];
+}
 @end

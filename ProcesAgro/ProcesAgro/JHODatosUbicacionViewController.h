@@ -14,5 +14,7 @@
     IBOutlet UITextField *departamento;
     
 }
+- (IBAction)salirMunicipio:(id)sender;
+- (IBAction)salirDepto:(id)sender;
 
 @end

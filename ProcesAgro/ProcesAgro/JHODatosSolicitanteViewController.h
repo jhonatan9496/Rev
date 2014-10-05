@@ -1,4 +1,4 @@
-//
+            //
 //  JHODatosSolicitanteViewController.h
 //  ProcesAgro
 //
@@ -16,5 +16,9 @@
     IBOutlet UITextField *celularSolicitante;
     
 }
+- (IBAction)salirnombresol:(id)sender;
+- (IBAction)salirCedSol:(id)sender;
+- (IBAction)salirFijoSol:(id)sender;
+- (IBAction)salirCelSol:(id)sender;
 
 @end

@@ -10,6 +10,9 @@
 #import "JHOAppDelegate.h"
 #import "JHODatosBovinosViewController.h"
 
+
+
+
 @interface JHODatosSolicitanteViewController ()
 
 @end
@@ -94,4 +97,19 @@
 }
 
 
+- (IBAction)salirnombresol:(id)sender {
+     [self resignFirstResponder];
+}
+
+- (IBAction)salirCedSol:(id)sender {
+     [self resignFirstResponder];
+}
+
+- (IBAction)salirFijoSol:(id)sender {
+     [self resignFirstResponder];
+}
+
+- (IBAction)salirCelSol:(id)sender {
+     [self resignFirstResponder];
+}
 @end

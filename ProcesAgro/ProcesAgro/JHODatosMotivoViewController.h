@@ -18,4 +18,11 @@
     
 }
 
+- (IBAction)begin:(id)sender;
+- (IBAction)salirdin:(id)sender;
+
+- (IBAction)salirCompra:(id)sender;
+- (IBAction)salirNacimiento:(id)sender;
+- (IBAction)salirprimer:(id)sender;
+
 @end

@@ -15,4 +15,5 @@
 }
 
 - (IBAction)enviarTramiteFinal:(id)sender;
+- (IBAction)salirJusti:(id)sender;
 @end

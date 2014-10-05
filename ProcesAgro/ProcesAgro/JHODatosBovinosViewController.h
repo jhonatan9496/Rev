@@ -17,4 +17,11 @@
     
 }
 
+- (IBAction)begin:(id)sender;
+- (IBAction)salir:(id)sender;
+
+- (IBAction)salir23:(id)sender;
+- (IBAction)salir12:(id)sender;
+- (IBAction)salir1:(id)sender;
+
 @end
