@@ -30,6 +30,10 @@
 		A338BF3F1998446C004FD9DB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338BF3E1998446C004FD9DB /* Social.framework */; };
 		A338BF4119984480004FD9DB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338BF4019984480004FD9DB /* Accounts.framework */; };
 		A338BF4819988117004FD9DB /* JHOCeldaPasosOfertaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A338BF4719988117004FD9DB /* JHOCeldaPasosOfertaTableViewCell.m */; };
+		A34EEEFB19EF8ABA008F43C6 /* ProcesAgroDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A34EEEFA19EF8ABA008F43C6 /* ProcesAgroDB.sqlite */; };
+		A34EEEFF19EF9543008F43C6 /* JHOListarCursosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34EEEFE19EF9543008F43C6 /* JHOListarCursosViewController.m */; };
+		A34EEF0219EF955F008F43C6 /* JHOCadaCursoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34EEF0119EF955F008F43C6 /* JHOCadaCursoViewController.m */; };
+		A34EEF0419EF9966008F43C6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34EEF0319EF9966008F43C6 /* Main_iPhone.storyboard */; };
 		A35E78461991CC3400584FFC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37611EA1991CAE60085B190 /* AVFoundation.framework */; };
 		A35E78471991CC4000584FFC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37611EC1991CAF00085B190 /* MediaPlayer.framework */; };
 		A35E784A1993F0CE00584FFC /* JHOListarConvocatoriasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A35E78491993F0CE00584FFC /* JHOListarConvocatoriasViewController.m */; };
@@ -48,7 +52,6 @@
 		A3A31F6B19B2CF5500D88311 /* link-pagina-convocatoria.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A31F6A19B2CF5500D88311 /* link-pagina-convocatoria.png */; };
 		A3A31F7319B2D31A00D88311 /* footer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3A31F7219B2D31A00D88311 /* footer.jpg */; };
 		A3A31F7519B2D38700D88311 /* acerca_De.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3A31F7419B2D38700D88311 /* acerca_De.jpg */; };
-		A3ABAD1819B17FC8008A435A /* ProcesAgroDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A3ABAD1719B17FC8008A435A /* ProcesAgroDB.sqlite */; };
 		A3ABAD1C19B23584008A435A /* JHODatosFincaYPropietarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD1B19B23584008A435A /* JHODatosFincaYPropietarioViewController.m */; };
 		A3ABAD1F19B235EA008A435A /* JHODatosUbicacionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD1E19B235EA008A435A /* JHODatosUbicacionViewController.m */; };
 		A3ABAD2219B23C57008A435A /* JHODatosSolicitanteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD2119B23C57008A435A /* JHODatosSolicitanteViewController.m */; };
@@ -63,7 +66,6 @@
 		A3BAADDB196E42760088BC31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3BAADD9196E42760088BC31 /* InfoPlist.strings */; };
 		A3BAADDD196E42760088BC31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BAADDC196E42760088BC31 /* main.m */; };
 		A3BAADE1196E42760088BC31 /* JHOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BAADE0196E42760088BC31 /* JHOAppDelegate.m */; };
-		A3BAADE4196E42760088BC31 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BAADE2196E42760088BC31 /* Main_iPhone.storyboard */; };
 		A3BAADE7196E42760088BC31 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BAADE5196E42760088BC31 /* Main_iPad.storyboard */; };
 		A3BAADEA196E42760088BC31 /* JHOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BAADE9196E42760088BC31 /* JHOViewController.m */; };
 		A3BAADEC196E42760088BC31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BAADEB196E42760088BC31 /* Images.xcassets */; };
@@ -113,6 +115,12 @@
 		A338BF4019984480004FD9DB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A338BF4619988117004FD9DB /* JHOCeldaPasosOfertaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOCeldaPasosOfertaTableViewCell.h; sourceTree = "<group>"; };
 		A338BF4719988117004FD9DB /* JHOCeldaPasosOfertaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOCeldaPasosOfertaTableViewCell.m; sourceTree = "<group>"; };
+		A34EEEFA19EF8ABA008F43C6 /* ProcesAgroDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = ProcesAgroDB.sqlite; path = ../../../../Desktop/ProcesAgroDB.sqlite; sourceTree = "<group>"; };
+		A34EEEFD19EF9543008F43C6 /* JHOListarCursosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOListarCursosViewController.h; sourceTree = "<group>"; };
+		A34EEEFE19EF9543008F43C6 /* JHOListarCursosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOListarCursosViewController.m; sourceTree = "<group>"; };
+		A34EEF0019EF955F008F43C6 /* JHOCadaCursoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOCadaCursoViewController.h; sourceTree = "<group>"; };
+		A34EEF0119EF955F008F43C6 /* JHOCadaCursoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOCadaCursoViewController.m; sourceTree = "<group>"; };
+		A34EEF0319EF9966008F43C6 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iPhone.storyboard; path = ../../../../Desktop/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A35E78481993F0CE00584FFC /* JHOListarConvocatoriasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOListarConvocatoriasViewController.h; sourceTree = "<group>"; };
 		A35E78491993F0CE00584FFC /* JHOListarConvocatoriasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOListarConvocatoriasViewController.m; sourceTree = "<group>"; };
 		A35E784B199420C100584FFC /* JHOBuscarGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOBuscarGeneralViewController.h; sourceTree = "<group>"; };
@@ -135,7 +143,6 @@
 		A3A31F6A19B2CF5500D88311 /* link-pagina-convocatoria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "link-pagina-convocatoria.png"; sourceTree = "<group>"; };
 		A3A31F7219B2D31A00D88311 /* footer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footer.jpg; sourceTree = "<group>"; };
 		A3A31F7419B2D38700D88311 /* acerca_De.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = acerca_De.jpg; sourceTree = "<group>"; };
-		A3ABAD1719B17FC8008A435A /* ProcesAgroDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProcesAgroDB.sqlite; sourceTree = "<group>"; };
 		A3ABAD1A19B23584008A435A /* JHODatosFincaYPropietarioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHODatosFincaYPropietarioViewController.h; sourceTree = "<group>"; };
 		A3ABAD1B19B23584008A435A /* JHODatosFincaYPropietarioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHODatosFincaYPropietarioViewController.m; sourceTree = "<group>"; };
 		A3ABAD1D19B235EA008A435A /* JHODatosUbicacionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHODatosUbicacionViewController.h; sourceTree = "<group>"; };
@@ -162,7 +169,6 @@
 		A3BAADDE196E42760088BC31 /* ProcesAgro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProcesAgro-Prefix.pch"; sourceTree = "<group>"; };
 		A3BAADDF196E42760088BC31 /* JHOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHOAppDelegate.h; sourceTree = "<group>"; };
 		A3BAADE0196E42760088BC31 /* JHOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHOAppDelegate.m; sourceTree = "<group>"; };
-		A3BAADE3196E42760088BC31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A3BAADE6196E42760088BC31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		A3BAADE8196E42760088BC31 /* JHOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHOViewController.h; sourceTree = "<group>"; };
 		A3BAADE9196E42760088BC31 /* JHOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHOViewController.m; sourceTree = "<group>"; };
@@ -206,6 +212,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A34EEEFC19EF9514008F43C6 /* Cursos */ = {
+			isa = PBXGroup;
+			children = (
+				A34EEEFD19EF9543008F43C6 /* JHOListarCursosViewController.h */,
+				A34EEEFE19EF9543008F43C6 /* JHOListarCursosViewController.m */,
+				A34EEF0019EF955F008F43C6 /* JHOCadaCursoViewController.h */,
+				A34EEF0119EF955F008F43C6 /* JHOCadaCursoViewController.m */,
+			);
+			name = Cursos;
+			sourceTree = "<group>";
+		};
 		A3ABAD1919B234FD008A435A /* Tramite */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +346,7 @@
 		A3BAADD6196E42760088BC31 /* ProcesAgro */ = {
 			isa = PBXGroup;
 			children = (
+				A34EEEFC19EF9514008F43C6 /* Cursos */,
 				A3ABAD3719B2CA7A008A435A /* Informacion */,
 				A3ABAD3619B2CA5B008A435A /* Convocatorias */,
 				A3ABAD3519B2CA3F008A435A /* Busqueda */,
@@ -337,7 +355,7 @@
 				A3ABAD1919B234FD008A435A /* Tramite */,
 				A3BAADDF196E42760088BC31 /* JHOAppDelegate.h */,
 				A3BAADE0196E42760088BC31 /* JHOAppDelegate.m */,
-				A3BAADE2196E42760088BC31 /* Main_iPhone.storyboard */,
+				A34EEF0319EF9966008F43C6 /* Main_iPhone.storyboard */,
 				A3BAADE5196E42760088BC31 /* Main_iPad.storyboard */,
 				A3BAADE8196E42760088BC31 /* JHOViewController.h */,
 				A3BAADE9196E42760088BC31 /* JHOViewController.m */,
@@ -350,6 +368,7 @@
 		A3BAADD7196E42760088BC31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A34EEEFA19EF8ABA008F43C6 /* ProcesAgroDB.sqlite */,
 				A314D16E19E0F59A00EF3637 /* Default-Portrait@2x.png */,
 				A314D16C19E0F56D00EF3637 /* Default-Portrait.png */,
 				A314D16A19E0F4E300EF3637 /* Default@2x.png */,
@@ -376,7 +395,6 @@
 				A3A31F7419B2D38700D88311 /* acerca_De.jpg */,
 				A3A31F7219B2D31A00D88311 /* footer.jpg */,
 				A3A31F6A19B2CF5500D88311 /* link-pagina-convocatoria.png */,
-				A3ABAD1719B17FC8008A435A /* ProcesAgroDB.sqlite */,
 				A338BF3C19983FF8004FD9DB /* convocatoria-fond.png */,
 				A3BAADD8196E42760088BC31 /* ProcesAgro-Info.plist */,
 				A3BAADD9196E42760088BC31 /* InfoPlist.strings */,
@@ -485,7 +503,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A306646819C6660500B3A56F /* agromapas.png in Resources */,
-				A3ABAD1819B17FC8008A435A /* ProcesAgroDB.sqlite in Resources */,
 				A314D16519E0F43700EF3637 /* Default.png in Resources */,
 				A3BAADE7196E42760088BC31 /* Main_iPad.storyboard in Resources */,
 				A306647419C667B100B3A56F /* tarjeta-profesional.png in Resources */,
@@ -499,12 +516,13 @@
 				A306646A19C6664400B3A56F /* sipsa.png in Resources */,
 				A314D16B19E0F4E300EF3637 /* Default@2x.png in Resources */,
 				A314D16D19E0F56D00EF3637 /* Default-Portrait.png in Resources */,
+				A34EEEFB19EF8ABA008F43C6 /* ProcesAgroDB.sqlite in Resources */,
 				A3728D5D19CA40A400511727 /* ipad72x72.png in Resources */,
 				A306647019C6674A00B3A56F /* autorizacion-productos-ecologicos.png in Resources */,
 				A306646C19C6667B00B3A56F /* siembra.png in Resources */,
-				A3BAADE4196E42760088BC31 /* Main_iPhone.storyboard in Resources */,
 				A3728D6019CA40A400511727 /* ipad76x76@2x.png in Resources */,
 				A3728D5E19CA40A400511727 /* ipad72x72@2x.png in Resources */,
+				A34EEF0419EF9966008F43C6 /* Main_iPhone.storyboard in Resources */,
 				A306647619C667DA00B3A56F /* capitalizacion-rural-dre.png in Resources */,
 				A3A31F7519B2D38700D88311 /* acerca_De.jpg in Resources */,
 				A306646619C6657900B3A56F /* cursos-vituales.png in Resources */,
@@ -542,7 +560,9 @@
 				A3BAADDD196E42760088BC31 /* main.m in Sources */,
 				A306646119C48CDF00B3A56F /* JHOIdentificarIpadViewController.m in Sources */,
 				A3ABAD2219B23C57008A435A /* JHODatosSolicitanteViewController.m in Sources */,
+				A34EEF0219EF955F008F43C6 /* JHOCadaCursoViewController.m in Sources */,
 				A3ABAD2B19B27EEB008A435A /* JHODatosMotivoViewController.m in Sources */,
+				A34EEEFF19EF9543008F43C6 /* JHOListarCursosViewController.m in Sources */,
 				A3ABAD2E19B28129008A435A /* JHOJustificacionEnviarViewController.m in Sources */,
 				A3EEC7B11995E3D500B29AB8 /* JHOCadaConvocatoriaViewController.m in Sources */,
 				A338BF4819988117004FD9DB /* JHOCeldaPasosOfertaTableViewCell.m in Sources */,
@@ -582,14 +602,6 @@
 				A3BAADDA196E42760088BC31 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A3BAADE2196E42760088BC31 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3BAADE3196E42760088BC31 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		A3BAADE5196E42760088BC31 /* Main_iPad.storyboard */ = {

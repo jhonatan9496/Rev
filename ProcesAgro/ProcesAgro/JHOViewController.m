@@ -176,7 +176,7 @@
         NSLog(@"SI HAY CONEXION");
         [self sincronizarServicios];
         [self sincronizarConvocatorias];
-        //[self sincronizarOficinas];
+        [self sincronizarCursos];
         [self sincronizarOfertasInstitucionales];
         [self sincronizarPasosOfertas];
         
@@ -219,7 +219,7 @@
                                                     error:nil];
         NSError * error;
         NSArray * arreglo= [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-        NSLog(@"%@",arreglo);
+       // NSLog(@"%@",arreglo);
         if (!arreglo) {
             NSLog(@"No sirvio el webService");
             UIAlertView *alerta_convocatorias= [[UIAlertView alloc]init];
@@ -231,11 +231,11 @@
         }else {
             int i=0;
             while ([arreglo count]>i) {
-                NSLog(@"contenido arreglo descripcion pasos ofertas :  %@",[arreglo[i] objectForKey:@"titulo_oferta"]);
+              //  NSLog(@"contenido arreglo descripcion pasos ofertas :  %@",[arreglo[i] objectForKey:@"titulo_oferta"]);
                 // crea la sentencia sql de ingresar los datos a la db
                 NSString *sql= [NSString stringWithFormat:@"insert into pasos_ofertas (\"id_paso\", \"titulo_paso\" , \"descripcion_paso\" , \"id_oferta_institucional\") VALUES(\"%i\", \"%@\", \"%@\",\"%@\")",[[arreglo[i] objectForKey:@"id"] integerValue],[arreglo[i] objectForKey:@"tituloPasos"],[arreglo[i] objectForKey:@"descripcionPaso"],[arreglo[i] objectForKey:@"ofertaInstitucional_id"]];
                 //se crea la sentencia
-                NSLog(@" pasos oferta %@",sql);
+              //  NSLog(@" pasos oferta %@",sql);
                 if (sqlite3_prepare_v2(dataBase, [sql UTF8String], -1, &sentencia, NULL)== SQLITE_OK) {
                     NSLog(@"inserto una oferta");
                     while  (sqlite3_step(sentencia)==SQLITE_OK) {
@@ -280,7 +280,7 @@
                                                     error:nil];
         NSError * error;
         NSArray * arreglo= [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-        NSLog(@"%@",arreglo);
+      //  NSLog(@"%@",arreglo);
         if (!arreglo) {
             NSLog(@"No sirvio el webService");
             UIAlertView *alerta_convocatorias= [[UIAlertView alloc]init];
@@ -292,7 +292,7 @@
         }else {
             int i=0;
             while ([arreglo count]>i) {
-                NSLog(@"contenido arreglo descripcion ofertas :  %@",[arreglo[i] objectForKey:@"titulo_oferta"]);
+             //   NSLog(@"contenido arreglo descripcion ofertas :  %@",[arreglo[i] objectForKey:@"titulo_oferta"]);
                 // crea la sentencia sql de ingresar los datos a la db
                 NSString *sql= [NSString stringWithFormat:@"insert into ofertas_institucionales (\"id_oferta_institucional\", \"titulo_oferta\" , \"descripcion_oferta\" , \"url_audio_oferta\", \"url_oferta\") VALUES(\"%i\", \"%@\", \"%@\",\"%@\",\"%@\")",[[arreglo[i] objectForKey:@"id"] integerValue],[arreglo[i] objectForKey:@"tituloOferta"],[arreglo[i] objectForKey:@"descripcionOferta"],[arreglo[i] objectForKey:@"urlAudioOferta"],[arreglo[i] objectForKey:@"urlOferta"]];
                 //se crea la sentencia
@@ -340,7 +340,7 @@
                                                     error:nil];
         NSError * error;
         NSArray * arreglo= [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-        NSLog(@"%@",arreglo);
+      //  NSLog(@"%@",arreglo);
         if (!arreglo) {
             NSLog(@"No sirvio el webService");
             UIAlertView *alerta_convocatorias= [[UIAlertView alloc]init];
@@ -352,7 +352,7 @@
         }else {
             int i=0;
             while ([arreglo count]>i) {
-                NSLog(@"contenido arreglo descripcion oficinas :  %@",[arreglo[i] objectForKey:@"descripcion"]);
+              //  NSLog(@"contenido arreglo descripcion oficinas :  %@",[arreglo[i] objectForKey:@"descripcion"]);
                 // crea la sentencia sql de ingresar los datos a la db
                 NSString *sql= [NSString stringWithFormat:@"insert into oficinas (\"id_oficina\", \"nombre_oficina\" , \"direccion_oficina\" , \"descripcion_oficina\", \"municipio_oficina\") VALUES(\"%i\", \"%@\", \"%@\",\"%@\",\"%@\")",[[arreglo[i] objectForKey:@"id"] integerValue],[arreglo[i] objectForKey:@"nombreOficina"],[arreglo[i] objectForKey:@"direccionOficina"],[arreglo[i] objectForKey:@"descripcionOficina"],[arreglo[i] objectForKey:@"lugar_id"]];
                 //se crea la sentencia
@@ -413,7 +413,7 @@
         }else {
             int i=0;
             while ([arreglo count]>i) {
-                NSLog(@"contenido arreglo descripcion servicios :  %@",[arreglo[i] objectForKey:@"descripcion"]);
+               // NSLog(@"contenido arreglo descripcion servicios :  %@",[arreglo[i] objectForKey:@"descripcion"]);
         // crea la sentencia sql de ingresar los datos a la db
         NSString *sql= [NSString stringWithFormat:@"insert into servicios (\"id_servicio\", \"titulo_servicio\" , \"descripcion_servicio\" , \"url_audio_servicio\", \"url_servicio\") VALUES(\"%i\", \"%@\", \"%@\",\"%@\",\"%@\")",[[arreglo[i] objectForKey:@"id"] integerValue],[arreglo[i] objectForKey:@"tituloServicio"],[arreglo[i] objectForKey:@"descripcionServicio"],[arreglo[i] objectForKey:@"urlAudioServicio"],[arreglo[i] objectForKey:@"urlServicio"]];
         //se crea la sentencia
@@ -446,6 +446,7 @@
 //-----------------------------------------------------------------------
 // ------------------- Sincronizar Convocatorias ------------------------
 //-----------------------------------------------------------------------
+
 -(void) sincronizarConvocatorias{
     // creamos un objeto del delegado para acceder a las variables
     JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
@@ -474,11 +475,11 @@
         }else {
             int i=0;
             while ([arreglo count]>i) {
-                NSLog(@"contenido arreglo %@",[arreglo[i] objectForKey:@"descripcion"]);
+               // NSLog(@"contenido arreglo %@",[arreglo[i] objectForKey:@"descripcion"]);
                 // crea la sentencia sql de ingresar los datos a la db
                 NSString *sql= [NSString stringWithFormat:@"insert into convocatorias (\"id_convocatoria\", \"titulo_convocatoria\" , \"descripcion_convocatoria\" , \"descripcion_larga_convocatoria\", \"url_convocatoria\") VALUES(\"%i\", \"%@\", \"%@\",\"%@\",\"%@\")",[[arreglo[i] objectForKey:@"id"] integerValue],[arreglo[i] objectForKey:@"tituloConvocatoria"],[arreglo[i] objectForKey:@"descripcion"],[arreglo[i] objectForKey:@"descripcionLarga"],[arreglo[i] objectForKey:@"urlConvocatoria"]];
                 //se crea la sentencia
-                NSLog(@"%@",sql);
+                //NSLog(@"%@",sql);
                 if (sqlite3_prepare_v2(dataBase, [sql UTF8String], -1, &sentencia, NULL)== SQLITE_OK) {
                     NSLog(@"inserto un convocatoria");
                     while  (sqlite3_step(sentencia)==SQLITE_OK) {
@@ -498,8 +499,68 @@
     }
     sqlite3_close(dataBase);
 }
+
 //-----------------------------------------------------------------------
 // ------------------- Final Sincronizar Convocatorias ------------------
+//-----------------------------------------------------------------------
+
+//-----------------------------------------------------------------------
+// ------------------- Sincronizar Cursos ------------------------
+//-----------------------------------------------------------------------
+-(void) sincronizarCursos{
+    // creamos un objeto del delegado para acceder a las variables
+    JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
+    //bariable db
+    sqlite3 *dataBase;
+    //variable de sentencia
+    sqlite3_stmt *sentencia;
+    //abrir la base de datos
+    if (sqlite3_open([appDelegate.dataBasePath UTF8String], &dataBase)== SQLITE_OK) {
+        //NSURL * url = [NSURL URLWithString:@"http://localhost/WebService/convocatorias.php"];
+        NSURL * url = [NSURL URLWithString:@"http://tucompualdia.com/aplicaciones/procesAgroWebService/cursosvirtuales.php"];
+        NSData * jsonData = [NSData dataWithContentsOfURL:url
+                                                  options:NSUTF8StringEncoding
+                                                    error:nil];
+        NSError * error;
+        NSArray * arreglo= [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+        //NSLog(@"%@",arre)
+        if (!arreglo) {
+            NSLog(@"No sirvio el webService");
+            UIAlertView *alerta_convocatorias= [[UIAlertView alloc]init];
+            [alerta_convocatorias setTitle:@"Error"];
+            [alerta_convocatorias setMessage:@"Fallo en el web service de Convocatorias"];
+            [alerta_convocatorias addButtonWithTitle:@"Informar"];
+            [alerta_convocatorias addButtonWithTitle:@"Cancelar"];
+            [alerta_convocatorias show];
+        }else {
+            int i=0;
+            while ([arreglo count]>i) {
+                // NSLog(@"contenido arreglo %@",[arreglo[i] objectForKey:@"descripcion"]);
+                // crea la sentencia sql de ingresar los datos a la db
+                NSString *sql= [NSString stringWithFormat:@"insert into cursos_virtuales (\"id_curso_virtual\", \"nombre_curso\" , \"descripcion_curso\" , \"url_audio_curso\", \"url_curso\") VALUES(\"%i\", \"%@\", \"%@\",\"%@\",\"%@\")",[[arreglo[i] objectForKey:@"id"] integerValue],[arreglo[i] objectForKey:@"nombreCurso"],[arreglo[i] objectForKey:@"descripcionCurso"],[arreglo[i] objectForKey:@"urlAudio"],[arreglo[i] objectForKey:@"urlCurso"]];
+                //se crea la sentencia
+                //NSLog(@"%@",sql);
+                if (sqlite3_prepare_v2(dataBase, [sql UTF8String], -1, &sentencia, NULL)== SQLITE_OK) {
+                    NSLog(@"inserto un curso");
+                    while  (sqlite3_step(sentencia)==SQLITE_OK) {
+                        NSLog(@"Insertado");
+                    }
+                }else {
+                    NSLog(@"Falla en la creacion del sql: alimentar base de datos de cursos");
+                }
+                // incrementa el contador del vector
+                i++;
+            }
+        }
+        
+        sqlite3_finalize(sentencia);
+    }else {
+        NSLog(@"No se puede abrir la DB en convocatoria ");
+    }
+    sqlite3_close(dataBase);
+}
+//-----------------------------------------------------------------------
+// ------------------- Final Sincronizar Cursos ------------------
 //-----------------------------------------------------------------------
 
 //-----------------------------------------------------------------------
@@ -524,11 +585,16 @@
     // codigo a ejecutar si hay conexion
     if (resultado & kSCNetworkReachabilityFlagsReachable) {
         NSLog(@"SI HAY CONEXION");
+        
+        // modificar tambien el cargado automatico
+        
         [self sincronizarServicios];
         [self sincronizarConvocatorias];
         //[self sincronizarOficinas];
         [self sincronizarOfertasInstitucionales];
+        [self sincronizarCursos];
         [self sincronizarPasosOfertas];
+        
    
   
     // codigo a ejecutar si NO hay conexion
