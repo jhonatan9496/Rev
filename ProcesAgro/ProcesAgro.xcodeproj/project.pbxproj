@@ -452,6 +452,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = jhonatan;
 				TargetAttributes = {
+					A3BAADCC196E42760088BC31 = {
+						DevelopmentTeam = BCD3V3L5XE;
+					};
 					A3BAADF0196E42760088BC31 = {
 						TestTargetID = A3BAADCC196E42760088BC31;
 					};

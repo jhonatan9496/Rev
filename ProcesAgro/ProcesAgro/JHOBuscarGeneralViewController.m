@@ -102,6 +102,19 @@
     //variable de sentencia
     sqlite3_stmt *sentencia;
     //abrir la base de datos
+    
+    // Titulo
+    
+    NSMutableDictionary *dicSelectConsultas= [[NSMutableDictionary alloc] init];
+
+    [dicSelectConsultas  setValue:@"            CONVOCATORIAS" forKey:@"nombre"];
+    [dicSelectConsultas setValue:@"" forKey:@"descripcion"];
+    [dicSelectConsultas setValue:@""  forKey:@"descripcion_corta"];
+    [dicSelectConsultas setValue:@"" forKey:@"link"];
+    [dicSelectConsultas setValue:@"titulo" forKey:@"tipo"];
+    [vectorConvocatorias addObject:dicSelectConsultas];
+    
+    
     if (sqlite3_open([appDelegate.dataBasePath UTF8String], &dataBase)== SQLITE_OK) {
         // crea la sentencia sql de ingresar los datos a la db
         NSString *sql= [NSString stringWithFormat:@"select * from convocatorias"];
@@ -131,6 +144,14 @@
         NSString *sql2= [NSString stringWithFormat:@"select * from servicios"];
         //se crea la sentencia
         NSLog(@"%@",sql2);
+        
+        NSMutableDictionary *dicSelectConsultas2= [[NSMutableDictionary alloc] init];
+        [dicSelectConsultas2  setValue:@"            SERVICIOS" forKey:@"nombre"];
+        [dicSelectConsultas2 setValue:@" " forKey:@"descripcion"];
+        [dicSelectConsultas2 setValue:@" "  forKey:@"descripcion_corta"];
+        [dicSelectConsultas2 setValue:@" " forKey:@"link"];
+        [dicSelectConsultas2 setValue:@"titulo" forKey:@"tipo"];
+        [vectorConvocatorias addObject:dicSelectConsultas2];
         if (sqlite3_prepare_v2(dataBase, [sql2 UTF8String], -1, &sentencia, NULL)== SQLITE_OK) {
             NSLog(@"Listo Servicio");
             while  (sqlite3_step(sentencia)==SQLITE_ROW) {
@@ -153,6 +174,13 @@
         NSString *sql3= [NSString stringWithFormat:@"select * from ofertas_institucionales"];
         //se crea la sentencia
         NSLog(@"%@",sql3);
+        NSMutableDictionary *dicSelectConsultas1= [[NSMutableDictionary alloc] init];
+        [dicSelectConsultas1  setValue:@"            OFERTAS" forKey:@"nombre"];
+        [dicSelectConsultas1 setValue:@" " forKey:@"descripcion"];
+        [dicSelectConsultas1 setValue:@"  "  forKey:@"descripcion_corta"];
+        [dicSelectConsultas1 setValue:@" " forKey:@"link"];
+        [dicSelectConsultas1 setValue:@"titulo" forKey:@"tipo"];
+        [vectorConvocatorias addObject:dicSelectConsultas1];
         if (sqlite3_prepare_v2(dataBase, [sql3 UTF8String], -1, &sentencia, NULL)== SQLITE_OK) {
             NSLog(@"Listo una oferta");
             while  (sqlite3_step(sentencia)==SQLITE_ROW) {

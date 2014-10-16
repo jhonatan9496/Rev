@@ -580,7 +580,8 @@
     
     JHOServiciosViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"UrlServicios"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
-    cadaConvocatoria.urlCargar=@"http://www.siembra.gov.co/";
+    
+    cadaConvocatoria.urlCargar=@"http://www.agronet.gov.co/agronetweb1/Agromapas.aspx";
 
 }
 
@@ -600,7 +601,7 @@
     
     JHOServiciosViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"UrlServicios"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
-    cadaConvocatoria.urlCargar=@"http://www.agronet.gov.co/agronetweb1/Agromapas.aspx";
+    cadaConvocatoria.urlCargar=@"http://www.siembra.gov.co/";
     
     
 }
