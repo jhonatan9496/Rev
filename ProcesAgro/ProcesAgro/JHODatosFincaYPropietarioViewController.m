@@ -31,8 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(400, 400)];
+    
     
     
     appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];

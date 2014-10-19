@@ -21,11 +21,6 @@
 		A306647219C6677B00B3A56F /* certificado-incentivo-forestal.png in Resources */ = {isa = PBXBuildFile; fileRef = A306647119C6677B00B3A56F /* certificado-incentivo-forestal.png */; };
 		A306647419C667B100B3A56F /* tarjeta-profesional.png in Resources */ = {isa = PBXBuildFile; fileRef = A306647319C667B100B3A56F /* tarjeta-profesional.png */; };
 		A306647619C667DA00B3A56F /* capitalizacion-rural-dre.png in Resources */ = {isa = PBXBuildFile; fileRef = A306647519C667DA00B3A56F /* capitalizacion-rural-dre.png */; };
-		A314D16519E0F43700EF3637 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A314D16419E0F43700EF3637 /* Default.png */; };
-		A314D16719E0F45300EF3637 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A314D16619E0F45300EF3637 /* Default-568h@2x.png */; };
-		A314D16B19E0F4E300EF3637 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A314D16A19E0F4E300EF3637 /* Default@2x.png */; };
-		A314D16D19E0F56D00EF3637 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = A314D16C19E0F56D00EF3637 /* Default-Portrait.png */; };
-		A314D16F19E0F59A00EF3637 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A314D16E19E0F59A00EF3637 /* Default-Portrait@2x.png */; };
 		A338BF3D19983FF8004FD9DB /* convocatoria-fond.png in Resources */ = {isa = PBXBuildFile; fileRef = A338BF3C19983FF8004FD9DB /* convocatoria-fond.png */; };
 		A338BF3F1998446C004FD9DB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338BF3E1998446C004FD9DB /* Social.framework */; };
 		A338BF4119984480004FD9DB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A338BF4019984480004FD9DB /* Accounts.framework */; };
@@ -37,13 +32,7 @@
 		A35E784A1993F0CE00584FFC /* JHOListarConvocatoriasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A35E78491993F0CE00584FFC /* JHOListarConvocatoriasViewController.m */; };
 		A35E784D199420C100584FFC /* JHOBuscarGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A35E784C199420C100584FFC /* JHOBuscarGeneralViewController.m */; };
 		A36C33BE19F411E7006E857E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36C33BD19F411E7006E857E /* Main_iPhone.storyboard */; };
-		A3728D5D19CA40A400511727 /* ipad72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = A3728D5619CA40A400511727 /* ipad72x72.png */; };
-		A3728D5E19CA40A400511727 /* ipad72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3728D5719CA40A400511727 /* ipad72x72@2x.png */; };
-		A3728D5F19CA40A400511727 /* ipad76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = A3728D5819CA40A400511727 /* ipad76x76.png */; };
-		A3728D6019CA40A400511727 /* ipad76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3728D5919CA40A400511727 /* ipad76x76@2x.png */; };
-		A3728D6119CA40A400511727 /* iphone57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = A3728D5A19CA40A400511727 /* iphone57x57.png */; };
-		A3728D6219CA40A400511727 /* iphone57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3728D5B19CA40A400511727 /* iphone57x57@2x.png */; };
-		A3728D6319CA40A400511727 /* iphone60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3728D5C19CA40A400511727 /* iphone60x60@2x.png */; };
+		A36C33C219F46AFC006E857E /* launchIphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36C33C119F46AFC006E857E /* launchIphone.xib */; };
 		A38B2BB519A8EB8800549256 /* JHOOfertaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38B2BB419A8EB8800549256 /* JHOOfertaViewController.m */; };
 		A38B2BB819A9424A00549256 /* JHOInformacionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A38B2BB719A9424A00549256 /* JHOInformacionViewController.m */; };
 		A38DB2781979DAD400D44BED /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A38DB2771979DAD400D44BED /* libsqlite3.dylib */; };
@@ -105,11 +94,6 @@
 		A306647119C6677B00B3A56F /* certificado-incentivo-forestal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "certificado-incentivo-forestal.png"; sourceTree = "<group>"; };
 		A306647319C667B100B3A56F /* tarjeta-profesional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tarjeta-profesional.png"; sourceTree = "<group>"; };
 		A306647519C667DA00B3A56F /* capitalizacion-rural-dre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capitalizacion-rural-dre.png"; sourceTree = "<group>"; };
-		A314D16419E0F43700EF3637 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A314D16619E0F45300EF3637 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A314D16A19E0F4E300EF3637 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		A314D16C19E0F56D00EF3637 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
-		A314D16E19E0F59A00EF3637 /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x.png"; sourceTree = "<group>"; };
 		A338BF3C19983FF8004FD9DB /* convocatoria-fond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convocatoria-fond.png"; sourceTree = "<group>"; };
 		A338BF3E1998446C004FD9DB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A338BF4019984480004FD9DB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -124,13 +108,7 @@
 		A35E784B199420C100584FFC /* JHOBuscarGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOBuscarGeneralViewController.h; sourceTree = "<group>"; };
 		A35E784C199420C100584FFC /* JHOBuscarGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOBuscarGeneralViewController.m; sourceTree = "<group>"; };
 		A36C33BD19F411E7006E857E /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
-		A3728D5619CA40A400511727 /* ipad72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad72x72.png; sourceTree = "<group>"; };
-		A3728D5719CA40A400511727 /* ipad72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad72x72@2x.png"; sourceTree = "<group>"; };
-		A3728D5819CA40A400511727 /* ipad76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad76x76.png; sourceTree = "<group>"; };
-		A3728D5919CA40A400511727 /* ipad76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad76x76@2x.png"; sourceTree = "<group>"; };
-		A3728D5A19CA40A400511727 /* iphone57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone57x57.png; sourceTree = "<group>"; };
-		A3728D5B19CA40A400511727 /* iphone57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone57x57@2x.png"; sourceTree = "<group>"; };
-		A3728D5C19CA40A400511727 /* iphone60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone60x60@2x.png"; sourceTree = "<group>"; };
+		A36C33C119F46AFC006E857E /* launchIphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = launchIphone.xib; sourceTree = "<group>"; };
 		A37611EA1991CAE60085B190 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A37611EC1991CAF00085B190 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A38B2BB319A8EB8800549256 /* JHOOfertaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOOfertaViewController.h; sourceTree = "<group>"; };
@@ -361,6 +339,7 @@
 				A3BAADE9196E42760088BC31 /* JHOViewController.m */,
 				A3BAADEB196E42760088BC31 /* Images.xcassets */,
 				A3BAADD7196E42760088BC31 /* Supporting Files */,
+				A36C33C119F46AFC006E857E /* launchIphone.xib */,
 			);
 			path = ProcesAgro;
 			sourceTree = "<group>";
@@ -369,18 +348,6 @@
 			isa = PBXGroup;
 			children = (
 				A3C0C67719F1C36800884A06 /* ProcesAgroDB.sqlite */,
-				A314D16E19E0F59A00EF3637 /* Default-Portrait@2x.png */,
-				A314D16C19E0F56D00EF3637 /* Default-Portrait.png */,
-				A314D16A19E0F4E300EF3637 /* Default@2x.png */,
-				A314D16619E0F45300EF3637 /* Default-568h@2x.png */,
-				A314D16419E0F43700EF3637 /* Default.png */,
-				A3728D5619CA40A400511727 /* ipad72x72.png */,
-				A3728D5719CA40A400511727 /* ipad72x72@2x.png */,
-				A3728D5819CA40A400511727 /* ipad76x76.png */,
-				A3728D5919CA40A400511727 /* ipad76x76@2x.png */,
-				A3728D5A19CA40A400511727 /* iphone57x57.png */,
-				A3728D5B19CA40A400511727 /* iphone57x57@2x.png */,
-				A3728D5C19CA40A400511727 /* iphone60x60@2x.png */,
 				A3026F1819C7EEEB0002DDC2 /* lofo-facebook-200x200.png */,
 				A3026F1919C7EEEB0002DDC2 /* lofo-twitter-200x200.png */,
 				A306647519C667DA00B3A56F /* capitalizacion-rural-dre.png */,
@@ -503,34 +470,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				A306646819C6660500B3A56F /* agromapas.png in Resources */,
-				A314D16519E0F43700EF3637 /* Default.png in Resources */,
+				A36C33C219F46AFC006E857E /* launchIphone.xib in Resources */,
 				A3BAADE7196E42760088BC31 /* Main_iPad.storyboard in Resources */,
 				A306647419C667B100B3A56F /* tarjeta-profesional.png in Resources */,
 				A3BAADEC196E42760088BC31 /* Images.xcassets in Resources */,
 				A3026F1A19C7EEEB0002DDC2 /* lofo-facebook-200x200.png in Resources */,
-				A3728D6219CA40A400511727 /* iphone57x57@2x.png in Resources */,
-				A3728D6119CA40A400511727 /* iphone57x57.png in Resources */,
-				A3728D6319CA40A400511727 /* iphone60x60@2x.png in Resources */,
 				A338BF3D19983FF8004FD9DB /* convocatoria-fond.png in Resources */,
 				A3A31F6B19B2CF5500D88311 /* link-pagina-convocatoria.png in Resources */,
 				A306646A19C6664400B3A56F /* sipsa.png in Resources */,
-				A314D16B19E0F4E300EF3637 /* Default@2x.png in Resources */,
-				A314D16D19E0F56D00EF3637 /* Default-Portrait.png in Resources */,
 				A3C0C67819F1C36800884A06 /* ProcesAgroDB.sqlite in Resources */,
-				A3728D5D19CA40A400511727 /* ipad72x72.png in Resources */,
 				A306647019C6674A00B3A56F /* autorizacion-productos-ecologicos.png in Resources */,
 				A306646C19C6667B00B3A56F /* siembra.png in Resources */,
-				A3728D6019CA40A400511727 /* ipad76x76@2x.png in Resources */,
-				A3728D5E19CA40A400511727 /* ipad72x72@2x.png in Resources */,
 				A36C33BE19F411E7006E857E /* Main_iPhone.storyboard in Resources */,
 				A306647619C667DA00B3A56F /* capitalizacion-rural-dre.png in Resources */,
 				A3A31F7519B2D38700D88311 /* acerca_De.jpg in Resources */,
 				A306646619C6657900B3A56F /* cursos-vituales.png in Resources */,
-				A314D16719E0F45300EF3637 /* Default-568h@2x.png in Resources */,
 				A3A31F7319B2D31A00D88311 /* footer.jpg in Resources */,
 				A3026F1B19C7EEEB0002DDC2 /* lofo-twitter-200x200.png in Resources */,
-				A314D16F19E0F59A00EF3637 /* Default-Portrait@2x.png in Resources */,
-				A3728D5F19CA40A400511727 /* ipad76x76.png in Resources */,
 				A3BAADDB196E42760088BC31 /* InfoPlist.strings in Resources */,
 				A306646E19C6670200B3A56F /* tramite-V.png in Resources */,
 				A306647219C6677B00B3A56F /* certificado-incentivo-forestal.png in Resources */,
@@ -703,7 +659,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProcesAgro/ProcesAgro-Prefix.pch";
 				INFOPLIST_FILE = "ProcesAgro/ProcesAgro-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -717,7 +673,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProcesAgro/ProcesAgro-Prefix.pch";
 				INFOPLIST_FILE = "ProcesAgro/ProcesAgro-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

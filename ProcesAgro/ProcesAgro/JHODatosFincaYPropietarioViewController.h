@@ -17,7 +17,6 @@
     IBOutlet UITextField *fijoPropietario;
     IBOutlet UITextField *celularPropietario;
     
-    IBOutlet UIScrollView *scroller;
     
     UITextField *currentTextField;
     BOOL keyboardIsShown;
