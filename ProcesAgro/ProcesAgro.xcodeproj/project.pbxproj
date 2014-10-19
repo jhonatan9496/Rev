@@ -32,11 +32,11 @@
 		A338BF4819988117004FD9DB /* JHOCeldaPasosOfertaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A338BF4719988117004FD9DB /* JHOCeldaPasosOfertaTableViewCell.m */; };
 		A34EEEFF19EF9543008F43C6 /* JHOListarCursosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34EEEFE19EF9543008F43C6 /* JHOListarCursosViewController.m */; };
 		A34EEF0219EF955F008F43C6 /* JHOCadaCursoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34EEF0119EF955F008F43C6 /* JHOCadaCursoViewController.m */; };
-		A34EEF0419EF9966008F43C6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34EEF0319EF9966008F43C6 /* Main_iPhone.storyboard */; };
 		A35E78461991CC3400584FFC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37611EA1991CAE60085B190 /* AVFoundation.framework */; };
 		A35E78471991CC4000584FFC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37611EC1991CAF00085B190 /* MediaPlayer.framework */; };
 		A35E784A1993F0CE00584FFC /* JHOListarConvocatoriasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A35E78491993F0CE00584FFC /* JHOListarConvocatoriasViewController.m */; };
 		A35E784D199420C100584FFC /* JHOBuscarGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A35E784C199420C100584FFC /* JHOBuscarGeneralViewController.m */; };
+		A36C33BE19F411E7006E857E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36C33BD19F411E7006E857E /* Main_iPhone.storyboard */; };
 		A3728D5D19CA40A400511727 /* ipad72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = A3728D5619CA40A400511727 /* ipad72x72.png */; };
 		A3728D5E19CA40A400511727 /* ipad72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3728D5719CA40A400511727 /* ipad72x72@2x.png */; };
 		A3728D5F19CA40A400511727 /* ipad76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = A3728D5819CA40A400511727 /* ipad76x76.png */; };
@@ -119,11 +119,11 @@
 		A34EEEFE19EF9543008F43C6 /* JHOListarCursosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOListarCursosViewController.m; sourceTree = "<group>"; };
 		A34EEF0019EF955F008F43C6 /* JHOCadaCursoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOCadaCursoViewController.h; sourceTree = "<group>"; };
 		A34EEF0119EF955F008F43C6 /* JHOCadaCursoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOCadaCursoViewController.m; sourceTree = "<group>"; };
-		A34EEF0319EF9966008F43C6 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iPhone.storyboard; path = ../../../../Desktop/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A35E78481993F0CE00584FFC /* JHOListarConvocatoriasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOListarConvocatoriasViewController.h; sourceTree = "<group>"; };
 		A35E78491993F0CE00584FFC /* JHOListarConvocatoriasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOListarConvocatoriasViewController.m; sourceTree = "<group>"; };
 		A35E784B199420C100584FFC /* JHOBuscarGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOBuscarGeneralViewController.h; sourceTree = "<group>"; };
 		A35E784C199420C100584FFC /* JHOBuscarGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOBuscarGeneralViewController.m; sourceTree = "<group>"; };
+		A36C33BD19F411E7006E857E /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A3728D5619CA40A400511727 /* ipad72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad72x72.png; sourceTree = "<group>"; };
 		A3728D5719CA40A400511727 /* ipad72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad72x72@2x.png"; sourceTree = "<group>"; };
 		A3728D5819CA40A400511727 /* ipad76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad76x76.png; sourceTree = "<group>"; };
@@ -355,7 +355,7 @@
 				A3ABAD1919B234FD008A435A /* Tramite */,
 				A3BAADDF196E42760088BC31 /* JHOAppDelegate.h */,
 				A3BAADE0196E42760088BC31 /* JHOAppDelegate.m */,
-				A34EEF0319EF9966008F43C6 /* Main_iPhone.storyboard */,
+				A36C33BD19F411E7006E857E /* Main_iPhone.storyboard */,
 				A3BAADE5196E42760088BC31 /* Main_iPad.storyboard */,
 				A3BAADE8196E42760088BC31 /* JHOViewController.h */,
 				A3BAADE9196E42760088BC31 /* JHOViewController.m */,
@@ -522,7 +522,7 @@
 				A306646C19C6667B00B3A56F /* siembra.png in Resources */,
 				A3728D6019CA40A400511727 /* ipad76x76@2x.png in Resources */,
 				A3728D5E19CA40A400511727 /* ipad72x72@2x.png in Resources */,
-				A34EEF0419EF9966008F43C6 /* Main_iPhone.storyboard in Resources */,
+				A36C33BE19F411E7006E857E /* Main_iPhone.storyboard in Resources */,
 				A306647619C667DA00B3A56F /* capitalizacion-rural-dre.png in Resources */,
 				A3A31F7519B2D38700D88311 /* acerca_De.jpg in Resources */,
 				A306646619C6657900B3A56F /* cursos-vituales.png in Resources */,
