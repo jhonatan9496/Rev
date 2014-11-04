@@ -63,6 +63,20 @@
 		A3BAADFD196E42760088BC31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3BAADFB196E42760088BC31 /* InfoPlist.strings */; };
 		A3BAADFF196E42760088BC31 /* ProcesAgroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BAADFE196E42760088BC31 /* ProcesAgroTests.m */; };
 		A3C0C67819F1C36800884A06 /* ProcesAgroDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A3C0C67719F1C36800884A06 /* ProcesAgroDB.sqlite */; };
+		A3CFB4AD1A08946100EB8DC8 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4A11A08946100EB8DC8 /* Icon-60.png */; };
+		A3CFB4AE1A08946100EB8DC8 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4A21A08946100EB8DC8 /* Icon-60@2x.png */; };
+		A3CFB4AF1A08946100EB8DC8 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4A31A08946100EB8DC8 /* Icon-60@3x.png */; };
+		A3CFB4B01A08946100EB8DC8 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4A41A08946100EB8DC8 /* Icon-76.png */; };
+		A3CFB4B11A08946100EB8DC8 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4A51A08946100EB8DC8 /* Icon-76@2x.png */; };
+		A3CFB4B21A08946100EB8DC8 /* Icon-76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4A61A08946100EB8DC8 /* Icon-76@3x.png */; };
+		A3CFB4B31A08946100EB8DC8 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4A71A08946100EB8DC8 /* Icon-Small.png */; };
+		A3CFB4B41A08946100EB8DC8 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4A81A08946100EB8DC8 /* Icon-Small@2x.png */; };
+		A3CFB4B51A08946100EB8DC8 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4A91A08946100EB8DC8 /* Icon-Small@3x.png */; };
+		A3CFB4B61A08946100EB8DC8 /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4AA1A08946100EB8DC8 /* Icon-Spotlight-40.png */; };
+		A3CFB4B71A08946100EB8DC8 /* Icon-Spotlight-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4AB1A08946100EB8DC8 /* Icon-Spotlight-40@2x.png */; };
+		A3CFB4B81A08946100EB8DC8 /* Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CFB4AC1A08946100EB8DC8 /* Icon-Spotlight-40@3x.png */; };
+		A3D112321A0898A800D1C7EE /* subir.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D112311A0898A800D1C7EE /* subir.png */; };
+		A3D112341A0898F100D1C7EE /* fija.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D112331A0898F100D1C7EE /* fija.png */; };
 		A3EEC7B11995E3D500B29AB8 /* JHOCadaConvocatoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EEC7B01995E3D500B29AB8 /* JHOCadaConvocatoriaViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +170,20 @@
 		A3BAADFC196E42760088BC31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A3BAADFE196E42760088BC31 /* ProcesAgroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProcesAgroTests.m; sourceTree = "<group>"; };
 		A3C0C67719F1C36800884A06 /* ProcesAgroDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProcesAgroDB.sqlite; sourceTree = "<group>"; };
+		A3CFB4A11A08946100EB8DC8 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		A3CFB4A21A08946100EB8DC8 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		A3CFB4A31A08946100EB8DC8 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		A3CFB4A41A08946100EB8DC8 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		A3CFB4A51A08946100EB8DC8 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		A3CFB4A61A08946100EB8DC8 /* Icon-76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@3x.png"; sourceTree = "<group>"; };
+		A3CFB4A71A08946100EB8DC8 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		A3CFB4A81A08946100EB8DC8 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		A3CFB4A91A08946100EB8DC8 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		A3CFB4AA1A08946100EB8DC8 /* Icon-Spotlight-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40.png"; sourceTree = "<group>"; };
+		A3CFB4AB1A08946100EB8DC8 /* Icon-Spotlight-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@2x.png"; sourceTree = "<group>"; };
+		A3CFB4AC1A08946100EB8DC8 /* Icon-Spotlight-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@3x.png"; sourceTree = "<group>"; };
+		A3D112311A0898A800D1C7EE /* subir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subir.png; sourceTree = "<group>"; };
+		A3D112331A0898F100D1C7EE /* fija.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fija.png; sourceTree = "<group>"; };
 		A3EEC7AF1995E3D500B29AB8 /* JHOCadaConvocatoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOCadaConvocatoriaViewController.h; sourceTree = "<group>"; };
 		A3EEC7B01995E3D500B29AB8 /* JHOCadaConvocatoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOCadaConvocatoriaViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -347,6 +375,9 @@
 		A3BAADD7196E42760088BC31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3D112331A0898F100D1C7EE /* fija.png */,
+				A3D112311A0898A800D1C7EE /* subir.png */,
+				A3CFB4A01A0893E200EB8DC8 /* iconosApp */,
 				A3C0C67719F1C36800884A06 /* ProcesAgroDB.sqlite */,
 				A3026F1819C7EEEB0002DDC2 /* lofo-facebook-200x200.png */,
 				A3026F1919C7EEEB0002DDC2 /* lofo-twitter-200x200.png */,
@@ -387,6 +418,25 @@
 				A3BAADFB196E42760088BC31 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3CFB4A01A0893E200EB8DC8 /* iconosApp */ = {
+			isa = PBXGroup;
+			children = (
+				A3CFB4A11A08946100EB8DC8 /* Icon-60.png */,
+				A3CFB4A21A08946100EB8DC8 /* Icon-60@2x.png */,
+				A3CFB4A31A08946100EB8DC8 /* Icon-60@3x.png */,
+				A3CFB4A41A08946100EB8DC8 /* Icon-76.png */,
+				A3CFB4A51A08946100EB8DC8 /* Icon-76@2x.png */,
+				A3CFB4A61A08946100EB8DC8 /* Icon-76@3x.png */,
+				A3CFB4A71A08946100EB8DC8 /* Icon-Small.png */,
+				A3CFB4A81A08946100EB8DC8 /* Icon-Small@2x.png */,
+				A3CFB4A91A08946100EB8DC8 /* Icon-Small@3x.png */,
+				A3CFB4AA1A08946100EB8DC8 /* Icon-Spotlight-40.png */,
+				A3CFB4AB1A08946100EB8DC8 /* Icon-Spotlight-40@2x.png */,
+				A3CFB4AC1A08946100EB8DC8 /* Icon-Spotlight-40@3x.png */,
+			);
+			name = iconosApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,26 +520,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				A306646819C6660500B3A56F /* agromapas.png in Resources */,
+				A3CFB4B01A08946100EB8DC8 /* Icon-76.png in Resources */,
+				A3CFB4AF1A08946100EB8DC8 /* Icon-60@3x.png in Resources */,
+				A3CFB4B41A08946100EB8DC8 /* Icon-Small@2x.png in Resources */,
+				A3CFB4B71A08946100EB8DC8 /* Icon-Spotlight-40@2x.png in Resources */,
 				A36C33C219F46AFC006E857E /* launchIphone.xib in Resources */,
+				A3D112341A0898F100D1C7EE /* fija.png in Resources */,
 				A3BAADE7196E42760088BC31 /* Main_iPad.storyboard in Resources */,
 				A306647419C667B100B3A56F /* tarjeta-profesional.png in Resources */,
 				A3BAADEC196E42760088BC31 /* Images.xcassets in Resources */,
+				A3D112321A0898A800D1C7EE /* subir.png in Resources */,
 				A3026F1A19C7EEEB0002DDC2 /* lofo-facebook-200x200.png in Resources */,
+				A3CFB4B51A08946100EB8DC8 /* Icon-Small@3x.png in Resources */,
 				A338BF3D19983FF8004FD9DB /* convocatoria-fond.png in Resources */,
+				A3CFB4B11A08946100EB8DC8 /* Icon-76@2x.png in Resources */,
+				A3CFB4B61A08946100EB8DC8 /* Icon-Spotlight-40.png in Resources */,
 				A3A31F6B19B2CF5500D88311 /* link-pagina-convocatoria.png in Resources */,
 				A306646A19C6664400B3A56F /* sipsa.png in Resources */,
 				A3C0C67819F1C36800884A06 /* ProcesAgroDB.sqlite in Resources */,
 				A306647019C6674A00B3A56F /* autorizacion-productos-ecologicos.png in Resources */,
 				A306646C19C6667B00B3A56F /* siembra.png in Resources */,
+				A3CFB4AD1A08946100EB8DC8 /* Icon-60.png in Resources */,
 				A36C33BE19F411E7006E857E /* Main_iPhone.storyboard in Resources */,
 				A306647619C667DA00B3A56F /* capitalizacion-rural-dre.png in Resources */,
+				A3CFB4B81A08946100EB8DC8 /* Icon-Spotlight-40@3x.png in Resources */,
+				A3CFB4B21A08946100EB8DC8 /* Icon-76@3x.png in Resources */,
 				A3A31F7519B2D38700D88311 /* acerca_De.jpg in Resources */,
 				A306646619C6657900B3A56F /* cursos-vituales.png in Resources */,
+				A3CFB4B31A08946100EB8DC8 /* Icon-Small.png in Resources */,
 				A3A31F7319B2D31A00D88311 /* footer.jpg in Resources */,
 				A3026F1B19C7EEEB0002DDC2 /* lofo-twitter-200x200.png in Resources */,
 				A3BAADDB196E42760088BC31 /* InfoPlist.strings in Resources */,
 				A306646E19C6670200B3A56F /* tramite-V.png in Resources */,
 				A306647219C6677B00B3A56F /* certificado-incentivo-forestal.png in Resources */,
+				A3CFB4AE1A08946100EB8DC8 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,8 +723,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProcesAgro/ProcesAgro-Prefix.pch";
 				INFOPLIST_FILE = "ProcesAgro/ProcesAgro-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -673,8 +738,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProcesAgro/ProcesAgro-Prefix.pch";
 				INFOPLIST_FILE = "ProcesAgro/ProcesAgro-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
