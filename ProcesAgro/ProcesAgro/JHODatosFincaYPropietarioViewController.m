@@ -33,6 +33,15 @@
     [super viewDidLoad];
     
     
+    [ica3101 setDelegate:self];
+    [nombreFinca setDelegate:self];
+    [nombrePropietario setDelegate:self];
+    [cedulaPropietario setDelegate:self];
+    [fijoPropietario setDelegate:self];
+    [celularPropietario setDelegate:self];
+    
+    
+    
     
     appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
     appDelegate.tramiteDiccionario = [[NSMutableDictionary alloc]init];
@@ -48,6 +57,41 @@
  
     
 }
+
+
+
+//---------------------------------------------------------------------------
+//------------- CAMPOS DE RESTRICCION DE CARACTERES   ---------------------
+//---------------------------------------------------------------------------
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    // VALIDAR ICA
+    if(textField == ica3101)
+    {
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"] invertedSet];
+        NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
+        return [string isEqualToString:filtered];
+    }
+    else if(textField == nombreFinca || textField == nombrePropietario)
+    {
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "] invertedSet];
+        NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
+        return [string isEqualToString:filtered];
+    }
+    else if(textField == cedulaPropietario || textField == fijoPropietario || textField == celularPropietario)
+    {
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"1234567890"] invertedSet];
+        NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
+        return [string isEqualToString:filtered];
+    }
+    else
+        return YES;
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -127,7 +171,7 @@
 //----------------------------------------------------
 
 - (IBAction)salirIca:(id)sender {
-     [self resignFirstResponder];
+     [ica3101 resignFirstResponder];
 }
 
 //----------------------------------------------------
@@ -203,6 +247,16 @@
     [self.view setFrame:CGRectMake(0,0,320,460)];
 }
 */
+
+//------------------------------------------------------
+//-------------Guardar todos  Teclado---------------------
+//------------------------------------------------------
+
+-(BOOL) textFieldShouldReturn: (UITextField *) textField {
+    [self resignFirstResponder];
+    return YES;
+}
+
 
 
 

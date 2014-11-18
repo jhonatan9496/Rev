@@ -119,4 +119,14 @@
 - (IBAction)salirprimer:(id)sender {
     [self resignFirstResponder];
 }
+
+//------------------------------------------------------
+//-------------Guardar todos  Teclado---------------------
+//------------------------------------------------------
+
+-(BOOL) textFieldShouldReturn: (UITextField *) textField {
+    [self resignFirstResponder];
+    return YES;
+}
+
 @end

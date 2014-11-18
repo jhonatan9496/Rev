@@ -29,6 +29,9 @@
 {
     [super viewDidLoad];
     
+    [municipio setDelegate:self];
+    [departamento setDelegate:self];
+    
     //Boton avanzar con metodo accion avanzar
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(avanzar:)];
     //titulo
@@ -100,4 +103,40 @@
 - (IBAction)salirDepto:(id)sender {
     [self resignFirstResponder];
 }
+
+
+
+
+
+//---------------------------------------------------------------------------
+//------------- CAMPOS DE RESTRICCION DE CARACTERES   ---------------------
+//---------------------------------------------------------------------------
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    // VALIDAR ICA
+    if(textField == municipio || textField == departamento)
+    {
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"] invertedSet];
+        NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
+        return [string isEqualToString:filtered];
+    }
+    
+    else
+        return YES;
+    
+    
+}
+
+//------------------------------------------------------
+//-------------Guardar todos  Teclado---------------------
+//------------------------------------------------------
+
+-(BOOL) textFieldShouldReturn: (UITextField *) textField {
+    [self resignFirstResponder];
+    return YES;
+}
+
+
 @end
