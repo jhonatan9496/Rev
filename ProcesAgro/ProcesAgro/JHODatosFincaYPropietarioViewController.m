@@ -116,16 +116,12 @@
 
 - (IBAction)celularEdita:(id)sender {
     
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-   [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
-    
+        
 }
 
 
 - (IBAction)sitermina:(id)sender {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
     
-    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
     [self resignFirstResponder];
 }
 
@@ -134,15 +130,11 @@
 //----------------------------------------------------
 
 - (IBAction)beginTelefonoFijo:(id)sender {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-    [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
     
 }
 
 - (IBAction)salirTelefonoFijo:(id)sender {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
     
-    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
     [self resignFirstResponder];
 }
 //----------------------------------------------------
