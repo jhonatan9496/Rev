@@ -68,26 +68,30 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     
     // VALIDAR ICA
-    if(textField == ica3101)
+    
+    if(textField == ica3101 && [[textField text] length] - range.length + string.length <= 10)
     {
+        //return [[textField text] length] - range.length + string.length < 4;
+        
         NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
+        
         return [string isEqualToString:filtered];
     }
-    else if(textField == nombreFinca || textField == nombrePropietario)
+    else if((textField == nombreFinca && [[textField text] length] - range.length + string.length <= 50) || (textField == nombrePropietario && [[textField text] length] - range.length + string.length <= 50) )
     {
         NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
         return [string isEqualToString:filtered];
     }
-    else if(textField == cedulaPropietario || textField == fijoPropietario || textField == celularPropietario)
+    else if((textField == cedulaPropietario && [[textField text] length] - range.length + string.length <= 11) || (textField == fijoPropietario && [[textField text] length] - range.length + string.length <= 11)|| (textField == celularPropietario && [[textField text] length] - range.length + string.length <= 10))
     {
         NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"1234567890"] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
         return [string isEqualToString:filtered];
     }
     else
-        return YES;
+        return NO;
     
     
 }
@@ -191,9 +195,9 @@
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([ica3101.text isEqualToString:@""] || [nombreFinca.text isEqualToString:@""] ||[nombrePropietario.text isEqualToString:@""]||[cedulaPropietario.text isEqualToString:@""]||[fijoPropietario.text isEqualToString:@""]||[celularPropietario.text isEqualToString:@""]||[ica3101.text length]>10||[nombreFinca.text length]>20||[nombrePropietario.text length]>20||[cedulaPropietario.text length]>14||[fijoPropietario.text length]>10||[celularPropietario.text length]>12) {
+    if ([ica3101.text isEqualToString:@""] || [nombreFinca.text isEqualToString:@""] ||[nombrePropietario.text isEqualToString:@""]||[cedulaPropietario.text isEqualToString:@""]||[fijoPropietario.text isEqualToString:@""]||[celularPropietario.text isEqualToString:@""]) {
         
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios o Demaciado largos" message:@"Existen campos Vacios o Demaciado Largos. \n Complete todos los campos ó verifique  que la informacion sea correcta para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios " message:@"Existen campos Vacios. \n Complete todos los campos " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
     }else {
         //------------------------------------------------------------
         //--------------Agregmos datos al diccionario--------------------

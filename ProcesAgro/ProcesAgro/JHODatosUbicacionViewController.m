@@ -16,6 +16,8 @@
 
 @implementation JHODatosUbicacionViewController
 
+@synthesize departamentos,municipios,vectorDepartamentos,vectorMunicipios;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,7 +35,52 @@
     [departamento setDelegate:self];
     
     //Boton avanzar con metodo accion avanzar
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(avanzar:)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+    
+    
+    // --------------------------------
+    //  picker
+    // --------------------------------
+    
+    self.departamentos.tag=1;
+    self.municipios.tag=2;
+    
+    //llamo vector json
+    NSURL * url = [NSURL URLWithString:@"http://procesagro.tucompualdia.com/departamentos"];
+    NSData * jsonData = [NSData dataWithContentsOfURL:url
+                                              options:NSUTF8StringEncoding
+                                                error:nil];
+    NSError * error;
+    NSArray * arreglo= [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    NSLog(@"%@",arreglo);
+    
+    //arreglo temporal
+    NSMutableArray *d = [[NSMutableArray alloc]initWithObjects:@"Seleccione Departamento", nil];
+    
+    // lleno arreglo temporal con lo que necesito de json
+    for (int i=0; i<[arreglo count]; i++) {
+        NSObject *tmp =[arreglo[i] objectForKey:@"nombreDepartamento"];
+        [d addObject:tmp];
+    }
+    
+    // asigno al pick view el vector
+    self.vectorDepartamentos =d;
+    
+    NSMutableArray *m = [[NSMutableArray alloc]initWithObjects:@"Seleccione Departamento", nil];
+     self.vectorMunicipios =m;
+    
+    
+    /*
+    //Crear boton info
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    //Asignarle evento al boton info
+    [btn addTarget:self action:@selector(avanzar:) forControlEvents:UIControlEventTouchUpInside];
+    //Agregar el boton al nav bar
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+     
+     */
+    
     //titulo
     self.navigationItem.title = @"Ubicacion";
     
@@ -62,6 +109,47 @@
 
 
 
+
+// ------------------
+// metodos pick
+// ------------------
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return [vectorDepartamentos count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    if (self.departamentos.tag == 1) {
+        
+        return [self.vectorDepartamentos objectAtIndex:row];
+    }
+    return [self.vectorMunicipios objectAtIndex:row];
+    
+}
+
+
+- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    int selet = row;
+    NSLog(@"%i",selet);
+    
+    
+    [departamentos reloadAllComponents];
+    
+    if (self.departamentos.tag == 1) {
+        
+        NSLog(@"First Picker View selected Value");
+    }
+    else if(self.municipios.tag == 2){
+        
+        NSLog(@"Second Picker View Selected Value");
+    }
+    
+    
+}
 
 - (IBAction)avanzar:(id)sender {
     

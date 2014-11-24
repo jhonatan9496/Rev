@@ -13,7 +13,21 @@
     IBOutlet UITextField *municipio;
     IBOutlet UITextField *departamento;
     
+    IBOutlet UIPickerView *departamentos;
+    IBOutlet UIPickerView *municipios;
+    
+    NSMutableArray  *vectorDepartamentos;
+    NSMutableArray  *vectorMunicipios;
+    
 }
+
+@property (strong, nonatomic) IBOutlet UIPickerView *departamentos;
+@property (strong, nonatomic) IBOutlet UIPickerView *municipios;
+
+@property (strong, nonatomic) IBOutlet  NSMutableArray *vectorDepartamentos;
+@property (strong, nonatomic) IBOutlet  NSMutableArray  *vectorMunicipios;
+
+
 - (IBAction)salirMunicipio:(id)sender;
 - (IBAction)salirDepto:(id)sender;
 

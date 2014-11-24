@@ -29,8 +29,14 @@
 {
     [super viewDidLoad];
     
+    
+    [primeraVez setDelegate:self];
+    [nacimiento setDelegate:self];
+    [compra setDelegate:self];
+    [perdidaDIN setDelegate:self];
+    
     //Boton avanzar con metodo accion avanzar
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(avanzar:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
     //titulo
     self.navigationItem.title = @"Motivo";
     
@@ -56,12 +62,27 @@
     NSLog(@"Vector %@" ,appDelegate.tramiteVector);
     */
     
+    int ani =[[appDelegate.tramiteDiccionario objectForKey:@"menor1Bovinos"] integerValue]+
+    [[appDelegate.tramiteDiccionario objectForKey:@"entre12Bovinos"] integerValue]+
+    [[appDelegate.tramiteDiccionario objectForKey:@"entre23Bovinos"] integerValue]+
+    [[appDelegate.tramiteDiccionario objectForKey:@"mayores3Bovinos"] integerValue]+
+    
+    [[appDelegate.tramiteDiccionario objectForKey:@"menor1Bufalino"] integerValue]+
+    [[appDelegate.tramiteDiccionario objectForKey:@"entre12Bufalino"] integerValue]+
+    [[appDelegate.tramiteDiccionario objectForKey:@"entre23Bufalino"] integerValue]+
+    [[appDelegate.tramiteDiccionario objectForKey:@"mayor3Bufalino"] integerValue];
+    
+    int mot = [primeraVez.text integerValue]+[nacimiento.text integerValue]+[compra.text integerValue]+[perdidaDIN.text integerValue];
+    
+    if ( ani==mot) {
+    
+    
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([primeraVez.text isEqualToString:@""] || [nacimiento.text isEqualToString:@""] ||[compra.text isEqualToString:@""]||[perdidaDIN.text isEqualToString:@""]||[primeraVez.text length]>3||[nacimiento.text length]>3||[compra.text length]>3||[perdidaDIN.text length]>3) {
+    if ([primeraVez.text isEqualToString:@""] || [nacimiento.text isEqualToString:@""] ||[compra.text isEqualToString:@""]||[perdidaDIN.text isEqualToString:@""]) {
         
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios o Demaciado largos" message:@"Existen campos Vacios o Demaciado Largos. \n Complete todos los campos ó verifique  que la informacion sea correcta para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios" message:@"Existen campos Vacios. \n Complete todos los campos para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
     }else {
 
         
@@ -76,7 +97,9 @@
     JHODatosMotivoViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"Enviar"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
     }
-    
+    }else{
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Motivo" message:@"El numero de animales  a identificar no es igual al numero de motivo de identificacion. \n Debe comprobar que la suma de bovinos y bufalinos sea igual a la suma de animales a identificar" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
 }
 
 
@@ -97,14 +120,14 @@
 
 
 - (IBAction)begin:(id)sender {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-    [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
+//    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+//    [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
 }
 
 - (IBAction)salirdin:(id)sender {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-    
-    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
+//    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+//    
+//    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
     [self resignFirstResponder];
 }
 
@@ -119,6 +142,27 @@
 - (IBAction)salirprimer:(id)sender {
     [self resignFirstResponder];
 }
+
+//---------------------------------------------------------------------------
+//------------- CAMPOS DE RESTRICCION DE CARACTERES   ---------------------
+//---------------------------------------------------------------------------
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    if((textField == primeraVez && [[textField text] length] - range.length + string.length <= 3) || (textField == nacimiento && [[textField text] length] - range.length + string.length <= 3) || (textField == compra&& [[textField text] length] - range.length + string.length <= 3)|| (textField == perdidaDIN&& [[textField text] length] - range.length + string.length <= 3))
+    {
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"1234567890"] invertedSet];
+        NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
+        return [string isEqualToString:filtered];
+    }
+    else
+        return NO;
+    
+    
+}
+
+
 
 //------------------------------------------------------
 //-------------Guardar todos  Teclado---------------------

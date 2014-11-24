@@ -28,8 +28,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [menor1Bufalino setDelegate:self];
+    [entre12Bufalino setDelegate:self];
+    [entre23Bufalino setDelegate:self];
+    [mayor3Bufalino setDelegate:self];
     //Boton avanzar con metodo accion avanzar
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(avanzar:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
     //titulo
     self.navigationItem.title = @"Bufalinos";
 
@@ -44,6 +49,8 @@
 
 - (IBAction)avanzar:(id)sender {
     
+    
+    
     // creamos un objeto del delegado para acceder a las variables
     JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
     /*
@@ -55,12 +62,23 @@
     NSLog(@"Vector %@" ,appDelegate.tramiteVector);
     */
     
+    int resultado =[[appDelegate.tramiteDiccionario objectForKey:@"menor1Bovinos"] integerValue]+
+    [[appDelegate.tramiteDiccionario objectForKey:@"entre12Bovinos"] integerValue]+
+    [[appDelegate.tramiteDiccionario objectForKey:@"entre23Bovinos"] integerValue]+
+    [[appDelegate.tramiteDiccionario objectForKey:@"mayores3Bovinos"] integerValue]+
+    [menor1Bufalino.text integerValue]+
+    [entre12Bufalino.text integerValue]+
+    [entre23Bufalino.text integerValue]+
+    [mayor3Bufalino.text integerValue];
+    
+    if ( resultado> 0) {
+        
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([menor1Bufalino.text isEqualToString:@""] || [entre12Bufalino.text isEqualToString:@""] ||[entre23Bufalino.text isEqualToString:@""]||[mayor3Bufalino.text isEqualToString:@""]||[menor1Bufalino.text length]>3||[entre12Bufalino.text length]>3||[entre23Bufalino.text length]>3||[mayor3Bufalino.text length]>3) {
+    if ([menor1Bufalino.text isEqualToString:@""] || [entre12Bufalino.text isEqualToString:@""] ||[entre23Bufalino.text isEqualToString:@""]||[mayor3Bufalino.text isEqualToString:@""]) {
         
-       UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios o Demaciado largos" message:@"Existen campos Vacios o Demaciado Largos. \n Complete todos los campos ó verifique  que la informacion sea correcta para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+       UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios" message:@"Existen campos Vacios. \n Complete todos los campos  para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
     }else {
 
     
@@ -75,8 +93,12 @@
     JHODatosMotivoViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"Motivo"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
     }
+    }else {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta 0 a Identificar" message:@"Para poder enviar el tramite almenos debe identificar 1 animal" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    
+    
 }
-
 
 /*
 #pragma mark - Navigation
@@ -96,14 +118,14 @@
 
 
 - (IBAction)begin3:(id)sender {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-    [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
+//    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+//    [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
 }
 
 - (IBAction)salir3:(id)sender {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-    
-    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
+//    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+//    
+//    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
     [self resignFirstResponder];
 }
 
@@ -117,6 +139,26 @@
 
 - (IBAction)salir23:(id)sender {
      [self resignFirstResponder];
+}
+
+
+//---------------------------------------------------------------------------
+//------------- CAMPOS DE RESTRICCION DE CARACTERES   ---------------------
+//---------------------------------------------------------------------------
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    if((textField == menor1Bufalino && [[textField text] length] - range.length + string.length <= 3) || (textField == entre12Bufalino && [[textField text] length] - range.length + string.length <= 3) || (textField == entre23Bufalino&& [[textField text] length] - range.length + string.length <= 3)|| (textField == mayor3Bufalino&& [[textField text] length] - range.length + string.length <= 3))
+    {
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"1234567890"] invertedSet];
+        NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
+        return [string isEqualToString:filtered];
+    }
+    else
+        return NO;
+    
+    
 }
 
 

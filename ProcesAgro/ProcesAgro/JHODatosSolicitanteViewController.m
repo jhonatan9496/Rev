@@ -36,10 +36,10 @@
     [nombreSolicitante setDelegate:self];
     [cedulaSolicitante setDelegate:self];
     [fijoSolicitante setDelegate:self];
-    [cedulaSolicitante setDelegate:self];
+    [celularSolicitante setDelegate:self];
     
     //Boton avanzar con metodo accion avanzar
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(avanzar:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
     //titulo
     self.navigationItem.title = @"Solicitante";
     // Do any additional setup after loading the view.
@@ -80,9 +80,9 @@
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([nombreSolicitante.text isEqualToString:@""] || [cedulaSolicitante.text isEqualToString:@""] ||[fijoSolicitante.text isEqualToString:@""]||[celularSolicitante.text isEqualToString:@""]||[nombreSolicitante.text length]>15||[cedulaSolicitante.text length]>15||[fijoSolicitante.text length]>15||[celularSolicitante.text length]>15||[nombreSolicitante.text length]>15) {
+    if ([nombreSolicitante.text isEqualToString:@""] || [cedulaSolicitante.text isEqualToString:@""] ||[fijoSolicitante.text isEqualToString:@""]||[celularSolicitante.text isEqualToString:@""]) {
         
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios o Demaciado largos" message:@"Existen campos Vacios o Demaciado Largos. \n Complete todos los campos ó verifique  que la informacion sea correcta para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];    }else {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios" message:@"Existen campos Vacios. \n Complete todos los campos  para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];    }else {
 
     //------------------------------------------------------------
     //--------------Agregmos datos al vector--------------------
@@ -128,20 +128,20 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     
     // VALIDAR ICA
-    if(textField == nombreSolicitante)
+    if(textField == nombreSolicitante && [[textField text] length] - range.length + string.length <= 30)
     {
         NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
         return [string isEqualToString:filtered];
     }
-    else if(textField == celularSolicitante || textField == fijoSolicitante || textField == cedulaSolicitante)
+    else if((textField == celularSolicitante && [[textField text] length] - range.length + string.length <= 10) || (textField == fijoSolicitante && [[textField text] length] - range.length + string.length <= 10) || (textField == cedulaSolicitante&& [[textField text] length] - range.length + string.length <= 10))
     {
         NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"1234567890"] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
         return [string isEqualToString:filtered];
     }
     else
-        return YES;
+        return NO;
     
     
 }

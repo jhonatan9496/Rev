@@ -29,8 +29,15 @@
 {
     [super viewDidLoad];
     
+    //Validar entrada de datos
+    [menor1Bovinos setDelegate:self];
+    [entre12Bovinos setDelegate:self];
+    [entre23Bovinos setDelegate:self];
+    [mayores3Bovinos setDelegate:self];
+
+    
     //Boton avanzar con metodo accion avanzar
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(avanzar:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
     //titulo
     self.navigationItem.title = @"Bovinos";
     // Do any additional setup after loading the view.
@@ -70,9 +77,9 @@
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([menor1Bovinos.text isEqualToString:@""] || [entre12Bovinos.text isEqualToString:@""] ||[entre23Bovinos.text isEqualToString:@""]||[mayores3Bovinos.text isEqualToString:@""]||[menor1Bovinos.text length]>3||[entre12Bovinos.text length]>3||[entre23Bovinos.text length]>3||[mayores3Bovinos.text length]>3) {
+    if ([menor1Bovinos.text isEqualToString:@""] || [entre12Bovinos.text isEqualToString:@""] ||[entre23Bovinos.text isEqualToString:@""]||[mayores3Bovinos.text isEqualToString:@""]) {
         
-       UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios o Demaciado largos" message:@"Existen campos Vacios o Demaciado Largos. \n Complete todos los campos ó verifique  que la informacion sea correcta para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+       UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios " message:@"Existen campos Vacios. \n Complete todos los campos" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
     }else {
 
     //------------------------------------------------------------
@@ -98,14 +105,14 @@
 
 
 - (IBAction)begin:(id)sender {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-    [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
+//    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+//    [self.view setFrame:CGRectMake(appFrame.origin.x,-196,appFrame.size.width,appFrame.size.height)];
 }
 
 - (IBAction)salir:(id)sender {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-    
-    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
+//    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+//    
+//    [self.view setFrame:CGRectMake(appFrame.origin.x,0,appFrame.size.width,appFrame.size.height)];
     [self resignFirstResponder];
 }
 
@@ -119,6 +126,26 @@
 
 - (IBAction)salir1:(id)sender {
      [self resignFirstResponder];
+}
+
+
+//---------------------------------------------------------------------------
+//------------- CAMPOS DE RESTRICCION DE CARACTERES   ---------------------
+//---------------------------------------------------------------------------
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    if((textField == menor1Bovinos && [[textField text] length] - range.length + string.length <= 3) || (textField == entre12Bovinos && [[textField text] length] - range.length + string.length <= 3) || (textField == entre23Bovinos&& [[textField text] length] - range.length + string.length <= 3)|| (textField == mayores3Bovinos&& [[textField text] length] - range.length + string.length <= 3))
+    {
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"1234567890"] invertedSet];
+        NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
+        return [string isEqualToString:filtered];
+    }
+    else
+        return NO;
+    
+    
 }
 
 
