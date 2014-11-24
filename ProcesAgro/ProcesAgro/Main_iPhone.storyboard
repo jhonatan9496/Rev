@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlZ-gc-kbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1357" y="1118"/>
+            <point key="canvasLocation" x="-545" y="1118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0kU-xf-BbT">
@@ -95,7 +95,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nzt-fe-AtP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-585" y="286"/>
+            <point key="canvasLocation" x="-545" y="286"/>
         </scene>
         <!--Item-->
         <scene sceneID="ufC-wZ-h7g">
@@ -359,50 +359,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo Curso" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVm-rX-4Xn">
-                                <rect key="frame" x="0.0" y="91" width="320" height="65"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion Curso" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63M-kk-pqG">
-                                <rect key="frame" x="21" y="192" width="290" height="255"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agr-XX-tQF">
-                                <rect key="frame" x="77" y="486" width="55" height="55"/>
-                                <state key="normal" backgroundImage="lofo-facebook-200x200.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="postFace:" destination="5Cm-6V-Sm8" eventType="touchUpInside" id="JWH-H5-s7J"/>
-                                    <action selector="postFacebook:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="taZ-ut-GO3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWN-8f-ZQG">
-                                <rect key="frame" x="189" y="486" width="55" height="55"/>
-                                <state key="normal" backgroundImage="lofo-twitter-200x200.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="postTwit:" destination="5Cm-6V-Sm8" eventType="touchUpInside" id="OrH-WC-uKa"/>
-                                    <action selector="postTwitter:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="gxT-Qo-Fsf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-za-e51">
-                                <rect key="frame" x="20" y="428" width="280" height="30"/>
-                                <state key="normal" backgroundImage="link-pagina-convocatoria.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="abrirNavegador:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="p0B-I4-wnR"/>
-                                    <action selector="linkWebCurso:" destination="5Cm-6V-Sm8" eventType="touchUpInside" id="3yt-2t-d0c"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syE-Ff-r9O">
+                                <rect key="frame" x="0.0" y="0.0" width="319" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRh-60-stX">
+                                        <rect key="frame" x="-1" y="0.0" width="320" height="540"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo Curso" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVm-rX-4Xn">
+                                                <rect key="frame" x="0.0" y="45" width="320" height="65"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion Curso" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63M-kk-pqG">
+                                                <rect key="frame" x="21" y="146" width="290" height="255"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agr-XX-tQF">
+                                                <rect key="frame" x="77" y="440" width="55" height="55"/>
+                                                <state key="normal" backgroundImage="lofo-facebook-200x200.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="postFace:" destination="5Cm-6V-Sm8" eventType="touchUpInside" id="JWH-H5-s7J"/>
+                                                    <action selector="postFacebook:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="taZ-ut-GO3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWN-8f-ZQG">
+                                                <rect key="frame" x="189" y="440" width="55" height="55"/>
+                                                <state key="normal" backgroundImage="lofo-twitter-200x200.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="postTwit:" destination="5Cm-6V-Sm8" eventType="touchUpInside" id="OrH-WC-uKa"/>
+                                                    <action selector="postTwitter:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="gxT-Qo-Fsf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-za-e51">
+                                                <rect key="frame" x="20" y="382" width="280" height="30"/>
+                                                <state key="normal" backgroundImage="link-pagina-convocatoria.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="abrirNavegador:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="p0B-I4-wnR"/>
+                                                    <action selector="linkWebCurso:" destination="5Cm-6V-Sm8" eventType="touchUpInside" id="3yt-2t-d0c"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="b3k-lc-L0o"/>
+                                            <constraint firstAttribute="height" constant="540" id="hHk-3z-OHf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mRh-60-stX" firstAttribute="top" secondItem="syE-Ff-r9O" secondAttribute="top" id="Bda-OC-M4X"/>
+                                    <constraint firstItem="mRh-60-stX" firstAttribute="leading" secondItem="syE-Ff-r9O" secondAttribute="leading" constant="-1" id="QfV-ku-ySy"/>
+                                    <constraint firstAttribute="trailing" secondItem="mRh-60-stX" secondAttribute="trailing" id="lOq-vc-9u7"/>
+                                    <constraint firstAttribute="bottom" secondItem="mRh-60-stX" secondAttribute="bottom" constant="28" id="zH2-4E-H7G"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="syE-Ff-r9O" firstAttribute="top" secondItem="sUM-hU-3yk" secondAttribute="topMargin" id="1S2-94-4Bd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="syE-Ff-r9O" secondAttribute="trailing" constant="-15" id="238-tM-XAp"/>
+                            <constraint firstItem="syE-Ff-r9O" firstAttribute="leading" secondItem="sUM-hU-3yk" secondAttribute="leadingMargin" constant="-16" id="7bO-D9-pgO"/>
+                            <constraint firstItem="YCr-tT-kry" firstAttribute="top" secondItem="syE-Ff-r9O" secondAttribute="bottom" id="Nqa-Ej-Yim"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="descripcionCurso" destination="63M-kk-pqG" id="Kc2-MO-uUl"/>
@@ -472,45 +499,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo convocatoria " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rV-rL-gme">
-                                <rect key="frame" x="20" y="76" width="280" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion Convocatoria" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBw-j8-9bg">
-                                <rect key="frame" x="20" y="158" width="280" height="227"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Br2-Ab-msf">
-                                <rect key="frame" x="68" y="493" width="55" height="55"/>
-                                <state key="normal" backgroundImage="lofo-facebook-200x200.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="postFacebook:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="Uy6-8c-oiI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvS-3J-rjo">
-                                <rect key="frame" x="182" y="493" width="55" height="55"/>
-                                <state key="normal" backgroundImage="lofo-twitter-200x200.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="postTwitter:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="AYG-fL-0hm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50x-Hf-U0O">
-                                <rect key="frame" x="24" y="441" width="280" height="30"/>
-                                <state key="normal" backgroundImage="link-pagina-convocatoria.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="abrirNavegador:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="fzx-Zb-zzY"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqQ-yc-66Z">
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2K-yI-VBM">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo convocatoria " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rV-rL-gme">
+                                                <rect key="frame" x="18" y="44" width="280" height="84"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion Convocatoria" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBw-j8-9bg">
+                                                <rect key="frame" x="18" y="126" width="280" height="227"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Br2-Ab-msf">
+                                                <rect key="frame" x="66" y="461" width="55" height="55"/>
+                                                <state key="normal" backgroundImage="lofo-facebook-200x200.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="postFacebook:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="Uy6-8c-oiI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvS-3J-rjo">
+                                                <rect key="frame" x="180" y="461" width="55" height="55"/>
+                                                <state key="normal" backgroundImage="lofo-twitter-200x200.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="postTwitter:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="AYG-fL-0hm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50x-Hf-U0O">
+                                                <rect key="frame" x="22" y="409" width="280" height="30"/>
+                                                <state key="normal" backgroundImage="link-pagina-convocatoria.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="abrirNavegador:" destination="TTP-Sn-dK9" eventType="touchUpInside" id="fzx-Zb-zzY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="568" id="Aex-7X-IyQ"/>
+                                            <constraint firstAttribute="width" constant="320" id="L4U-x5-Upp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="d2K-yI-VBM" secondAttribute="bottom" id="3Ue-27-3J4"/>
+                                    <constraint firstAttribute="trailing" secondItem="d2K-yI-VBM" secondAttribute="trailing" constant="-5" id="BWp-Ep-2W1"/>
+                                    <constraint firstItem="d2K-yI-VBM" firstAttribute="leading" secondItem="SqQ-yc-66Z" secondAttribute="leading" id="Ys2-nT-QdD"/>
+                                    <constraint firstItem="d2K-yI-VBM" firstAttribute="top" secondItem="SqQ-yc-66Z" secondAttribute="top" id="Ywa-Y6-sQp"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fnj-fY-bL9" firstAttribute="top" secondItem="SqQ-yc-66Z" secondAttribute="bottom" id="7hc-xQ-PLB"/>
+                            <constraint firstItem="SqQ-yc-66Z" firstAttribute="top" secondItem="Eb2-22-oIu" secondAttribute="topMargin" id="Azb-EF-RFA"/>
+                            <constraint firstItem="SqQ-yc-66Z" firstAttribute="leading" secondItem="Eb2-22-oIu" secondAttribute="leadingMargin" constant="-16" id="J5P-ij-aS9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SqQ-yc-66Z" secondAttribute="trailing" constant="-11" id="rpC-9W-Ptx"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="descripcionCadaConvocatoria" destination="JBw-j8-9bg" id="3BK-5T-spp"/>
@@ -600,66 +654,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mFX-96-4Aq"/>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MV4-c6-KhZ">
-                                <rect key="frame" x="5" y="0.0" width="320" height="568"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuM-cj-Qn6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n80-Dw-Swj">
-                                        <rect key="frame" x="1" y="389" width="22" height="23"/>
-                                        <state key="normal" backgroundImage="lofo-twitter-200x200.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="twitterJhonatan:" destination="lsp-c9-90P" eventType="touchUpInside" id="E2a-Pc-VAo"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-IK-OIZ">
-                                        <rect key="frame" x="1" y="419" width="22" height="23"/>
-                                        <state key="normal" backgroundImage="lofo-twitter-200x200.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="twitterJairo:" destination="lsp-c9-90P" eventType="touchUpInside" id="sPO-Lr-Les"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksJ-OW-DyN">
-                                        <rect key="frame" x="1" y="448" width="22" height="23"/>
-                                        <state key="normal" backgroundImage="lofo-twitter-200x200.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="TwitterJessica:" destination="lsp-c9-90P" eventType="touchUpInside" id="l5a-b2-Kpd"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jhonatan Acelas-Desarrollo Movil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIg-GK-qg9">
-                                        <rect key="frame" x="31" y="389" width="257" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jairo Alonso-Desarrollo Web  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-wu-hff">
-                                        <rect key="frame" x="31" y="421" width="228" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jessica Cruz  Alonso-Diseño Grafico" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZd-qU-pcq">
-                                        <rect key="frame" x="31" y="448" width="281" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="footer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tTZ-Bd-UIp">
-                                        <rect key="frame" x="-8" y="479" width="320" height="89"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="acerca_De.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WOi-fY-MO7">
-                                        <rect key="frame" x="-8" y="63" width="320" height="318"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MV4-c6-KhZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n80-Dw-Swj">
+                                                <rect key="frame" x="1" y="326" width="22" height="23"/>
+                                                <state key="normal" backgroundImage="lofo-twitter-200x200.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="twitterJhonatan:" destination="lsp-c9-90P" eventType="touchUpInside" id="E2a-Pc-VAo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-IK-OIZ">
+                                                <rect key="frame" x="1" y="356" width="22" height="23"/>
+                                                <state key="normal" backgroundImage="lofo-twitter-200x200.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="twitterJairo:" destination="lsp-c9-90P" eventType="touchUpInside" id="sPO-Lr-Les"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksJ-OW-DyN">
+                                                <rect key="frame" x="1" y="385" width="22" height="23"/>
+                                                <state key="normal" backgroundImage="lofo-twitter-200x200.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="TwitterJessica:" destination="lsp-c9-90P" eventType="touchUpInside" id="l5a-b2-Kpd"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jhonatan Acelas-Desarrollo Movil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIg-GK-qg9">
+                                                <rect key="frame" x="31" y="326" width="257" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jairo Alonso-Desarrollo Web  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-wu-hff">
+                                                <rect key="frame" x="31" y="358" width="228" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jessica Cruz  Alonso-Diseño Grafico" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZd-qU-pcq">
+                                                <rect key="frame" x="31" y="385" width="281" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="footer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tTZ-Bd-UIp">
+                                                <rect key="frame" x="-8" y="416" width="320" height="89"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="acerca_De.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WOi-fY-MO7">
+                                                <rect key="frame" x="-8" y="0.0" width="320" height="318"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="568" id="sTu-Hq-r36"/>
+                                            <constraint firstAttribute="width" constant="320" id="wdh-NF-f4a"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <constraints>
+                                    <constraint firstItem="MV4-c6-KhZ" firstAttribute="leading" secondItem="zuM-cj-Qn6" secondAttribute="leading" id="CC4-nP-Zgw"/>
+                                    <constraint firstItem="MV4-c6-KhZ" firstAttribute="top" secondItem="zuM-cj-Qn6" secondAttribute="top" id="G8r-61-RfL"/>
+                                    <constraint firstAttribute="trailing" secondItem="MV4-c6-KhZ" secondAttribute="trailing" id="pr5-dY-08r"/>
+                                    <constraint firstAttribute="bottom" secondItem="MV4-c6-KhZ" secondAttribute="bottom" id="wrW-Sr-KQC"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hML-2J-Iof" firstAttribute="top" secondItem="zuM-cj-Qn6" secondAttribute="bottom" id="06f-bQ-Omr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zuM-cj-Qn6" secondAttribute="trailing" constant="-16" id="g0H-hM-Iz2"/>
+                            <constraint firstItem="zuM-cj-Qn6" firstAttribute="leading" secondItem="d6P-fh-Q6W" secondAttribute="leadingMargin" constant="-16" id="vPc-Mg-cVg"/>
+                            <constraint firstItem="zuM-cj-Qn6" firstAttribute="top" secondItem="d6P-fh-Q6W" secondAttribute="topMargin" id="xgm-hT-YTn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fev-Ej-62T" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -848,57 +922,39 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ubicación Finca " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-eM-Q1P">
                                 <rect key="frame" x="0.0" y="66" width="320" height="57"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87l-BO-EFr">
-                                <rect key="frame" x="132" y="210" width="181" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="salirDepto:" destination="hrq-KR-zx9" eventType="editingDidEndOnExit" id="T17-jM-DWY"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oFj-tU-TTS">
-                                <rect key="frame" x="132" y="155" width="181" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="salirMunicipio:" destination="hrq-KR-zx9" eventType="editingDidEndOnExit" id="s4b-06-xA0"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Municipio ó Vereda " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzD-WX-Sn4">
-                                <rect key="frame" x="20" y="148" width="92" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Departamento" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM1-lM-KlF">
-                                <rect key="frame" x="20" y="204" width="112" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Municipio ó Vereda " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzD-WX-Sn4">
+                                <rect key="frame" x="0.0" y="312" width="320" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nda-rb-Lxx">
-                                <rect key="frame" x="-7" y="253" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="142" width="320" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hrq-KR-zx9" id="460-39-WQy"/>
                                     <outlet property="delegate" destination="hrq-KR-zx9" id="tvy-XP-l9S"/>
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QR4-HQ-FnG">
-                                <rect key="frame" x="0.0" y="406" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="356" width="320" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hrq-KR-zx9" id="ksd-Lz-F4z"/>
                                     <outlet property="delegate" destination="hrq-KR-zx9" id="m5q-ca-TDm"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Departamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM1-lM-KlF">
+                                <rect key="frame" x="0.0" y="116" width="320" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="departamento" destination="87l-BO-EFr" id="mZ8-gU-euC"/>
                         <outlet property="departamentos" destination="nda-rb-Lxx" id="8yx-bd-UnL"/>
-                        <outlet property="municipio" destination="oFj-tU-TTS" id="7kZ-a2-VyJ"/>
                         <outlet property="municipios" destination="QR4-HQ-FnG" id="3ll-Lg-PTq"/>
                     </connections>
                 </viewController>

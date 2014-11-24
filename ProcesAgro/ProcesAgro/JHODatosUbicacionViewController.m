@@ -16,7 +16,7 @@
 
 @implementation JHODatosUbicacionViewController
 
-@synthesize departamentos,municipios,vectorDepartamentos,vectorMunicipios;
+@synthesize departamentos,municipios,vectorDepartamentos,vectorMunicipios,vectorTmpMuni,vectorTmpDeptos,selDep,selMun;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    selDep = @"seleccionar";
+    selMun = @"seleccionar";
     
     [municipio setDelegate:self];
     [departamento setDelegate:self];
@@ -43,16 +45,17 @@
     //  picker
     // --------------------------------
     
-    self.departamentos.tag=1;
-    self.municipios.tag=2;
     
-    //llamo vector json
+    // --------------------------------
+    //  lleno deptos
+    // --------------------------------
     NSURL * url = [NSURL URLWithString:@"http://procesagro.tucompualdia.com/departamentos"];
     NSData * jsonData = [NSData dataWithContentsOfURL:url
                                               options:NSUTF8StringEncoding
                                                 error:nil];
     NSError * error;
-    NSArray * arreglo= [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    NSMutableArray * arreglo= [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    self.vectorTmpDeptos=arreglo;
     NSLog(@"%@",arreglo);
     
     //arreglo temporal
@@ -67,9 +70,47 @@
     // asigno al pick view el vector
     self.vectorDepartamentos =d;
     
+    
+    // --------------------------------
+    //  lleno inicial muni
+    // --------------------------------
+    
     NSMutableArray *m = [[NSMutableArray alloc]initWithObjects:@"Seleccione Departamento", nil];
      self.vectorMunicipios =m;
     
+    
+    
+    // --------------------------------
+    //  temporal muni
+    // --------------------------------
+    
+    NSURL * url2 = [NSURL URLWithString:@"http://procesagro.tucompualdia.com/municipios/"];
+    NSData * jsonData2 = [NSData dataWithContentsOfURL:url2
+                                              options:NSUTF8StringEncoding
+                                                error:nil];
+    NSError * error2;
+    NSArray * arreglo2= [NSJSONSerialization JSONObjectWithData:jsonData2 options:kNilOptions error:&error2];
+    //NSLog(@"arreglo normal %@",arreglo2);
+    
+    //arreglo temporal
+    NSMutableArray *t = [[NSMutableArray alloc]init];
+    
+    // lleno arreglo temporal con lo que necesito de json
+    for (int i=0; i<[arreglo2 count]; i++) {
+        NSMutableDictionary *tmp = [[NSMutableDictionary alloc]init];
+        [tmp setValue:[arreglo2[i] objectForKey:@"nombreMunicipio"] forKey:@"municipio"];
+        [tmp setValue:[arreglo2[i] objectForKey:@"departamento"] forKey:@"idDepto"];
+        
+        
+        
+        [t addObject:tmp];
+    }
+    
+    self.vectorTmpMuni = t;
+    
+    NSLog(@" vector temporal munis %@",vectorTmpMuni);
+    NSLog(@" vector temporal deptos %@",vectorTmpDeptos);
+  
     
     /*
     //Crear boton info
@@ -118,34 +159,91 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    if (pickerView == departamentos) {
     return [vectorDepartamentos count];
+            }
+        return [vectorMunicipios count];
+            
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    if (self.departamentos.tag == 1) {
+    if (pickerView == departamentos) {
         
         return [self.vectorDepartamentos objectAtIndex:row];
+    }else if (pickerView == municipios){
+        return [self.vectorMunicipios objectAtIndex:row];
     }
     return [self.vectorMunicipios objectAtIndex:row];
-    
+
 }
 
 
 - (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    int selet = row;
-    NSLog(@"%i",selet);
+    
+    //int selet = row;
+    //NSLog(@"%i",selet);
     
     
-    [departamentos reloadAllComponents];
+   // [departamentos reloadAllComponents];
     
-    if (self.departamentos.tag == 1) {
+    if (pickerView == departamentos) {
+      
+        if (row != 0 ) {
+            
         
-        NSLog(@"First Picker View selected Value");
+        
+        NSLog(@" %@", [vectorTmpDeptos[row-1] objectForKey:@"id"]);
+            
+            selDep =[vectorTmpDeptos[row-1] objectForKey:@"nombreDepartamento"];
+            
+    
+        [self.vectorMunicipios removeAllObjects];
+        
+        NSMutableArray *m = [[NSMutableArray alloc]initWithObjects:@"Seleccione Municipio" , nil];
+            
+            for (int i = 0; i<[vectorTmpMuni count]; i++) {
+                
+                
+               // NSLog(@"com1 %i ",[[vectorTmpMuni[i] objectForKey:@"idDepto"] integerValue]);
+               // NSLog(@"com2 %i ",[[vectorTmpDeptos[row-1] objectForKey:@"id"] integerValue]);
+                
+                
+                if ([[vectorTmpMuni[i] objectForKey:@"idDepto"] integerValue]== [[vectorTmpDeptos[row-1] objectForKey:@"id"] integerValue] ) {
+                    
+                    NSObject *tmp =[vectorTmpMuni[i] objectForKey:@"municipio"];
+                    [m addObject:tmp];
+
+               }
+            }
+        
+        
+        
+         self.vectorMunicipios =m;
+            selMun = @"seleccionar";
+        [municipios reloadAllComponents];
+            
+        }
+    else{
+        selDep = @"seleccionar";
+        selMun = @"seleccionar";
+        [self.vectorMunicipios removeAllObjects];
+        NSMutableArray *m = [[NSMutableArray alloc]initWithObjects:@"Seleccione Departamento", nil];
+        self.vectorMunicipios =m;
+        [municipios reloadAllComponents];
     }
-    else if(self.municipios.tag == 2){
+    }
+    
+    
+    
+    if (pickerView == municipios) {
         
-        NSLog(@"Second Picker View Selected Value");
+        if (row != 0 ) {
+            NSLog(@" %@",vectorMunicipios[row]  );
+            selMun = vectorMunicipios[row] ;
+        }else {
+            selMun = @"seleccionar";
+        }
     }
     
     
@@ -165,15 +263,15 @@
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([municipio.text isEqualToString:@""]||[departamento.text isEqualToString:@""]||[municipio.text length]>15||[departamento.text length]>15) {
+    if ([selDep isEqualToString:@"seleccionar"]||[selMun isEqualToString:@"seleccionar"]) {
         
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios o Demaciado largos" message:@"Existen campos Vacios o Demaciado Largos. \n Complete todos los campos ó verifique  que la informacion sea correcta para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
     }else {
         //------------------------------------------------------------
         //--------------Agregmos datos al diccionario--------------------
         //------------------------------------------------------------
-    [appDelegate.tramiteDiccionario setObject:municipio.text forKey:@"municipio"];
-    [appDelegate.tramiteDiccionario setObject:departamento.text forKey:@"departamento"];
+    [appDelegate.tramiteDiccionario setObject:selMun forKey:@"municipio"];
+    [appDelegate.tramiteDiccionario setObject:selDep forKey:@"departamento"];
     
     NSLog(@"diccionario %@", appDelegate.tramiteDiccionario);
 
