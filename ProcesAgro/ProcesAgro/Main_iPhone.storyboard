@@ -767,8 +767,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyH-nO-3qJ">
-                                <rect key="frame" x="4" y="-195" width="312" height="699"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyH-nO-3qJ">
+                                <rect key="frame" x="4" y="-195" width="312" height="755"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jT-3w-IFO">
                                         <rect key="frame" x="0.0" y="196" width="320" height="1003"/>
@@ -926,27 +926,27 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Municipio ó Vereda " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzD-WX-Sn4">
-                                <rect key="frame" x="0.0" y="312" width="320" height="44"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleccione Municipio ó Vereda " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzD-WX-Sn4">
+                                <rect key="frame" x="0.0" y="289" width="320" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nda-rb-Lxx">
-                                <rect key="frame" x="0.0" y="142" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="135" width="320" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hrq-KR-zx9" id="460-39-WQy"/>
                                     <outlet property="delegate" destination="hrq-KR-zx9" id="tvy-XP-l9S"/>
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QR4-HQ-FnG">
-                                <rect key="frame" x="0.0" y="356" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="331" width="320" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hrq-KR-zx9" id="ksd-Lz-F4z"/>
                                     <outlet property="delegate" destination="hrq-KR-zx9" id="m5q-ca-TDm"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Departamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM1-lM-KlF">
-                                <rect key="frame" x="0.0" y="116" width="320" height="41"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleccione Departamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM1-lM-KlF">
+                                <rect key="frame" x="0.0" y="109" width="320" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
