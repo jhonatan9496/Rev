@@ -1126,16 +1126,6 @@
                                     <action selector="enviarTramite:" destination="DgJ-Zx-jvZ" eventType="touchUpInside" id="eNA-wa-QvV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTr-TX-xrB">
-                                <rect key="frame" x="367" y="790" width="96" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Inicio">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="l3s-MA-BZ8" kind="modal" id="zYF-6F-8QB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1171,6 +1161,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bw9-z7-BDT"/>
+        <segue reference="unS-L9-oLK"/>
     </inferredMetricsTieBreakers>
 </document>

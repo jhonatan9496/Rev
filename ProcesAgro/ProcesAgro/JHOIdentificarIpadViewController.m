@@ -86,7 +86,12 @@
     [entre23Bufalino.text integerValue]+
     [mayor3Bufalino.text integerValue];
     
+    int mot = [primeraVez.text integerValue]+[nacimiento.text integerValue]+[compra.text integerValue]+[perdidaDIN.text integerValue];
+    
     if ( resultado> 0) {
+        
+        
+        if ( resultado==mot) {
    
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
@@ -119,6 +124,9 @@
 
     
     }
+        }else{
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Motivo" message:@"El numero de animales  a identificar no es igual al numero de motivo de identificacion. \n Debe comprobar que la suma de bovinos y bufalinos sea igual a la suma de animales a identificar" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+        }
     }else {
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta 0 a Identificar" message:@"Para poder enviar el tramite almenos debe identificar 1 animal" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
     }

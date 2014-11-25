@@ -27,6 +27,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
+    
+    
+    if ([[appDelegate.tramiteDiccionario objectForKey:@"perdidaDIN"] integerValue]==0) {
+        justificacion.userInteractionEnabled =NO;
+    }
+    
+    
     self.navigationItem.title = @"Envio";
     // Do any additional setup after loading the view.
 }
@@ -98,6 +107,8 @@
     
     if ([ret isEqualToString:@"Insertado"]) {
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Tramite Exitoso" message:@"Su solicitud se ha realizado exitosamente. \n Gracias por utilizar nuestro servicio" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+        // Redirecciona al view controller inicial de la app
+        [[self navigationController] dismissModalViewControllerAnimated:YES];
         
     }else{
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Tramite Fallido" message:@"Su solicitud no se ha realizado . \n Por vafor verifique su conexion" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
