@@ -77,7 +77,7 @@
     // creamos un objeto del delegado para acceder a las variables
     JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
     
-    int resultado =[[appDelegate.tramiteDiccionario objectForKey:@"menor1Bovinos"] integerValue]+
+    int resultado =[menor1Bovinos.text integerValue]+
     [entre12Bovinos.text integerValue]+
     [entre23Bovinos.text integerValue]+
     [mayores3Bovinos.text integerValue]+
