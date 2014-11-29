@@ -24,6 +24,7 @@
     IBOutlet UITextField *fijoSolicitante;
     IBOutlet UITextField *celularSolicitante;
     
+    IBOutlet UITextField *nombreVereda;
     
     IBOutlet UIPickerView *departamentos;
     IBOutlet UIPickerView *municipios;

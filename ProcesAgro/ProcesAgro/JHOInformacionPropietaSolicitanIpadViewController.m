@@ -47,6 +47,7 @@
     [cedulaSolicitante setDelegate:self];
     [fijoSolicitante setDelegate:self];
     [celularSolicitante setDelegate:self];
+    [nombreVereda setDelegate:self];
     
     
     //Crea un nuevo objeto tramite diccionario
@@ -63,7 +64,7 @@
     // --------------------------------
     //  lleno deptos
     // --------------------------------
-    NSURL * url = [NSURL URLWithString:@"http://procesagro.tucompualdia.com/departamentos"];
+    NSURL * url = [NSURL URLWithString:@"http://154.70.153.108/proyectos/procesAgroWeb/web/app.php/departamentos"];
     NSData * jsonData = [NSData dataWithContentsOfURL:url
                                               options:NSUTF8StringEncoding
                                                 error:nil];
@@ -98,7 +99,7 @@
     //  temporal muni
     // --------------------------------
     
-    NSURL * url2 = [NSURL URLWithString:@"http://procesagro.tucompualdia.com/municipios/"];
+    NSURL * url2 = [NSURL URLWithString:@"http://154.70.153.108/proyectos/procesAgroWeb/web/app.php/municipios/"];
     NSData * jsonData2 = [NSData dataWithContentsOfURL:url2
                                                options:NSUTF8StringEncoding
                                                  error:nil];
@@ -251,7 +252,7 @@
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([ica3101.text isEqualToString:@""] || [nombreFinca.text isEqualToString:@""] ||[nombrePropietario.text isEqualToString:@""]||[cedulaPropietario.text isEqualToString:@""]||[fijoPropietario.text isEqualToString:@""]||[celularPropietario.text isEqualToString:@""]||[nombreSolicitante.text isEqualToString:@""] || [cedulaSolicitante.text isEqualToString:@""] ||[fijoSolicitante.text isEqualToString:@""]||[celularSolicitante.text isEqualToString:@""] ||[selDep isEqualToString:@"seleccionar"]||[selMun isEqualToString:@"seleccionar"]) {
+    if ([ica3101.text isEqualToString:@""] || [nombreFinca.text isEqualToString:@""] ||[nombrePropietario.text isEqualToString:@""]||[cedulaPropietario.text isEqualToString:@""]||[fijoPropietario.text isEqualToString:@""]||[celularPropietario.text isEqualToString:@""]||[nombreSolicitante.text isEqualToString:@""] || [cedulaSolicitante.text isEqualToString:@""] ||[fijoSolicitante.text isEqualToString:@""]||[celularSolicitante.text isEqualToString:@""] ||[selDep isEqualToString:@"seleccionar"]||[selMun isEqualToString:@"seleccionar"]|| [nombreVereda.text isEqualToString:@""] ) {
         
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios" message:@"Existen campos Vacios. \n Complete todos los campos para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
     }else {
@@ -270,6 +271,7 @@
         [appDelegate.tramiteDiccionario setObject:cedulaSolicitante.text forKey:@"cedulaSolicitante"];
         [appDelegate.tramiteDiccionario setObject:fijoSolicitante.text forKey:@"fijoSolicitante"];
         [appDelegate.tramiteDiccionario setObject:celularSolicitante.text forKey:@"celularSolicitante"];
+        [appDelegate.tramiteDiccionario setObject:nombreVereda forKey:@"nombreVereda"];
             
         NSLog(@"diccionario %@", appDelegate.tramiteDiccionario);
       
@@ -312,7 +314,7 @@
         
         return [string isEqualToString:filtered];
     }
-    else if((textField == nombreFinca && [[textField text] length] - range.length + string.length <= 50) || (textField == nombrePropietario && [[textField text] length] - range.length + string.length <= 50) ||(textField == nombreSolicitante && [[textField text] length] - range.length + string.length <= 30))
+    else if((textField == nombreFinca && [[textField text] length] - range.length + string.length <= 50) || (textField == nombrePropietario && [[textField text] length] - range.length + string.length <= 50) ||(textField == nombreSolicitante && [[textField text] length] - range.length + string.length <= 30)||(textField == nombreVereda && [[textField text] length] - range.length + string.length <= 30))
     {
         NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
