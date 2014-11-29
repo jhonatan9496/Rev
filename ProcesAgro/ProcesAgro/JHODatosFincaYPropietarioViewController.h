@@ -22,7 +22,9 @@
     BOOL keyboardIsShown;
     
 }
-@property(nonatomic,retain)UIScrollView *scroller;
+
+
+
 
 
 - (IBAction)celularEdita:(id)sender;

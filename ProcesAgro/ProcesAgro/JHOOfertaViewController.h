@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelTituloOferta;
 @property (weak, nonatomic) IBOutlet UILabel *labelDescripcionOferta;
 
+@property (strong, nonatomic) IBOutlet UITextView *descripcionscroll;
+
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

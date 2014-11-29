@@ -49,7 +49,7 @@
     // --------------------------------
     //  lleno deptos
     // --------------------------------
-    NSURL * url = [NSURL URLWithString:@"http://procesagro.tucompualdia.com/departamentos"];
+    NSURL * url = [NSURL URLWithString:@"http://154.70.153.108/proyectos/procesAgroWeb/web/app.php/departamentos"];
     NSData * jsonData = [NSData dataWithContentsOfURL:url
                                               options:NSUTF8StringEncoding
                                                 error:nil];
@@ -84,7 +84,7 @@
     //  temporal muni
     // --------------------------------
     
-    NSURL * url2 = [NSURL URLWithString:@"http://procesagro.tucompualdia.com/municipios/"];
+    NSURL * url2 = [NSURL URLWithString:@"http://154.70.153.108/proyectos/procesAgroWeb/web/app.php/municipios/"];
     NSData * jsonData2 = [NSData dataWithContentsOfURL:url2
                                               options:NSUTF8StringEncoding
                                                 error:nil];

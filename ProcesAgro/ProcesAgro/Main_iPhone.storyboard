@@ -20,17 +20,12 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo Oferta Institucional" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLC-Xa-P0D">
                                 <rect key="frame" x="20" y="60" width="280" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb3-8n-Jzz">
-                                <rect key="frame" x="20" y="117" width="280" height="95"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kka-IY-sLM">
-                                <rect key="frame" x="-14" y="213" width="334" height="355"/>
+                                <rect key="frame" x="-14" y="253" width="334" height="315"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaPasoOferta" rowHeight="100" id="hEI-xt-eAQ" customClass="JHOCeldaPasosOfertaTableViewCell">
@@ -70,11 +65,18 @@
                                     <outlet property="delegate" destination="W0l-wL-gHg" id="akB-Kw-zEc"/>
                                 </connections>
                             </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNc-7O-ae3">
+                                <rect key="frame" x="16" y="107" width="286" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="labelDescripcionOferta" destination="xb3-8n-Jzz" id="z5Q-kF-o5r"/>
+                        <outlet property="descripcionscroll" destination="aNc-7O-ae3" id="E3h-dv-GZB"/>
                         <outlet property="labelTituloOferta" destination="GLC-Xa-P0D" id="I6L-XT-0dD"/>
                         <outlet property="tableView" destination="Kka-IY-sLM" id="UII-n3-JgX"/>
                     </connections>
@@ -900,7 +902,7 @@
                         <outlet property="cedulaPropietario" destination="KaQ-tV-Xs9" id="GS1-TU-axk"/>
                         <outlet property="celularPropietario" destination="j1y-8E-0qY" id="nMJ-PU-UJN"/>
                         <outlet property="fijoPropietario" destination="UAr-7l-nET" id="2LL-bK-yV6"/>
-                        <outlet property="ica3101" destination="Eec-i1-USQ" id="zFo-CD-bjZ"/>
+                        <outlet property="ica3101" destination="Eec-i1-USQ" id="oMt-4k-OGR"/>
                         <outlet property="nombreFinca" destination="bWt-pu-Q4c" id="aGw-2j-AOh"/>
                         <outlet property="nombrePropietario" destination="v17-AE-Rxz" id="wmy-1L-quJ"/>
                     </connections>
@@ -1039,6 +1041,14 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qu4-uY-2Xg">
+                                                <rect key="frame" x="152" y="86" width="140" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                <connections>
+                                                    <action selector="salirnombresol:" destination="zWH-5I-xMj" eventType="editingDidEndOnExit" id="uac-e5-iP2"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1067,7 +1077,8 @@
                         <outlet property="cedulaSolicitante" destination="WxM-v1-tXe" id="NuC-n4-Cft"/>
                         <outlet property="celularSolicitante" destination="0FV-Ob-hSC" id="O3c-so-XQ9"/>
                         <outlet property="fijoSolicitante" destination="V4T-IB-ff9" id="YeP-zU-YyF"/>
-                        <outlet property="nombreSolicitante" destination="hhY-kj-fFa" id="o9s-kk-M3A"/>
+                        <outlet property="nombreSolicitante" destination="qu4-uY-2Xg" id="6Yi-Dy-W3U"/>
+                        <outlet property="sol" destination="qu4-uY-2Xg" id="rN6-wW-RZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gu4-9C-xbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1471,16 +1482,6 @@
                                     <action selector="salirJusti:" destination="lzD-RS-eNq" eventType="editingDidEndOnExit" id="0bc-KB-NGI"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUe-8J-loY">
-                                <rect key="frame" x="108" y="210" width="108" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Enviar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="enviarTramiteFinal:" destination="lzD-RS-eNq" eventType="touchUpInside" id="OkB-ZF-q3s"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-fp-b6t">
                                 <rect key="frame" x="26" y="68" width="278" height="66"/>
                                 <string key="text">Justificación en caso de Perdida de DIN
@@ -1489,6 +1490,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUe-8J-loY">
+                                <rect key="frame" x="108" y="227" width="108" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Enviar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enviarTramiteFinal:" destination="lzD-RS-eNq" eventType="touchUpInside" id="OkB-ZF-q3s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1576,6 +1587,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Vd0-9s-f1b"/>
+        <segue reference="qnW-uc-n7c"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -38,6 +38,8 @@
     [self.tableView reloadData];
     [_labelTituloOferta setText:_textTituloOferta];
     [_labelDescripcionOferta setText:_textDeescripcionOferta];
+    
+    [_descripcionscroll setText:_textDeescripcionOferta];
     // Do any additional setup after loading the view.
 }
 

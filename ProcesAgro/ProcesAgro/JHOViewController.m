@@ -213,7 +213,7 @@
     //abrir la base de datos
     if (sqlite3_open([appDelegate.dataBasePath UTF8String], &dataBase)== SQLITE_OK) {
         //NSURL * url = [NSURL URLWithString:@"http://localhost/WebService/pasosofertas.php"];
-        NSURL * url = [NSURL URLWithString:@"http://tucompualdia.com/aplicaciones/procesAgroWebService/pasosofertas.php"];
+        NSURL * url = [NSURL URLWithString:@"http://154.70.153.108/proyectos/webservice/pasosofertas.php"];
         NSData * jsonData = [NSData dataWithContentsOfURL:url
                                                   options:NSUTF8StringEncoding
                                                     error:nil];
@@ -274,7 +274,7 @@
     //abrir la base de datos
     if (sqlite3_open([appDelegate.dataBasePath UTF8String], &dataBase)== SQLITE_OK) {
       //  NSURL * url = [NSURL URLWithString:@"http://localhost/WebService/ofertasinstitucionales.php"];
-        NSURL * url = [NSURL URLWithString:@"http://tucompualdia.com/aplicaciones/procesAgroWebService/ofertasinstitucionales.php"];
+        NSURL * url = [NSURL URLWithString:@"http://154.70.153.108/proyectos/webservice/ofertasinstitucionales.php"];
         NSData * jsonData = [NSData dataWithContentsOfURL:url
                                                   options:NSUTF8StringEncoding
                                                     error:nil];
@@ -395,7 +395,7 @@
     //abrir la base de datos
     if (sqlite3_open([appDelegate.dataBasePath UTF8String], &dataBase)== SQLITE_OK) {
         //NSURL * url = [NSURL URLWithString:@"http://localhost/WebService/servicios.php"];
-        NSURL * url = [NSURL URLWithString:@"http://tucompualdia.com/aplicaciones/procesAgroWebService/servicios.php"];
+        NSURL * url = [NSURL URLWithString:@"http://154.70.153.108/proyectos/webservice/servicios.php"];
         NSData * jsonData = [NSData dataWithContentsOfURL:url
                                                   options:NSUTF8StringEncoding
                                                     error:nil];
@@ -457,7 +457,7 @@
     //abrir la base de datos
     if (sqlite3_open([appDelegate.dataBasePath UTF8String], &dataBase)== SQLITE_OK) {
        //NSURL * url = [NSURL URLWithString:@"http://localhost/WebService/convocatorias.php"];
-        NSURL * url = [NSURL URLWithString:@"http://tucompualdia.com/aplicaciones/procesAgroWebService/convocatorias.php"];
+        NSURL * url = [NSURL URLWithString:@"http://154.70.153.108/proyectos/webservice/convocatorias.php"];
         NSData * jsonData = [NSData dataWithContentsOfURL:url
                                                   options:NSUTF8StringEncoding
                                                     error:nil];
@@ -517,7 +517,7 @@
     //abrir la base de datos
     if (sqlite3_open([appDelegate.dataBasePath UTF8String], &dataBase)== SQLITE_OK) {
         //NSURL * url = [NSURL URLWithString:@"http://localhost/WebService/convocatorias.php"];
-        NSURL * url = [NSURL URLWithString:@"http://tucompualdia.com/aplicaciones/procesAgroWebService/cursosvirtuales.php"];
+        NSURL * url = [NSURL URLWithString:@"http://154.70.153.108/proyectos/webservice/cursosvirtuales.php"];
         NSData * jsonData = [NSData dataWithContentsOfURL:url
                                                   options:NSUTF8StringEncoding
                                                     error:nil];
@@ -689,8 +689,8 @@
     
     JHOOfertaViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"ofertaInstitucional"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
-    cadaConvocatoria.textTituloOferta = @"Oferta Boton 1";
-    cadaConvocatoria.textDeescripcionOferta = @"Oferta Boton 1";
+    cadaConvocatoria.textTituloOferta = @"Autorizacion a certificadoras de productos ecologicos";
+    cadaConvocatoria.textDeescripcionOferta = @"Otorgar la autorización a los organismos de certificación para que puedan certificar productos ecológicos bajo la normatividad colombiana y a su vez administrar el uso del Sello de Alimento Ecológico del Ministerio de Agricultura y Desarrollo Rural.";
     cadaConvocatoria.idOferta=@"1";
 
 }
@@ -699,8 +699,8 @@
     
     JHOOfertaViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"ofertaInstitucional"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
-    cadaConvocatoria.textTituloOferta = @"Oferta Boton 2";
-    cadaConvocatoria.textDeescripcionOferta = @"Oferta Boton 2";
+    cadaConvocatoria.textTituloOferta = @"Certificado de incentivo Forestal";
+    cadaConvocatoria.textDeescripcionOferta = @"Es un reconocimiento del Estado Colombiano, a través del Ministerio de Agricultura y Desarrollo Rural -MADR- en convenio de administración con FINAGR";
     cadaConvocatoria.idOferta=@"2";
 }
 
@@ -708,16 +708,16 @@
     
     JHOOfertaViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"ofertaInstitucional"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
-    cadaConvocatoria.textTituloOferta = @"Oferta Boton 3";
-    cadaConvocatoria.textDeescripcionOferta = @"Oferta Boton 3";
+    cadaConvocatoria.textTituloOferta = @"Tramite de tarjeta Profesional";
+    cadaConvocatoria.textDeescripcionOferta = @"Obtener la autorización para ejercer en el territorio colombiano la profesión de administrador en desarrollo agroindustrial.";
     cadaConvocatoria.idOferta=@"3";
 }
 
 - (IBAction)oferta4:(id)sender {
     JHOOfertaViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"ofertaInstitucional"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
-    cadaConvocatoria.textTituloOferta = @"Oferta Boton 4";
-    cadaConvocatoria.textDeescripcionOferta = @"Oferta Boton 4";
+    cadaConvocatoria.textTituloOferta = @"Incentivo a la capitalizacion forestal";
+    cadaConvocatoria.textDeescripcionOferta = @"Mejorar la productividad y competitividad de los productores agropecuarios mediante el apoyo a la inversión en bienes de capital. Pequeños y medianos";
     cadaConvocatoria.idOferta=@"4";
 }
 

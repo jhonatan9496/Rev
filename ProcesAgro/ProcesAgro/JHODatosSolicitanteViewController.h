@@ -16,6 +16,9 @@
     IBOutlet UITextField *celularSolicitante;
     
 }
+
+@property  (nonatomic,strong) IBOutlet UITextField *nombreSolicitante;
+
 - (IBAction)salirnombresol:(id)sender;
 - (IBAction)salirCedSol:(id)sender;
 - (IBAction)salirFijoSol:(id)sender;
