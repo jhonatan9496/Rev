@@ -271,7 +271,7 @@
         [appDelegate.tramiteDiccionario setObject:cedulaSolicitante.text forKey:@"cedulaSolicitante"];
         [appDelegate.tramiteDiccionario setObject:fijoSolicitante.text forKey:@"fijoSolicitante"];
         [appDelegate.tramiteDiccionario setObject:celularSolicitante.text forKey:@"celularSolicitante"];
-        [appDelegate.tramiteDiccionario setObject:nombreVereda forKey:@"nombreVereda"];
+        [appDelegate.tramiteDiccionario setObject:nombreVereda.text forKey:@"nombreVereda"];
             
         NSLog(@"diccionario %@", appDelegate.tramiteDiccionario);
       
