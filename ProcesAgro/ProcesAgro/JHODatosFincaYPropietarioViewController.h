@@ -16,7 +16,7 @@
     IBOutlet UITextField *cedulaPropietario;
     IBOutlet UITextField *fijoPropietario;
     IBOutlet UITextField *celularPropietario;
-    
+    IBOutlet UITextField *nombreVereda;
     
     UITextField *currentTextField;
     BOOL keyboardIsShown;

@@ -19,7 +19,6 @@
 
 @implementation JHODatosSolicitanteViewController
 
-@synthesize nombreSolicitante;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

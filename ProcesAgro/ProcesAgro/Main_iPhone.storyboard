@@ -783,7 +783,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Celular Propietario" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSn-Kw-oQD">
-                                                <rect key="frame" x="14" y="368" width="92" height="44"/>
+                                                <rect key="frame" x="14" y="423" width="92" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -793,12 +793,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre Finca" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTc-Bd-hQM">
-                                                <rect key="frame" x="14" y="116" width="92" height="41"/>
+                                                <rect key="frame" x="14" y="171" width="92" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v17-AE-Rxz">
-                                                <rect key="frame" x="126" y="177" width="181" height="30"/>
+                                                <rect key="frame" x="126" y="232" width="181" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <connections>
@@ -806,7 +806,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-7l-nET">
-                                                <rect key="frame" x="126" y="306" width="181" height="30"/>
+                                                <rect key="frame" x="126" y="361" width="181" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                 <connections>
@@ -815,7 +815,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-pu-Q4c">
-                                                <rect key="frame" x="126" y="122" width="181" height="30"/>
+                                                <rect key="frame" x="126" y="177" width="181" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <connections>
@@ -823,12 +823,12 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Telefono Fijo" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDP-nG-w8F">
-                                                <rect key="frame" x="14" y="299" width="92" height="44"/>
+                                                <rect key="frame" x="14" y="354" width="92" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1y-8E-0qY">
-                                                <rect key="frame" x="126" y="375" width="181" height="30"/>
+                                                <rect key="frame" x="126" y="430" width="181" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                 <connections>
@@ -845,21 +845,34 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre Propietario" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXO-Oz-UPD">
-                                                <rect key="frame" x="14" y="170" width="92" height="44"/>
+                                                <rect key="frame" x="14" y="225" width="92" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cédula Propietario" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytL-qu-A2z">
-                                                <rect key="frame" x="14" y="233" width="92" height="44"/>
+                                                <rect key="frame" x="14" y="288" width="92" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KaQ-tV-Xs9">
-                                                <rect key="frame" x="126" y="240" width="181" height="30"/>
+                                                <rect key="frame" x="126" y="295" width="181" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                 <connections>
                                                     <action selector="salirCedula:" destination="bcb-IB-yyW" eventType="editingDidEndOnExit" id="wGl-Bk-jlZ"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre vereda" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNn-e3-82T">
+                                                <rect key="frame" x="14" y="110" width="92" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MdX-DN-p8l">
+                                                <rect key="frame" x="126" y="116" width="181" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="salirNombreFinca:" destination="bcb-IB-yyW" eventType="editingDidEndOnExit" id="BM2-pB-W59"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -905,6 +918,7 @@
                         <outlet property="ica3101" destination="Eec-i1-USQ" id="oMt-4k-OGR"/>
                         <outlet property="nombreFinca" destination="bWt-pu-Q4c" id="aGw-2j-AOh"/>
                         <outlet property="nombrePropietario" destination="v17-AE-Rxz" id="wmy-1L-quJ"/>
+                        <outlet property="nombreVereda" destination="MdX-DN-p8l" id="ebQ-CI-F9E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkX-Fr-GAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1078,7 +1092,6 @@
                         <outlet property="celularSolicitante" destination="0FV-Ob-hSC" id="O3c-so-XQ9"/>
                         <outlet property="fijoSolicitante" destination="V4T-IB-ff9" id="YeP-zU-YyF"/>
                         <outlet property="nombreSolicitante" destination="qu4-uY-2Xg" id="6Yi-Dy-W3U"/>
-                        <outlet property="sol" destination="qu4-uY-2Xg" id="rN6-wW-RZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gu4-9C-xbv" userLabel="First Responder" sceneMemberID="firstResponder"/>

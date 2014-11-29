@@ -39,6 +39,7 @@
     [cedulaPropietario setDelegate:self];
     [fijoPropietario setDelegate:self];
     [celularPropietario setDelegate:self];
+    [nombreVereda setDelegate:self];
     
     
     
@@ -78,7 +79,7 @@
         
         return [string isEqualToString:filtered];
     }
-    else if((textField == nombreFinca && [[textField text] length] - range.length + string.length <= 50) || (textField == nombrePropietario && [[textField text] length] - range.length + string.length <= 50) )
+    else if((textField == nombreFinca && [[textField text] length] - range.length + string.length <= 50) || (textField == nombrePropietario && [[textField text] length] - range.length + string.length <= 50)||(textField == nombreVereda && [[textField text] length] - range.length + string.length <= 50) )
     {
         NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
@@ -195,7 +196,7 @@
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([ica3101.text isEqualToString:@""] || [nombreFinca.text isEqualToString:@""] ||[nombrePropietario.text isEqualToString:@""]||[cedulaPropietario.text isEqualToString:@""]||[fijoPropietario.text isEqualToString:@""]||[celularPropietario.text isEqualToString:@""]) {
+    if ([ica3101.text isEqualToString:@""] || [nombreFinca.text isEqualToString:@""] ||[nombrePropietario.text isEqualToString:@""]||[cedulaPropietario.text isEqualToString:@""]||[fijoPropietario.text isEqualToString:@""]||[celularPropietario.text isEqualToString:@""] || [nombreVereda.text isEqualToString:@""]) {
         
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios " message:@"Existen campos Vacios. \n Complete todos los campos " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
     }else {
@@ -211,6 +212,7 @@
     [appDelegate.tramiteDiccionario setObject:cedulaPropietario.text forKey:@"cedulaPropietario"];
     [appDelegate.tramiteDiccionario setObject:fijoPropietario.text forKey:@"fijoPropietario"];
     [appDelegate.tramiteDiccionario setObject:celularPropietario.text forKey:@"celularPropietario"];
+    [appDelegate.tramiteDiccionario setObject:nombreVereda.text forKey:@"nombreVereda"];
     
     NSLog(@"diccionario %@", appDelegate.tramiteDiccionario);
 
