@@ -11,6 +11,7 @@
 #import <sqlite3.h>
 #import "JHOCadaConvocatoriaViewController.h"
 #import "JHOCeldaPasosOfertaTableViewCell.h"
+#import "JHOCadaPasoOfertaViewController.h"
 
 @interface JHOOfertaViewController (){
     NSMutableArray *vectorConvocatorias;
@@ -146,11 +147,13 @@
 //-----------------Evento al hacer click en cada celda--------------
 //------------------------------------------------------------------
 -(void) tableView: (UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *datosConvocatoria =[vectorConvocatorias objectAtIndex:indexPath.row];
+    JHOCadaPasoOfertaViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"cadaPasoOferta"];
+    [self.navigationController pushViewController:cadaConvocatoria animated:YES];
+    NSLog(@"%@",datosConvocatoria);
+    cadaConvocatoria.textTituloPaso =[datosConvocatoria objectForKey:@"nombre"];
+    cadaConvocatoria.textDeescripcionPaso = [datosConvocatoria objectForKey:@"descripcion"];
     
-    // JHOCadaConvocatoriaViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"JHOCadaConvocatoriaViewController"];
-    // [self.navigationController pushViewController:cadaConvocatoria animated:YES];
-    // cadaConvocatoria.textTituloConvocatoria =[datosConvocatoria objectForKey:@"nombre"];
-    // cadaConvocatoria.textDeescripcionConvocatoria = [datosConvocatoria objectForKey:@"descripcion"];
 }
 
 

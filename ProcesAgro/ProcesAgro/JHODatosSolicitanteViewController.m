@@ -83,7 +83,21 @@
     //------------------------------------------------------------
     if ([nombreSolicitante.text isEqualToString:@""] || [cedulaSolicitante.text isEqualToString:@""] ||[fijoSolicitante.text isEqualToString:@""]||[celularSolicitante.text isEqualToString:@""]) {
         
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios" message:@"Existen campos Vacios. \n Complete todos los campos  para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];    }else {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios" message:@"Existen campos Vacios. \n Complete todos los campos  para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else if ([nombreSolicitante.text length]<7){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Nombre Solicitante" message:@"El campo debe tener minimo 7 caracteres y maximo 50 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else if ([cedulaSolicitante.text length]<7){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Cedula Solicitante" message:@"El campo debe tener minimo 7 caracteres y maximo 10 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else if ([fijoSolicitante.text length]<6){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Fijo Solicitante" message:@"El campo debe tener minimo 6 caracteres y maximo 10 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else if ([celularSolicitante.text length]<10){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Celular Solicitante" message:@"El campo debe tener 10 caracteres. " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else {
 
     //------------------------------------------------------------
     //--------------Agregmos datos al vector--------------------
@@ -131,7 +145,7 @@
     // VALIDAR ICA
     if(textField == nombreSolicitante && [[textField text] length] - range.length + string.length <= 30)
     {
-        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "] invertedSet];
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzñáéíóú "] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
         return [string isEqualToString:filtered];
     }

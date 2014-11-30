@@ -20,6 +20,43 @@
             </objects>
             <point key="canvasLocation" x="-942" y="-164"/>
         </scene>
+        <!--Cada Paso Oferta View Controller-->
+        <scene sceneID="Bzk-qJ-WaM">
+            <objects>
+                <viewController storyboardIdentifier="cadaPasoOferta" id="ZPz-1r-mpS" customClass="JHOCadaPasoOfertaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="swO-wp-hKk"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Df-C6-81D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lGL-qx-GJB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXS-ie-Mm3">
+                                <rect key="frame" x="81" y="178" width="625" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogR-yf-9co">
+                                <rect key="frame" x="81" y="361" width="625" height="236"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="descripcionPasoOferta" destination="ogR-yf-9co" id="ve1-bI-BX4"/>
+                        <outlet property="tituloPasoOferta" destination="KXS-ie-Mm3" id="EEa-Fg-ds4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZkP-wI-y70" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1809" y="1008"/>
+        </scene>
         <!--Oferta View Controller-->
         <scene sceneID="KPI-gc-Kdf">
             <objects>
@@ -53,27 +90,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWT-Mp-mFK">
-                                                    <rect key="frame" x="45" y="20" width="533" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="589" translatesAutoresizingMaskIntoConstraints="NO" id="OOM-1l-6Cp">
-                                                    <rect key="frame" x="45" y="50" width="589" height="42"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L5C-de-s5z">
                                                     <rect key="frame" x="672" y="34" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="cambioSwicth:" destination="O95-xT-vhY" eventType="valueChanged" id="kue-z2-yg9"/>
                                                     </connections>
                                                 </switch>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWT-Mp-mFK">
+                                                    <rect key="frame" x="45" y="34" width="533" height="52"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="check" destination="L5C-de-s5z" id="E1Z-eZ-2Px"/>
-                                            <outlet property="desPaso" destination="OOM-1l-6Cp" id="mK3-AN-BxP"/>
                                             <outlet property="tituloPaso" destination="PWT-Mp-mFK" id="XOf-V0-Qw4"/>
                                         </connections>
                                     </tableViewCell>

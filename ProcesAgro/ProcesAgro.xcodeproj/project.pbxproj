@@ -40,6 +40,7 @@
 		A3A31F6B19B2CF5500D88311 /* link-pagina-convocatoria.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A31F6A19B2CF5500D88311 /* link-pagina-convocatoria.png */; };
 		A3A31F7319B2D31A00D88311 /* footer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3A31F7219B2D31A00D88311 /* footer.jpg */; };
 		A3A31F7519B2D38700D88311 /* acerca_De.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3A31F7419B2D38700D88311 /* acerca_De.jpg */; };
+		A3A629341A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A629331A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.m */; };
 		A3ABAD1C19B23584008A435A /* JHODatosFincaYPropietarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD1B19B23584008A435A /* JHODatosFincaYPropietarioViewController.m */; };
 		A3ABAD1F19B235EA008A435A /* JHODatosUbicacionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD1E19B235EA008A435A /* JHODatosUbicacionViewController.m */; };
 		A3ABAD2219B23C57008A435A /* JHODatosSolicitanteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD2119B23C57008A435A /* JHODatosSolicitanteViewController.m */; };
@@ -134,6 +135,8 @@
 		A3A31F6A19B2CF5500D88311 /* link-pagina-convocatoria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "link-pagina-convocatoria.png"; sourceTree = "<group>"; };
 		A3A31F7219B2D31A00D88311 /* footer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footer.jpg; sourceTree = "<group>"; };
 		A3A31F7419B2D38700D88311 /* acerca_De.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = acerca_De.jpg; sourceTree = "<group>"; };
+		A3A629321A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOCadaPasoOfertaViewController.h; sourceTree = "<group>"; };
+		A3A629331A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOCadaPasoOfertaViewController.m; sourceTree = "<group>"; };
 		A3ABAD1A19B23584008A435A /* JHODatosFincaYPropietarioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHODatosFincaYPropietarioViewController.h; sourceTree = "<group>"; };
 		A3ABAD1B19B23584008A435A /* JHODatosFincaYPropietarioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHODatosFincaYPropietarioViewController.m; sourceTree = "<group>"; };
 		A3ABAD1D19B235EA008A435A /* JHODatosUbicacionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHODatosUbicacionViewController.h; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				A338BF4719988117004FD9DB /* JHOCeldaPasosOfertaTableViewCell.m */,
 				A38B2BB319A8EB8800549256 /* JHOOfertaViewController.h */,
 				A38B2BB419A8EB8800549256 /* JHOOfertaViewController.m */,
+				A3A629321A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.h */,
+				A3A629331A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.m */,
 			);
 			name = Ofertas;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3BAADE1196E42760088BC31 /* JHOAppDelegate.m in Sources */,
+				A3A629341A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.m in Sources */,
 				A3ABAD3219B2C65C008A435A /* JHOServiciosViewController.m in Sources */,
 				A3ABAD2819B2446D008A435A /* JHODatosBufalinosViewController.m in Sources */,
 				A35E784D199420C100584FFC /* JHOBuscarGeneralViewController.m in Sources */,

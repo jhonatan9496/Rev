@@ -255,7 +255,39 @@
     if ([ica3101.text isEqualToString:@""] || [nombreFinca.text isEqualToString:@""] ||[nombrePropietario.text isEqualToString:@""]||[cedulaPropietario.text isEqualToString:@""]||[fijoPropietario.text isEqualToString:@""]||[celularPropietario.text isEqualToString:@""]||[nombreSolicitante.text isEqualToString:@""] || [cedulaSolicitante.text isEqualToString:@""] ||[fijoSolicitante.text isEqualToString:@""]||[celularSolicitante.text isEqualToString:@""] ||[selDep isEqualToString:@"seleccionar"]||[selMun isEqualToString:@"seleccionar"]|| [nombreVereda.text isEqualToString:@""] ) {
         
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios" message:@"Existen campos Vacios. \n Complete todos los campos para continuar con su tramite" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
-    }else {
+    }
+    else if ([ica3101.text length]<4){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo ICA 3-101" message:@"El campo debe tener minimo 4 caracteres y maximo 30 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }else if ([nombreVereda.text length]<4){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Nombre Vereda" message:@"El campo debe tener minimo 4 caracteres y maximo 30 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }else if ([nombreFinca.text length]<4){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Nombre Finca" message:@"El campo debe tener minimo 4 caracteres y maximo 30 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }else if ([nombrePropietario.text length]<7){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Nombre Propietario" message:@"El campo debe tener minimo 7 caracteres y maximo 50 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else if ([cedulaPropietario.text length]<7){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Cedula Propietario" message:@"El campo debe tener minimo 7 caracteres y maximo 10 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else if ([fijoPropietario.text length]<6){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Fijo Propietario" message:@"El campo debe tener minimo 6 caracteres y maximo 10 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else if ([celularPropietario.text length]<10){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Celular Propietario" message:@"El campo debe tener 10 caracteres. " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    
+    else if ([nombreSolicitante.text length]<7){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Nombre Solicitante" message:@"El campo debe tener minimo 7 caracteres y maximo 50 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else if ([cedulaSolicitante.text length]<7){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Cedula Solicitante" message:@"El campo debe tener minimo 7 caracteres y maximo 10 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else if ([fijoSolicitante.text length]<6){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Fijo Solicitante" message:@"El campo debe tener minimo 6 caracteres y maximo 10 " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else if ([celularSolicitante.text length]<10){
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campo Celular Solicitante" message:@"El campo debe tener 10 caracteres. " delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
+    }
+    else {
         //------------------------------------------------------------
         //--------------Agregmos datos al diccionario--------------------
         //------------------------------------------------------------

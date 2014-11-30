@@ -28,7 +28,7 @@
     [super viewDidLoad];
     [self cargarurl];
     
-    self.navigationItem.title = @"Servicio";
+    self.navigationItem.title = @"Web View";
 
     
     // Do any additional setup after loading the view.
