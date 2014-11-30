@@ -20,6 +20,8 @@
 
 @implementation JHOBuscarGeneralViewController
 
+@synthesize searchBar;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,8 +34,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"Buscar";
+    JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
     
- 
+    
+    
+    [searchBar becomeFirstResponder];
+    
+    
+searchBar.text =appDelegate.buscarFiltro;
+    
+  
+    
+    
     // un vector lleno y el otro se llena con el filtro de busqueda
     vectorConvocatorias = [[NSMutableArray alloc]init];
     busquedaSel = [[NSMutableArray alloc]init ];
@@ -45,15 +58,17 @@
     }
     // recargamos la tabal
     [self.tableView reloadData];
+    
+ 
 
     //-----------------------------------------------
     //         valores de la busqueda
     //-----------------------------------------------
-    JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
+    
     //appDelegate.buscarFiltro
     NSLog(@" Prueba ----%@",appDelegate.buscarFiltro);
     if (appDelegate.buscarFiltro!=NULL) {
-        [_searchBar setText:appDelegate.buscarFiltro];
+        [searchBar setText:appDelegate.buscarFiltro];
         NSString *a =appDelegate.buscarFiltro;
         
         
@@ -76,9 +91,31 @@
     [self.tableView reloadData];
     
     
+    
+    [busquedaSel removeAllObjects];
+    // NSLog(@" selec %@",busquedaSel);
+    //NSLog(@"comple %@",vectorConvocatorias);
+    for (int i=0; i<[vectorConvocatorias count]; i++) {
+        NSDictionary *dic = [vectorConvocatorias objectAtIndex:i];
+        NSString *buscar = [dic objectForKey:@"nombre"];
+        NSLog(@"buscar %@",buscar);
+        NSRange nameRange = [buscar rangeOfString:searchBar.text options:NSCaseInsensitiveSearch];
+        
+        if (nameRange.location != NSNotFound) {
+            NSLog(@"agrego %@",[vectorConvocatorias objectAtIndex:i]);
+            [busquedaSel addObject:[vectorConvocatorias objectAtIndex:i]];
+        }
+    }
+    [self.tableView reloadData];
+    
+    
+    
+    
 
       // Do any additional setup after loading the view.
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JHOBuscarGeneralViewController : UIViewController <UIScrollViewDelegate>
+@interface JHOBuscarGeneralViewController : UIViewController <UIScrollViewDelegate>{
+    IBOutlet UISearchBar *searchBar;
+}
 
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end

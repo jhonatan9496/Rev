@@ -18,6 +18,8 @@
 
 #import "JHOServiciosViewController.h"
 
+#import "JHOBuscarGeneralViewController.h"
+
 @interface JHOViewController (){
     NSMutableArray *convocatoriasPrincipal;
     
@@ -606,18 +608,22 @@
     
 }
 
-- (IBAction)guardarFiltroBusqueda:(id)sender {
-    JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
-    appDelegate.buscarFiltro =textFiltroBusqueda.text;
-}
+
 //-----------------------------------------------------------------------
 // ------------------- Fin Evento boton Actualizar   --------------------
 //-----------------------------------------------------------------------
 
 
 - (IBAction)BuscarPrincipal:(id)sender {
+    
     JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
     appDelegate.buscarFiltro =textFiltroBusqueda.text;
+    
+    JHOBuscarGeneralViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"buscar2"];
+    [self.navigationController pushViewController:cadaConvocatoria animated:YES];
+    cadaConvocatoria.searchBar=textFiltroBusqueda.text;
+    
+
 }
 
 - (IBAction)servicio1:(id)sender {
