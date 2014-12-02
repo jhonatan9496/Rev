@@ -34,7 +34,10 @@
     [entre23Bufalino setDelegate:self];
     [mayor3Bufalino setDelegate:self];
     //Boton avanzar con metodo accion avanzar
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+    UIBarButtonItem*avanzar=[[UIBarButtonItem alloc] initWithTitle:@"Avanzar" style:UIBarButtonItemStylePlain target:self action:@selector(avanzar:)];
+    
+    self.navigationItem.rightBarButtonItem=avanzar;
     //titulo
     self.navigationItem.title = @"Bufalinos";
 
@@ -76,23 +79,43 @@
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([menor1Bufalino.text isEqualToString:@""] || [entre12Bufalino.text isEqualToString:@""] ||[entre23Bufalino.text isEqualToString:@""]||[mayor3Bufalino.text isEqualToString:@""]) {
-        
-       UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios" message:@"Existen campos Vacios. \n Debe escribir 0 en los campos que no va a identificar animales" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
-    }else {
-
     
-    [appDelegate.tramiteDiccionario setObject:menor1Bufalino.text forKey:@"menor1Bufalino"];
-    [appDelegate.tramiteDiccionario setObject:entre12Bufalino.text forKey:@"entre12Bufalino"];
-    [appDelegate.tramiteDiccionario setObject:entre23Bufalino.text forKey:@"entre23Bufalino"];
-    [appDelegate.tramiteDiccionario setObject:mayor3Bufalino.text forKey:@"mayor3Bufalino"];
+        
+        
+        
+        if ([menor1Bufalino.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"menor1Bufalino"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:menor1Bufalino.text forKey:@"menor1Bufalino"];
+        }
+        
+        
+        if ([entre12Bufalino.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"entre12Bufalino"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:entre12Bufalino.text forKey:@"entre12Bufalino"];
+        }
+        
+        if ([entre23Bufalino.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"entre23Bufalino"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:entre23Bufalino.text forKey:@"entre23Bufalino"];
+        }
+        
+        if ([mayor3Bufalino.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"mayor3Bufalino"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:mayor3Bufalino.text forKey:@"mayor3Bufalino"];
+        }
+        
+        
     
     NSLog(@"diccionario %@", appDelegate.tramiteDiccionario);
 
     
     JHODatosMotivoViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"Motivo"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
-    }
+    
     }else {
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta 0 a Identificar" message:@"Para poder enviar el tramite almenos debe identificar 1 animal" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
     }

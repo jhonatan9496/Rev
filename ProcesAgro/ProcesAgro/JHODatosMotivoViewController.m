@@ -36,7 +36,10 @@
     [perdidaDIN setDelegate:self];
     
     //Boton avanzar con metodo accion avanzar
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+   // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+    UIBarButtonItem*avanzar=[[UIBarButtonItem alloc] initWithTitle:@"Avanzar" style:UIBarButtonItemStylePlain target:self action:@selector(avanzar:)];
+    
+    self.navigationItem.rightBarButtonItem=avanzar;
     //titulo
     self.navigationItem.title = @"Motivo";
     
@@ -80,23 +83,41 @@
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([primeraVez.text isEqualToString:@""] || [nacimiento.text isEqualToString:@""] ||[compra.text isEqualToString:@""]||[perdidaDIN.text isEqualToString:@""]) {
+ 
         
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios" message:@"Existen campos Vacios. \n Debe escribir 0 en los campos que no va a identificar animales" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
-    }else {
+        
+        if ([primeraVez.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"primeraVez"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:primeraVez.text forKey:@"primeraVez"];
+        }
+        
+        if ([nacimiento.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"nacimiento"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:nacimiento.text forKey:@"nacimiento"];
+        }
+        
+        if ([compra.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"compra"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:compra.text forKey:@"compra"];
+        }
+        
+        if ([perdidaDIN.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"perdidaDIN"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:perdidaDIN.text forKey:@"perdidaDIN"];
+        }
 
         
-    [appDelegate.tramiteDiccionario setObject:primeraVez.text forKey:@"primeraVez"];
-    [appDelegate.tramiteDiccionario setObject:nacimiento.text forKey:@"nacimiento"];
-    [appDelegate.tramiteDiccionario setObject:compra.text forKey:@"compra"];
-    [appDelegate.tramiteDiccionario setObject:perdidaDIN.text forKey:@"perdidaDIN"];
     
     NSLog(@"diccionario %@", appDelegate.tramiteDiccionario);
 
     
     JHODatosMotivoViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"Enviar"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
-    }
+    
     }else{
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Motivo" message:@"El numero de animales  a identificar no es igual al numero de motivo de identificacion. \n Debe comprobar que la suma de bovinos y bufalinos sea igual a la suma de animales a identificar" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
     }

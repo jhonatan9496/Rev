@@ -38,7 +38,13 @@
     
     //Boton avanzar con metodo accion avanzar
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+   // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]  initWithTitle:@"Avanzar" initWithBarButtonSystemItem:UIBarButtonItemStylePlain target:self action:@selector(avanzar:)];
+    
+    
+    
+    UIBarButtonItem*avanzar=[[UIBarButtonItem alloc] initWithTitle:@"Avanzar" style:UIBarButtonItemStylePlain target:self action:@selector(avanzar:)];
+
+    self.navigationItem.rightBarButtonItem=avanzar;
     
     
     // --------------------------------

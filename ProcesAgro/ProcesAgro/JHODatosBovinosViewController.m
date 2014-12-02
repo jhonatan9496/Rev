@@ -37,7 +37,11 @@
 
     
     //Boton avanzar con metodo accion avanzar
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+    
+    UIBarButtonItem*avanzar=[[UIBarButtonItem alloc] initWithTitle:@"Avanzar" style:UIBarButtonItemStylePlain target:self action:@selector(avanzar:)];
+    
+    self.navigationItem.rightBarButtonItem=avanzar;
     //titulo
     self.navigationItem.title = @"Bovinos";
     // Do any additional setup after loading the view.
@@ -77,25 +81,44 @@
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([menor1Bovinos.text isEqualToString:@""] || [entre12Bovinos.text isEqualToString:@""] ||[entre23Bovinos.text isEqualToString:@""]||[mayores3Bovinos.text isEqualToString:@""]) {
+    
         
-       UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios " message:@"Existen campos Vacios. \n Debe escribir 0 en los campos que no va a identificar animales" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
-    }else {
+        
+        if ([menor1Bovinos.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"menor1Bovinos"];
+        }else{
+             [appDelegate.tramiteDiccionario setObject:menor1Bovinos.text forKey:@"menor1Bovinos"];
+        }
+        
+        if ([entre12Bovinos.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"entre12Bovinos"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:entre12Bovinos.text forKey:@"entre12Bovinos"];
+        }
+        
+        if ([entre23Bovinos.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"entre23Bovinos"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:entre23Bovinos.text forKey:@"entre23Bovinos"];
+        }
+        
+        if ([mayores3Bovinos.text isEqualToString:@""]){
+            [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"mayores3Bovinos"];
+        }else{
+            [appDelegate.tramiteDiccionario setObject:mayores3Bovinos.text forKey:@"mayores3Bovinos"];
+        }
 
     //------------------------------------------------------------
     //--------------Agregmos datos al vector--------------------
     //------------------------------------------------------------
-    [appDelegate.tramiteDiccionario setObject:menor1Bovinos.text forKey:@"menor1Bovinos"];
-    [appDelegate.tramiteDiccionario setObject:entre12Bovinos.text forKey:@"entre12Bovinos"];
-    [appDelegate.tramiteDiccionario setObject:entre23Bovinos.text forKey:@"entre23Bovinos"];
-    [appDelegate.tramiteDiccionario setObject:mayores3Bovinos.text forKey:@"mayores3Bovinos"];
+   
     
     NSLog(@"diccionario %@", appDelegate.tramiteDiccionario);
-
+// abrimos nueva vista
     
     JHODatosBufalinosViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"Bufalinos"];
     [self.navigationController pushViewController:cadaConvocatoria animated:YES];
-    }
+    
     
 }
 

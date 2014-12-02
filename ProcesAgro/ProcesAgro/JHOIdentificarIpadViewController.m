@@ -47,7 +47,10 @@
     
     
     //Boton avanzar con metodo accion avanzar
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+    UIBarButtonItem*avanzar=[[UIBarButtonItem alloc] initWithTitle:@"Avanzar" style:UIBarButtonItemStylePlain target:self action:@selector(avanzar:)];
+    
+    self.navigationItem.rightBarButtonItem=avanzar;
     //titulo
     self.navigationItem.title = @"Identificar";
     // Do any additional setup after loading the view.
@@ -96,26 +99,91 @@
     //------------------------------------------------------------
     //--------------validar campos nulos --------------------
     //------------------------------------------------------------
-    if ([menor1Bovinos.text isEqualToString:@""] || [entre12Bovinos.text isEqualToString:@""] ||[entre23Bovinos.text isEqualToString:@""]||[mayores3Bovinos.text isEqualToString:@""]||[menor1Bufalino.text isEqualToString:@""] || [entre12Bufalino.text isEqualToString:@""] ||[entre23Bufalino.text isEqualToString:@""]||[mayor3Bufalino.text isEqualToString:@""]||[primeraVez.text isEqualToString:@""] || [nacimiento.text isEqualToString:@""] ||[compra.text isEqualToString:@""]||[perdidaDIN.text isEqualToString:@""]) {
-        
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Campos Vacios" message:@"Existen campos Vacios. \n Debe ingresar 0 en los campos de animales que no va a identificar" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
-    }else {
+ 
         
         //------------------------------------------------------------
         //--------------Agregmos datos al vector--------------------
         //------------------------------------------------------------
-        [appDelegate.tramiteDiccionario setObject:menor1Bovinos.text forKey:@"menor1Bovinos"];
-        [appDelegate.tramiteDiccionario setObject:entre12Bovinos.text forKey:@"entre12Bovinos"];
-        [appDelegate.tramiteDiccionario setObject:entre23Bovinos.text forKey:@"entre23Bovinos"];
-        [appDelegate.tramiteDiccionario setObject:mayores3Bovinos.text forKey:@"mayores3Bovinos"];
-        [appDelegate.tramiteDiccionario setObject:menor1Bufalino.text forKey:@"menor1Bufalino"];
-        [appDelegate.tramiteDiccionario setObject:entre12Bufalino.text forKey:@"entre12Bufalino"];
-        [appDelegate.tramiteDiccionario setObject:entre23Bufalino.text forKey:@"entre23Bufalino"];
-        [appDelegate.tramiteDiccionario setObject:mayor3Bufalino.text forKey:@"mayor3Bufalino"];
-        [appDelegate.tramiteDiccionario setObject:primeraVez.text forKey:@"primeraVez"];
-        [appDelegate.tramiteDiccionario setObject:nacimiento.text forKey:@"nacimiento"];
-        [appDelegate.tramiteDiccionario setObject:compra.text forKey:@"compra"];
-        [appDelegate.tramiteDiccionario setObject:perdidaDIN.text forKey:@"perdidaDIN"];
+            
+            
+            if ([menor1Bovinos.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"menor1Bovinos"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:menor1Bovinos.text forKey:@"menor1Bovinos"];
+            }
+            
+            if ([entre12Bovinos.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"entre12Bovinos"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:entre12Bovinos.text forKey:@"entre12Bovinos"];
+            }
+            
+            if ([entre23Bovinos.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"entre23Bovinos"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:entre23Bovinos.text forKey:@"entre23Bovinos"];
+            }
+            
+            if ([mayores3Bovinos.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"mayores3Bovinos"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:mayores3Bovinos.text forKey:@"mayores3Bovinos"];
+            }
+            
+            
+            
+            if ([menor1Bufalino.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"menor1Bufalino"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:menor1Bufalino.text forKey:@"menor1Bufalino"];
+            }
+            
+            
+            if ([entre12Bufalino.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"entre12Bufalino"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:entre12Bufalino.text forKey:@"entre12Bufalino"];
+            }
+            
+            if ([entre23Bufalino.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"entre23Bufalino"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:entre23Bufalino.text forKey:@"entre23Bufalino"];
+            }
+            
+            if ([mayor3Bufalino.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"mayor3Bufalino"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:mayor3Bufalino.text forKey:@"mayor3Bufalino"];
+            }
+            
+            
+            if ([primeraVez.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"primeraVez"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:primeraVez.text forKey:@"primeraVez"];
+            }
+            
+            if ([nacimiento.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"nacimiento"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:nacimiento.text forKey:@"nacimiento"];
+            }
+            
+            if ([compra.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"compra"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:compra.text forKey:@"compra"];
+            }
+            
+            if ([perdidaDIN.text isEqualToString:@""]){
+                [appDelegate.tramiteDiccionario setObject:@"0" forKey:@"perdidaDIN"];
+            }else{
+                [appDelegate.tramiteDiccionario setObject:perdidaDIN.text forKey:@"perdidaDIN"];
+            }
+
+            
+
         
         NSLog(@"diccionario %@", appDelegate.tramiteDiccionario);
         
@@ -123,7 +191,7 @@
         [self.navigationController pushViewController:cadaConvocatoria animated:YES];
 
     
-    }
+    
         }else{
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alerta Motivo" message:@"El numero de animales  a identificar no es igual al numero de motivo de identificacion. \n Debe comprobar que la suma de bovinos y bufalinos sea igual a la suma de animales a identificar" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil]; [message show];
         }

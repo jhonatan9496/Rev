@@ -337,18 +337,18 @@
     
     // VALIDAR ICA
     
-    if(textField == ica3101 && [[textField text] length] - range.length + string.length <= 10)
+    if((textField == ica3101 && [[textField text] length] - range.length + string.length <= 10)||(textField == nombreVereda && [[textField text] length] - range.length + string.length <= 30)||(textField == nombreFinca && [[textField text] length] - range.length + string.length <= 50) )
     {
         //return [[textField text] length] - range.length + string.length < 4;
         
-        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"] invertedSet];
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ñáéíóú "] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
         
         return [string isEqualToString:filtered];
     }
-    else if((textField == nombreFinca && [[textField text] length] - range.length + string.length <= 50) || (textField == nombrePropietario && [[textField text] length] - range.length + string.length <= 50) ||(textField == nombreSolicitante && [[textField text] length] - range.length + string.length <= 30)||(textField == nombreVereda && [[textField text] length] - range.length + string.length <= 30))
+    else if( (textField == nombrePropietario && [[textField text] length] - range.length + string.length <= 50) ||(textField == nombreSolicitante && [[textField text] length] - range.length + string.length <= 50))
     {
-        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "] invertedSet];
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzñáéíóú "] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
         return [string isEqualToString:filtered];
     }

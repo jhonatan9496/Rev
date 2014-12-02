@@ -70,16 +70,16 @@
     
     // VALIDAR ICA
     
-    if(textField == ica3101 && [[textField text] length] - range.length + string.length <= 10)
+    if((textField == nombreFinca && [[textField text] length] - range.length + string.length <= 30) ||(textField == ica3101 && [[textField text] length] - range.length + string.length <= 10)||(textField == nombreVereda && [[textField text] length] - range.length + string.length <= 30))
     {
         //return [[textField text] length] - range.length + string.length < 4;
         
-        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"] invertedSet];
+        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ñáéíóú "] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
         
         return [string isEqualToString:filtered];
     }
-    else if((textField == nombreFinca && [[textField text] length] - range.length + string.length <= 30) || (textField == nombrePropietario && [[textField text] length] - range.length + string.length <= 50)||(textField == nombreVereda && [[textField text] length] - range.length + string.length <= 30) )
+    else if( (textField == nombrePropietario && [[textField text] length] - range.length + string.length <= 50) )
     {
         NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzñáéíóú "] invertedSet];
         NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
