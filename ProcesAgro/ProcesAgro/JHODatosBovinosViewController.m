@@ -36,6 +36,37 @@
     [mayores3Bovinos setDelegate:self];
 
     
+    
+    //--------------------------------------------
+    //      Volvemos a cargar datos si estan cargad
+    //--------------------------------------------
+    JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
+    
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        menor1Bovinos.text=[appDelegate.tramiteDiccionario objectForKey:@"menor1Bovinos"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        entre12Bovinos.text=[appDelegate.tramiteDiccionario objectForKey:@"entre12Bovinos"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        entre23Bovinos.text=[appDelegate.tramiteDiccionario objectForKey:@"entre23Bovinos"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        mayores3Bovinos.text=[appDelegate.tramiteDiccionario objectForKey:@"mayores3Bovinos"];
+    }
+    //--------------------------------------------
+    //     FIN  Volvemos a cargar datos si estan cargad
+    //--------------------------------------------
+
+    
     //Boton avanzar con metodo accion avanzar
     //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
     

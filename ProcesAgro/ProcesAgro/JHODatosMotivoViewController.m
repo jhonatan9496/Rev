@@ -37,6 +37,38 @@
     
     //Boton avanzar con metodo accion avanzar
    // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+    
+    
+    //--------------------------------------------
+    //      Volvemos a cargar datos si estan cargad
+    //--------------------------------------------
+    JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
+    
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        primeraVez.text=[appDelegate.tramiteDiccionario objectForKey:@"primeraVez"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        nacimiento.text=[appDelegate.tramiteDiccionario objectForKey:@"nacimiento"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        compra.text=[appDelegate.tramiteDiccionario objectForKey:@"compra"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        perdidaDIN.text=[appDelegate.tramiteDiccionario objectForKey:@"perdidaDIN"];
+    }
+    //--------------------------------------------
+    //     FIN  Volvemos a cargar datos si estan cargad
+    //--------------------------------------------
+    
+    
     UIBarButtonItem*avanzar=[[UIBarButtonItem alloc] initWithTitle:@"Avanzar" style:UIBarButtonItemStylePlain target:self action:@selector(avanzar:)];
     
     self.navigationItem.rightBarButtonItem=avanzar;

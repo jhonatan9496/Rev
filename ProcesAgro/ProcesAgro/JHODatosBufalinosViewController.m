@@ -35,6 +35,37 @@
     [mayor3Bufalino setDelegate:self];
     //Boton avanzar con metodo accion avanzar
     //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
+    
+    //--------------------------------------------
+    //      Volvemos a cargar datos si estan cargad
+    //--------------------------------------------
+    JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
+    
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        menor1Bufalino.text=[appDelegate.tramiteDiccionario objectForKey:@"menor1Bufalino"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        entre12Bufalino.text=[appDelegate.tramiteDiccionario objectForKey:@"entre12Bufalino"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        entre23Bufalino.text=[appDelegate.tramiteDiccionario objectForKey:@"entre23Bufalino"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        mayor3Bufalino.text=[appDelegate.tramiteDiccionario objectForKey:@"mayor3Bufalino"];
+    }
+    //--------------------------------------------
+    //     FIN  Volvemos a cargar datos si estan cargad
+    //--------------------------------------------
+
+    
     UIBarButtonItem*avanzar=[[UIBarButtonItem alloc] initWithTitle:@"Avanzar" style:UIBarButtonItemStylePlain target:self action:@selector(avanzar:)];
     
     self.navigationItem.rightBarButtonItem=avanzar;

@@ -48,6 +48,15 @@
     appDelegate.tramiteDiccionario = [[NSMutableDictionary alloc]init];
     // Do any additional setup after loading the view.
     
+//      [appDelegate.tramiteDiccionario setObject:ica3101.text forKey:@"ica"];
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        ica3101.text=[appDelegate.tramiteDiccionario objectForKey:@"ica"];
+    }
+    
+    
+    
     
     [ica3101 setReturnKeyType: UIReturnKeyDone];
     
