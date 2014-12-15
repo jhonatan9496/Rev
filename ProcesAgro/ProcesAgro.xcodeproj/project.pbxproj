@@ -48,7 +48,6 @@
 		A3ABAD2B19B27EEB008A435A /* JHODatosMotivoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD2A19B27EEB008A435A /* JHODatosMotivoViewController.m */; };
 		A3ABAD2E19B28129008A435A /* JHOJustificacionEnviarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD2D19B28129008A435A /* JHOJustificacionEnviarViewController.m */; };
 		A3ABAD3219B2C65C008A435A /* JHOServiciosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD3119B2C65C008A435A /* JHOServiciosViewController.m */; };
-		A3B6C7CB1A3E14770084231A /* acerca_de_nuevo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3B6C7CA1A3E14770084231A /* acerca_de_nuevo.jpg */; };
 		A3BAADD1196E42760088BC31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BAADD0196E42760088BC31 /* Foundation.framework */; };
 		A3BAADD3196E42760088BC31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BAADD2196E42760088BC31 /* CoreGraphics.framework */; };
 		A3BAADD5196E42760088BC31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BAADD4196E42760088BC31 /* UIKit.framework */; };
@@ -152,7 +151,6 @@
 		A3ABAD2D19B28129008A435A /* JHOJustificacionEnviarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOJustificacionEnviarViewController.m; sourceTree = "<group>"; };
 		A3ABAD3019B2C65C008A435A /* JHOServiciosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOServiciosViewController.h; sourceTree = "<group>"; };
 		A3ABAD3119B2C65C008A435A /* JHOServiciosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOServiciosViewController.m; sourceTree = "<group>"; };
-		A3B6C7CA1A3E14770084231A /* acerca_de_nuevo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = acerca_de_nuevo.jpg; path = ../../../../Desktop/acerca_de_nuevo.jpg; sourceTree = "<group>"; };
 		A3BAADCD196E42760088BC31 /* ProcesAgro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProcesAgro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BAADD0196E42760088BC31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A3BAADD2196E42760088BC31 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -380,7 +378,6 @@
 		A3BAADD7196E42760088BC31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A3B6C7CA1A3E14770084231A /* acerca_de_nuevo.jpg */,
 				A3D112331A0898F100D1C7EE /* fija.png */,
 				A3D112311A0898A800D1C7EE /* subir.png */,
 				A3CFB4A01A0893E200EB8DC8 /* iconosApp */,
@@ -552,7 +549,6 @@
 				A3CFB4B21A08946100EB8DC8 /* Icon-76@3x.png in Resources */,
 				A306646619C6657900B3A56F /* cursos-vituales.png in Resources */,
 				A3CFB4B31A08946100EB8DC8 /* Icon-Small.png in Resources */,
-				A3B6C7CB1A3E14770084231A /* acerca_de_nuevo.jpg in Resources */,
 				A3A31F7319B2D31A00D88311 /* footer.jpg in Resources */,
 				A3026F1B19C7EEEB0002DDC2 /* lofo-twitter-200x200.png in Resources */,
 				A3BAADDB196E42760088BC31 /* InfoPlist.strings in Resources */,

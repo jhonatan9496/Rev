@@ -203,7 +203,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="acerca_de_nuevo.jpg" highlightedImage="acerca_De.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1ZI-fR-Kba">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fija.png" translatesAutoresizingMaskIntoConstraints="NO" id="1ZI-fR-Kba">
                                 <rect key="frame" x="0.0" y="73" width="768" height="644"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="footer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="21L-02-afI">
@@ -1146,14 +1146,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="acerca_De.jpg" width="591" height="634"/>
-        <image name="acerca_de_nuevo.jpg" width="590" height="509"/>
         <image name="agromapas.png" width="435" height="135"/>
         <image name="autorizacion-productos-ecologicos.png" width="330" height="135"/>
         <image name="capitalizacion-rural-dre.png" width="360" height="135"/>
         <image name="certificado-incentivo-forestal.png" width="234" height="135"/>
         <image name="convocatoria-fond.png" width="1071" height="270"/>
         <image name="cursos-vituales.png" width="247" height="135"/>
+        <image name="fija.png" width="449" height="617"/>
         <image name="footer.jpg" width="536" height="158"/>
         <image name="link-pagina-convocatoria.png" width="551" height="61"/>
         <image name="lofo-facebook-200x200.png" width="200" height="200"/>
