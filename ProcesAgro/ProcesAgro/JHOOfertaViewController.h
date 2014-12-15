@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *textTituloOferta;
 @property (nonatomic, strong) NSString *textDeescripcionOferta;
 @property (nonatomic, strong) NSString *idOferta;
+@property (nonatomic,strong) NSString *urlOferta;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelTituloOferta;
 @property (weak, nonatomic) IBOutlet UILabel *labelDescripcionOferta;
@@ -25,4 +26,5 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+- (IBAction)linkOferta:(id)sender;
 @end

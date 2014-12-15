@@ -12,6 +12,7 @@
 #import "JHOCadaConvocatoriaViewController.h"
 #import "JHOCeldaPasosOfertaTableViewCell.h"
 #import "JHOCadaPasoOfertaViewController.h"
+#import "JHOServiciosViewController.h"
 
 @interface JHOOfertaViewController (){
     NSMutableArray *vectorConvocatorias;
@@ -170,4 +171,11 @@
 }
 */
 
+- (IBAction)linkOferta:(id)sender {
+    
+    JHOServiciosViewController  *cadaConvocatoria = [self.storyboard instantiateViewControllerWithIdentifier:@"UrlServicios"];
+    [self.navigationController pushViewController:cadaConvocatoria animated:YES];
+    cadaConvocatoria.urlCargar=self.urlOferta;
+    
+}
 @end

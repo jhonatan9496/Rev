@@ -39,7 +39,6 @@
 		A38DB28E197CA50100D44BED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38DB28D197CA50100D44BED /* SystemConfiguration.framework */; };
 		A3A31F6B19B2CF5500D88311 /* link-pagina-convocatoria.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A31F6A19B2CF5500D88311 /* link-pagina-convocatoria.png */; };
 		A3A31F7319B2D31A00D88311 /* footer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3A31F7219B2D31A00D88311 /* footer.jpg */; };
-		A3A31F7519B2D38700D88311 /* acerca_De.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3A31F7419B2D38700D88311 /* acerca_De.jpg */; };
 		A3A629341A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A629331A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.m */; };
 		A3ABAD1C19B23584008A435A /* JHODatosFincaYPropietarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD1B19B23584008A435A /* JHODatosFincaYPropietarioViewController.m */; };
 		A3ABAD1F19B235EA008A435A /* JHODatosUbicacionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD1E19B235EA008A435A /* JHODatosUbicacionViewController.m */; };
@@ -49,6 +48,7 @@
 		A3ABAD2B19B27EEB008A435A /* JHODatosMotivoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD2A19B27EEB008A435A /* JHODatosMotivoViewController.m */; };
 		A3ABAD2E19B28129008A435A /* JHOJustificacionEnviarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD2D19B28129008A435A /* JHOJustificacionEnviarViewController.m */; };
 		A3ABAD3219B2C65C008A435A /* JHOServiciosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ABAD3119B2C65C008A435A /* JHOServiciosViewController.m */; };
+		A3B6C7CB1A3E14770084231A /* acerca_de_nuevo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3B6C7CA1A3E14770084231A /* acerca_de_nuevo.jpg */; };
 		A3BAADD1196E42760088BC31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BAADD0196E42760088BC31 /* Foundation.framework */; };
 		A3BAADD3196E42760088BC31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BAADD2196E42760088BC31 /* CoreGraphics.framework */; };
 		A3BAADD5196E42760088BC31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BAADD4196E42760088BC31 /* UIKit.framework */; };
@@ -134,7 +134,6 @@
 		A38DB28D197CA50100D44BED /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A3A31F6A19B2CF5500D88311 /* link-pagina-convocatoria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "link-pagina-convocatoria.png"; sourceTree = "<group>"; };
 		A3A31F7219B2D31A00D88311 /* footer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footer.jpg; sourceTree = "<group>"; };
-		A3A31F7419B2D38700D88311 /* acerca_De.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = acerca_De.jpg; sourceTree = "<group>"; };
 		A3A629321A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOCadaPasoOfertaViewController.h; sourceTree = "<group>"; };
 		A3A629331A2AB9A7007ADE7E /* JHOCadaPasoOfertaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOCadaPasoOfertaViewController.m; sourceTree = "<group>"; };
 		A3ABAD1A19B23584008A435A /* JHODatosFincaYPropietarioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHODatosFincaYPropietarioViewController.h; sourceTree = "<group>"; };
@@ -153,6 +152,7 @@
 		A3ABAD2D19B28129008A435A /* JHOJustificacionEnviarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOJustificacionEnviarViewController.m; sourceTree = "<group>"; };
 		A3ABAD3019B2C65C008A435A /* JHOServiciosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOServiciosViewController.h; sourceTree = "<group>"; };
 		A3ABAD3119B2C65C008A435A /* JHOServiciosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOServiciosViewController.m; sourceTree = "<group>"; };
+		A3B6C7CA1A3E14770084231A /* acerca_de_nuevo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = acerca_de_nuevo.jpg; path = ../../../../Desktop/acerca_de_nuevo.jpg; sourceTree = "<group>"; };
 		A3BAADCD196E42760088BC31 /* ProcesAgro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProcesAgro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BAADD0196E42760088BC31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A3BAADD2196E42760088BC31 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -380,6 +380,7 @@
 		A3BAADD7196E42760088BC31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3B6C7CA1A3E14770084231A /* acerca_de_nuevo.jpg */,
 				A3D112331A0898F100D1C7EE /* fija.png */,
 				A3D112311A0898A800D1C7EE /* subir.png */,
 				A3CFB4A01A0893E200EB8DC8 /* iconosApp */,
@@ -395,7 +396,6 @@
 				A306646919C6664400B3A56F /* sipsa.png */,
 				A306646719C6660500B3A56F /* agromapas.png */,
 				A306646519C6657900B3A56F /* cursos-vituales.png */,
-				A3A31F7419B2D38700D88311 /* acerca_De.jpg */,
 				A3A31F7219B2D31A00D88311 /* footer.jpg */,
 				A3A31F6A19B2CF5500D88311 /* link-pagina-convocatoria.png */,
 				A338BF3C19983FF8004FD9DB /* convocatoria-fond.png */,
@@ -550,9 +550,9 @@
 				A306647619C667DA00B3A56F /* capitalizacion-rural-dre.png in Resources */,
 				A3CFB4B81A08946100EB8DC8 /* Icon-Spotlight-40@3x.png in Resources */,
 				A3CFB4B21A08946100EB8DC8 /* Icon-76@3x.png in Resources */,
-				A3A31F7519B2D38700D88311 /* acerca_De.jpg in Resources */,
 				A306646619C6657900B3A56F /* cursos-vituales.png in Resources */,
 				A3CFB4B31A08946100EB8DC8 /* Icon-Small.png in Resources */,
+				A3B6C7CB1A3E14770084231A /* acerca_de_nuevo.jpg in Resources */,
 				A3A31F7319B2D31A00D88311 /* footer.jpg in Resources */,
 				A3026F1B19C7EEEB0002DDC2 /* lofo-twitter-200x200.png in Resources */,
 				A3BAADDB196E42760088BC31 /* InfoPlist.strings in Resources */,

@@ -46,6 +46,75 @@
     
     
     
+    //--------------------------------------------
+    //      Volvemos a cargar datos si estan cargad
+    //--------------------------------------------
+    JHOAppDelegate *appDelegate = (JHOAppDelegate *) [[UIApplication sharedApplication]delegate];
+    
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        menor1Bovinos.text=[appDelegate.tramiteDiccionario objectForKey:@"menor1Bovinos"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        entre12Bovinos.text=[appDelegate.tramiteDiccionario objectForKey:@"entre12Bovinos"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        entre23Bovinos.text=[appDelegate.tramiteDiccionario objectForKey:@"entre23Bovinos"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        mayores3Bovinos.text=[appDelegate.tramiteDiccionario objectForKey:@"mayores3Bovinos"];
+    }
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        menor1Bufalino.text=[appDelegate.tramiteDiccionario objectForKey:@"menor1Bufalino"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        entre12Bufalino.text=[appDelegate.tramiteDiccionario objectForKey:@"entre12Bufalino"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        entre23Bufalino.text=[appDelegate.tramiteDiccionario objectForKey:@"entre23Bufalino"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        mayor3Bufalino.text=[appDelegate.tramiteDiccionario objectForKey:@"mayor3Bufalino"];
+    }
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        primeraVez.text=[appDelegate.tramiteDiccionario objectForKey:@"primeraVez"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        nacimiento.text=[appDelegate.tramiteDiccionario objectForKey:@"nacimiento"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        compra.text=[appDelegate.tramiteDiccionario objectForKey:@"compra"];
+    }
+    
+    if ([appDelegate.tramiteDiccionario objectForKey:@"ica"]){
+        NSLog(@"dato guardadp");
+        perdidaDIN.text=[appDelegate.tramiteDiccionario objectForKey:@"perdidaDIN"];
+    }
+
+    //--------------------------------------------
+    //     FIN  Volvemos a cargar datos si estan cargad
+    //--------------------------------------------
+
+    
     //Boton avanzar con metodo accion avanzar
     //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(avanzar:)];
     UIBarButtonItem*avanzar=[[UIBarButtonItem alloc] initWithTitle:@"Avanzar" style:UIBarButtonItemStylePlain target:self action:@selector(avanzar:)];

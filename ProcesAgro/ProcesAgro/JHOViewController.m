@@ -698,6 +698,7 @@
     cadaConvocatoria.textTituloOferta = @"Autorizacion a certificadoras de productos ecologicos";
     cadaConvocatoria.textDeescripcionOferta = @"Otorgar la autorización a los organismos de certificación para que puedan certificar productos ecológicos bajo la normatividad colombiana y a su vez administrar el uso del Sello de Alimento Ecológico del Ministerio de Agricultura y Desarrollo Rural.";
     cadaConvocatoria.idOferta=@"1";
+    cadaConvocatoria.urlOferta=@"https://www.minagricultura.gov.co/tramites-servicios/Paginas/Sello-Ecologico.aspx";
 
 }
 
@@ -708,6 +709,7 @@
     cadaConvocatoria.textTituloOferta = @"Certificado de incentivo Forestal";
     cadaConvocatoria.textDeescripcionOferta = @"Es un reconocimiento del Estado Colombiano, a través del Ministerio de Agricultura y Desarrollo Rural -MADR- en convenio de administración con FINAGR";
     cadaConvocatoria.idOferta=@"2";
+    cadaConvocatoria.urlOferta=@"https://www.minagricultura.gov.co/tramites-servicios/apoyos-incentivos/Paginas/Certificado-de-Incentivo-Forestal-CIF-2013-v2.aspx";
 }
 
 - (IBAction)oferta3:(id)sender {
@@ -717,6 +719,7 @@
     cadaConvocatoria.textTituloOferta = @"Tramite de tarjeta Profesional";
     cadaConvocatoria.textDeescripcionOferta = @"Obtener la autorización para ejercer en el territorio colombiano la profesión de administrador en desarrollo agroindustrial.";
     cadaConvocatoria.idOferta=@"3";
+    cadaConvocatoria.urlOferta=@"https://www.minagricultura.gov.co/tramites-servicios/Paginas/Tramite-Tarjeta-Profesional.aspx";
 }
 
 - (IBAction)oferta4:(id)sender {
@@ -725,6 +728,7 @@
     cadaConvocatoria.textTituloOferta = @"Incentivo a la capitalizacion forestal";
     cadaConvocatoria.textDeescripcionOferta = @"Mejorar la productividad y competitividad de los productores agropecuarios mediante el apoyo a la inversión en bienes de capital. Pequeños y medianos";
     cadaConvocatoria.idOferta=@"4";
+    cadaConvocatoria.urlOferta=@"https://www.minagricultura.gov.co/tramites-servicios/credito-agropecuario/Paginas/Incentivo-a-la-Capitalizacion-Rural-Programa-DRE-v2.aspx";
 }
 
 - (IBAction)informacion:(id)sender {

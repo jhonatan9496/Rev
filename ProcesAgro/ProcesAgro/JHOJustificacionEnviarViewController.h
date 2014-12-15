@@ -11,8 +11,11 @@
 @interface JHOJustificacionEnviarViewController : UIViewController{
     
     IBOutlet UITextField *justificacion;
+    BOOL justificaTaman;
     
 }
+
+
 
 - (IBAction)enviarTramiteFinal:(id)sender;
 - (IBAction)salirJusti:(id)sender;

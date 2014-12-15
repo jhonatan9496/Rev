@@ -225,9 +225,13 @@ searchBar.text =appDelegate.buscarFiltro;
                 NSString *id_papaoferta = [NSString  stringWithUTF8String:( char *)sqlite3_column_text(sentencia, 0)];
                 NSString *nombreConsulta = [NSString  stringWithUTF8String:( char *)sqlite3_column_text(sentencia, 1)];
                 NSString *descConvoc = [NSString  stringWithUTF8String:( char *)sqlite3_column_text(sentencia, 2)];
+                NSString *urlOferta = [NSString  stringWithUTF8String:( char *)sqlite3_column_text(sentencia, 4)];
+                
+                
                 [dicSelectConsultas  setValue:nombreConsulta forKey:@"nombre"];
                 [dicSelectConsultas setValue:descConvoc forKey:@"descripcion"];
                 [dicSelectConsultas setValue:id_papaoferta forKeyPath:@"id_papaoferta"];
+                [dicSelectConsultas setValue:urlOferta forKeyPath:@"urlOferta"];
                 [dicSelectConsultas setValue:@"oferta" forKey:@"tipo"];
                 [vectorConvocatorias addObject:dicSelectConsultas];
             
@@ -354,6 +358,8 @@ searchBar.text =appDelegate.buscarFiltro;
         cadaConvocatoria.textTituloOferta = [datosBusqueda objectForKey:@"nombre"];
         cadaConvocatoria.textDeescripcionOferta = [datosBusqueda objectForKey:@"descripcion"];
         cadaConvocatoria.idOferta=[datosBusqueda objectForKey:@"id_papaoferta"];
+        cadaConvocatoria.urlOferta=[datosBusqueda objectForKey:@"urlOferta"];
+        
         NSLog(@" id %@",[datosBusqueda objectForKey:@"id_papaoferta"]);
     }
 }

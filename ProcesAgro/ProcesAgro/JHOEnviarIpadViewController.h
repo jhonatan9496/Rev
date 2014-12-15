@@ -11,6 +11,7 @@
 @interface JHOEnviarIpadViewController : UIViewController{
     
     IBOutlet UITextField *justificacion;
+    BOOL justificaTaman;
 }
 - (IBAction)enviarTramite:(id)sender;
 
