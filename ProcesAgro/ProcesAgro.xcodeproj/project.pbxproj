@@ -27,6 +27,7 @@
 		A338BF4819988117004FD9DB /* JHOCeldaPasosOfertaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A338BF4719988117004FD9DB /* JHOCeldaPasosOfertaTableViewCell.m */; };
 		A34EEEFF19EF9543008F43C6 /* JHOListarCursosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34EEEFE19EF9543008F43C6 /* JHOListarCursosViewController.m */; };
 		A34EEF0219EF955F008F43C6 /* JHOCadaCursoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34EEF0119EF955F008F43C6 /* JHOCadaCursoViewController.m */; };
+		A35B6C7D1A4150D300D4ED61 /* cccc.png in Resources */ = {isa = PBXBuildFile; fileRef = A35B6C7C1A4150D300D4ED61 /* cccc.png */; };
 		A35E78461991CC3400584FFC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37611EA1991CAE60085B190 /* AVFoundation.framework */; };
 		A35E78471991CC4000584FFC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37611EC1991CAF00085B190 /* MediaPlayer.framework */; };
 		A35E784A1993F0CE00584FFC /* JHOListarConvocatoriasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A35E78491993F0CE00584FFC /* JHOListarConvocatoriasViewController.m */; };
@@ -117,6 +118,7 @@
 		A34EEEFE19EF9543008F43C6 /* JHOListarCursosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOListarCursosViewController.m; sourceTree = "<group>"; };
 		A34EEF0019EF955F008F43C6 /* JHOCadaCursoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOCadaCursoViewController.h; sourceTree = "<group>"; };
 		A34EEF0119EF955F008F43C6 /* JHOCadaCursoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOCadaCursoViewController.m; sourceTree = "<group>"; };
+		A35B6C7C1A4150D300D4ED61 /* cccc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cccc.png; sourceTree = "<group>"; };
 		A35E78481993F0CE00584FFC /* JHOListarConvocatoriasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOListarConvocatoriasViewController.h; sourceTree = "<group>"; };
 		A35E78491993F0CE00584FFC /* JHOListarConvocatoriasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOListarConvocatoriasViewController.m; sourceTree = "<group>"; };
 		A35E784B199420C100584FFC /* JHOBuscarGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOBuscarGeneralViewController.h; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 		A3BAADD7196E42760088BC31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A35B6C7C1A4150D300D4ED61 /* cccc.png */,
 				A3D112331A0898F100D1C7EE /* fija.png */,
 				A3D112311A0898A800D1C7EE /* subir.png */,
 				A3CFB4A01A0893E200EB8DC8 /* iconosApp */,
@@ -490,7 +493,7 @@
 				ORGANIZATIONNAME = jhonatan;
 				TargetAttributes = {
 					A3BAADCC196E42760088BC31 = {
-						DevelopmentTeam = BCD3V3L5XE;
+						DevelopmentTeam = DKL227H868;
 					};
 					A3BAADF0196E42760088BC31 = {
 						TestTargetID = A3BAADCC196E42760088BC31;
@@ -542,6 +545,7 @@
 				A3C0C67819F1C36800884A06 /* ProcesAgroDB.sqlite in Resources */,
 				A306647019C6674A00B3A56F /* autorizacion-productos-ecologicos.png in Resources */,
 				A306646C19C6667B00B3A56F /* siembra.png in Resources */,
+				A35B6C7D1A4150D300D4ED61 /* cccc.png in Resources */,
 				A3CFB4AD1A08946100EB8DC8 /* Icon-60.png in Resources */,
 				A36C33BE19F411E7006E857E /* Main_iPhone.storyboard in Resources */,
 				A306647619C667DA00B3A56F /* capitalizacion-rural-dre.png in Resources */,
@@ -722,6 +726,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProcesAgro/ProcesAgro-Prefix.pch";
 				INFOPLIST_FILE = "ProcesAgro/ProcesAgro-Info.plist";
@@ -737,6 +742,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProcesAgro/ProcesAgro-Prefix.pch";
 				INFOPLIST_FILE = "ProcesAgro/ProcesAgro-Info.plist";
