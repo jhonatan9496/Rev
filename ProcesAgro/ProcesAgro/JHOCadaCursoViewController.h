@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
+#import <AVFoundation/AVAudioPlayer.h>
 
 @interface JHOCadaCursoViewController : UIViewController{
        SLComposeViewController *post;
+       AVAudioPlayer *audioPlayer;
     
     
 }
@@ -21,6 +23,7 @@
 @property (nonatomic, strong) NSString *textTituloCurso;
 @property (nonatomic, strong) NSString *textDeescripcionCurso;
 @property (nonatomic, strong) NSString *textLinkCurso;
+@property (nonatomic, strong) NSString *urlCurso;
 
 @property (strong, nonatomic) IBOutlet UILabel *tituloCurso;
 @property (strong, nonatomic) IBOutlet UILabel *descripcionCurso;

@@ -30,6 +30,7 @@
     //NSLog(@"aaa %@",self.dataBasePath);
     //llamada al metodo cargar base de datos  
     [self cargarDB];
+    
     tramiteVector = [NSMutableArray arrayWithObjects:@"cero",nil];
     //NSMutableArray *tramite = [NSMutableArray arrayWithObjects:@"cero",nil];
     

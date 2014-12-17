@@ -8,6 +8,8 @@
 
 #import "JHOCadaCursoViewController.h"
 #import "JHOServiciosViewController.h"
+#import <Foundation/Foundation.h>
+
 
 @interface JHOCadaCursoViewController ()
 
@@ -20,6 +22,32 @@
     [_tituloCurso setText:_textTituloCurso];
     [_descripcionCurso setText:_textDeescripcionCurso];
     self.navigationItem.title = @"Curso";
+    
+    
+    //------------------------------------------------------------------
+    //---------  reproducir audio del inicio de la app FUNCIONA-=---------
+    //------------------------------------------------------------------
+    
+    NSString *urlString = self.urlCurso;
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString ]];
+    
+    audioPlayer = [[AVAudioPlayer alloc] initWithData:data error:nil];
+    audioPlayer.numberOfLoops = 1;
+    
+    if (audioPlayer == nil){
+        NSLog(@"Error");
+    }
+    else {
+        [audioPlayer prepareToPlay];
+        [audioPlayer play];
+        NSLog(@"play");
+    }
+    //[audioPlayer play];
+    
+    
+    //------------------------------------------------------------------
+    //---------  Botones y titulo de  Nav bar  Controller---------------
+    //------------------------------------------------------------------
     // Do any additional setup after loading the view.
 }
 

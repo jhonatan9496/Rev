@@ -129,6 +129,7 @@
     cadaConvocatoria.textTituloCurso =[datosConvocatoria objectForKey:@"nombre"];
     cadaConvocatoria.textDeescripcionCurso = [datosConvocatoria objectForKey:@"descripcion"];
     cadaConvocatoria.textLinkCurso = [datosConvocatoria objectForKey:@"link"];
+    cadaConvocatoria.urlCurso =[datosConvocatoria objectForKey:@"audio"];
     
 }
 

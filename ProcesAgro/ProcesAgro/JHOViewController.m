@@ -38,19 +38,23 @@
     //---------  reproducir audio del inicio de la app FUNCIONA-=---------
     //------------------------------------------------------------------
     /*
-    NSString *urlString = @"http://181.41.201.152/conexionapi/audioinicio.mp3";
+    NSString *urlString = @"http://154.70.153.108/proyectos/webservice/audios/fidelidad.mp3";
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString ]];
     
     audioPlayer = [[AVAudioPlayer alloc] initWithData:data error:nil];
     audioPlayer.numberOfLoops = 1;
     
-    if (audioPlayer == nil)
+    if (audioPlayer == nil){
         NSLog(@"Error");
-    else
+    }
+    else {
         [audioPlayer prepareToPlay];
+        [audioPlayer play];
+        NSLog(@"play");
+    }
     //[audioPlayer play];
-    */
     
+    */
     //------------------------------------------------------------------
     //---------  Botones y titulo de  Nav bar  Controller---------------
     //------------------------------------------------------------------
